@@ -1,0 +1,18 @@
+name: MechDown Pad
+description: Transform yourself into one of the most powerful mecha! To shoot (on mobile) the activation of the control by the mouse and the keyboard is compulsory!
+type: MechPad
+mech: MechDown
+size: 3
+consumes: {
+  power: 5
+}
+category: upgrade
+research: omega-mech-pad
+requirements: [
+  thorium/500
+  titanium/500
+  silicon/400
+  graphite/350
+  surge-alloy/250
+  phase-fabric/200
+]

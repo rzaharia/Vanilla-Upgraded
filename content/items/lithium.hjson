@@ -1,6 +1,6 @@
 type: material
 name: Lithium
-description: !idée de Senri! Un minerai qui explose quand il n'est pas transporté dans un convoyeur herméthique.
+description: !Senri's idea! An ore that explodes when it is not transported in an airtight conveyor.
 hardness: 3
 cost: 2
 color: ffffff

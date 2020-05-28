@@ -1,5 +1,5 @@
-name: Usine a drone constructeur avancé.
-description: Une usine a drone qui vont vous assistez. Meilleur que les drones constructeur normaux.
+name: Factory has advanced manufacturer drone.
+description: A drone factory that will assist you. Better than normal manufacturer drones.
 type: UnitFactory
 unitType: drone-constructeur-avance
 size: 4
@@ -12,8 +12,8 @@ consumes: {
     items: [
       graphite/30
       titanium/30
-	  lithium/30
-      tsungtsene/30
+	    lithium/30
+      tungstene/30
     ]
   }
 }
@@ -21,7 +21,7 @@ category: units
 research: phantom-factory
 requirements: [
   copper/240
-  tsungtsene/300
+  tungstene/300
   titanium/500
   surge-alloy/100
 ]

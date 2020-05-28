@@ -1,5 +1,5 @@
-name: Usine a Teoleus
-description: Creer de l'unité volante: Teoleus
+name: Factory in Teoleus
+description: Create the flying unit: Teoleus
 type: UnitFactory
 unitType: Teoleus
 size: 2

@@ -1,0 +1,6 @@
+type: material
+name: Niobium
+description: !Senri's idea! An ore capable of creating compound resources.
+hardness: 6
+cost: 5
+color: 989aa3

@@ -1,5 +1,5 @@
 name: PekkaLand
-description: !Fait par Pekka! Cette carte est un map attack pas des plus facile ! Alor soyer prêt parce que ca commence !
+description: !Made by Pekka! This map is not a very easy map attack! So be ready because it starts!
 loadout: basicFoundation
 startingItems: [
   copper/200
@@ -40,5 +40,5 @@ resources: [
   scrap
   thorium
   lithium
-  tsungtsene
+  tungstene
 ]

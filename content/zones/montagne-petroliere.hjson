@@ -1,5 +1,5 @@
-name: Montagne petrolière
-description: !Fait par Zerox! Cette carte permet de récolter du Lithium !
+name: Oil Mountain
+description: !Made by Zerox! This card allows you to collect Lithium!
 loadout: basicFoundation
 startingItems: [
    copper/150

@@ -1,13 +1,11 @@
-type: GenericCrafter
-name: "Dilueur"
-description: "Transforme le liquide cryogénique et le thorium en thorium liquid"
+name: "Diluter"
+description: "Transforms cryogenic liquid and thorium into thorium liquid"
+type: GenericSmelter
 liquidCapacity: 50
-outputLiquid: {
-  liquid: thorium-liquid
-  amount: 12
-}
+outputLiquid: thorium-liquid/12
 size: 2
 hasPower: true
+hasItems: true
 hasLiquids: true
 craftTime: 10
 updateEffect: smeltsmoke

@@ -1,0 +1,13 @@
+name: Mending Wall Large
+description: A wall that can regenerate more faster.
+health: 1680
+size: 2
+update: true 
+solid: true
+blockGround: walls
+requirements: [
+   Obsidienne/24
+   Emeraude/12
+]
+category: defense
+research: mendingWall

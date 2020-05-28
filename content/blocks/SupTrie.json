@@ -1,0 +1,16 @@
+{
+	"type": "battery",
+	"name": "Very Large Battery",
+	"description": "A very large battery capable of storing an enormous amount of energy."
+	"size": 4,
+	"health": 750
+	"category": "power",
+	"requirements": [
+		{"item": "lead", "amount": 120},
+		{"item": "titanium", "amount": 100},
+		{"item": "silicon", "amount": 100},
+		{"item": "lithium", "amount": 100}
+	],
+	"consumes": { "powerBuffered": 100000 },
+	"research": "battery-large"
+}

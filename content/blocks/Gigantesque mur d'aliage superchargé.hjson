@@ -1,11 +1,10 @@
-name: Gigantesque mur d'aliage superchargé
-description: Un mur d'aliage superchagé plus résistant que jamais !
-type: SurgeWall
-lightningChance: 0.29
-lightningDamage: 24
-lightningLenght:22
-health: 14720
+name: Gigantic super-charged alloy wall
+description: A super-coated alloy wall more resistant than ever!
 size: 4
+type: SurgeWall
+lightningChance: 0.27
+lightningDamage: 25
+lightningLenght: 24
 requirements: [
    surge-alloy/245
 ]

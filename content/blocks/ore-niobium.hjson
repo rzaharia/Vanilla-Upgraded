@@ -1,0 +1,6 @@
+type: OreBlock
+itemDrop: niobium
+variant: 3
+oreDefault: true
+oreScale: 9.70
+oreThreshold: 0.870

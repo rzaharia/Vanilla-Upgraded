@@ -1,0 +1,24 @@
+{
+	"name": "Quantum Chest",
+	"description": "A chest connect to the cores with a large storage capacity, it is impossible to deconstruct it after having installed it.",
+	"type": "CoreBlock",
+	"health": 500,
+	"size": 3,
+	"itemCapacity": 2500,
+	"requirements": [
+	    {
+			"item": "thorium",
+			"amount": 250
+		},
+		{
+			"item": "titanium",
+			"amount": 350
+		},
+		{
+			"item": "phase-fabric",
+			"amount": 350
+		}
+	],
+  "category": "effect",
+	"research": "vault"
+}

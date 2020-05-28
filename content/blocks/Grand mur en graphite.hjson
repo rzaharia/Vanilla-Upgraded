@@ -1,5 +1,5 @@
-name: Grand mur en graphite
-description: Un mur de graphite plus gros et plus résitant que le premier.
+name: Large graphite wall
+description: A bigger and more resistant graphite wall than the first.
 type: Wall
 health: 1560
 size: 2

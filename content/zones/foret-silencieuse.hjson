@@ -1,5 +1,5 @@
-name: Forêt Silencieuse
-description: !Fait par Zerox! Pour l'instant, cette carte n'a aucune spécialité (elle en aura une dans une prochaine mis a jour).
+name: Silent Forest
+description: !Made by Zerox! This forest is really too quiet, but below this land is pure tsungtsene!
 startingItems: [
    copper/250
    lead/250
@@ -31,5 +31,5 @@ resources: [
   sand
   thorium
   lithium
-  tsungtsene
+  tungstene
 ]

@@ -1,5 +1,5 @@
-name: Immense mur de thorium
-description: Un mur de thorium plus gros mais plud résistant.
+name: Huge thorium wall
+description: A bigger but thicker wall of thorium.
 type: Wall
 health: 7200
 size: 3

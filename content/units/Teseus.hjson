@@ -1,6 +1,6 @@
 type: GroundUnit
 name: Teseus
-description:  Petit robot tirant de puissant éclair
+description: Small robot firing powerful lightning
 speed: 0.05
 flying: false
 health: 100

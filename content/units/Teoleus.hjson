@@ -1,6 +1,6 @@
 type: flyingUnit
 name: Teoleus
-description:  La version volante de Teseus
+description: The flying version of Teseus
 speed: 0.2
 flying: true
 health: 100

@@ -1,5 +1,5 @@
-name: Immense mur de tissu phasé
-description: Un mur de tissu phasé plus gros mais plus résistant.
+name: Huge wall of phased tissue
+description: A bigger but stronger phased fabric wall.
 type: DeflectorWall
 maxDamageDeflect: 17
 health: 5400

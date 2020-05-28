@@ -1,5 +1,5 @@
-name: Immense mur d'aliage superchargé
-description: Un mur d'aliage superchagé plus gros mais plud résistant.
+name: Huge supercharged alloy wall
+description: A larger but stronger super charged wall of alloy.
 type: SurgeWall
 lightningChance: 0.22
 lightningDamage: 21

@@ -1,10 +1,10 @@
 name: Teseura Mech Pad
-description: Transformez-vous en Teseura
+description: Transform into Teseura
 type: MechPad
 mech: Teseura
 size: 2
 consumes: {
-  power: 0.7
+  power: 3.5
 }
 category: upgrade
 research: delta-mech-pad
@@ -13,4 +13,5 @@ requirements: [
   titanium/150
   silicon/200
   graphite/100
+  surge-alloy/100
 ]

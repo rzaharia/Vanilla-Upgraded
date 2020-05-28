@@ -1,6 +1,6 @@
 type: ChargeTurret
-name: Lancier Aérien
-Description: Comme un lancier classic mais anti-air
+name: Airliner
+Description: Like a classic but antiaircraft lancer
 category: turret
 range: 155.04
 chargeTime: 50

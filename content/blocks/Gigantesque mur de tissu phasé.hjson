@@ -1,5 +1,5 @@
-name: Gigantesque mur de tissu phasé
-description: Un mur de tissu phasé plus résistant que jamais !
+name: Gigantic phased fabric wall
+description: A phased fabric wall more resistant than ever!
 type: DeflectorWall
 maxDamageDeflect: 21
 health: 9600

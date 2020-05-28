@@ -1,5 +1,5 @@
-name: Usine a Teseus
-description: Creer de petit robot puissant
+name: Factory in Teseus
+description: Create powerful little robot
 type: UnitFactory
 unitType: Teseus
 size: 2

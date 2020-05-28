@@ -1,0 +1,30 @@
+{
+    "name": "MechDown",
+    "description": "The mecha version of fusion!",
+    "speed": 0.35,
+    "boostSpeed": 0.35,
+    "itemCapacity": "100",
+    "mineSpeed": 2,
+    "drillPower": 2,
+    "mass": 15,
+    "buildPower": 2.2,
+    "engineColor": "666495",
+    "flying": false,
+    "health": 1200,
+    "weaponOffsetX": 7,
+    "weapon": {
+        "lenght": 7,
+        "shootSound":"corexplode",
+        "shotDelay":0,
+        "name":"MechDown-blaster",
+        "inaccuracy":0,
+        "spacing":20,
+        "velocityRnd":0,
+        "shootDuration":7,
+        "reload":50,
+        "shots":1,
+        "ejectEffect":"none",
+        "alternate":false,
+        "bullet":"meltdownLaser"
+    }
+}
