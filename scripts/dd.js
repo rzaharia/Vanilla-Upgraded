@@ -1,21 +1,17 @@
-//Encore buggé ne l'utiliser pas !
-
 //назначаем имя блока
-const Dilueur = extendContent(GenericSmelter, "Dilueur", {	
+const Dilueur = extendContent(GenericSmelter, "dilueur", {	
 //запускаем функцую загруживания
 	load: function(){
 		//загружаем картнику самого завода
 		this.region = Core.atlas.find(this.name);
-		//загружаем картнику ротатора завода
-		this.rimRegion = Core.atlas.find(this.name + "-roe");
-
+		this.liquidRegion = Core.atlas.find(this.name + "-liquid");
 	},
 	
 //запускаем функцию генерации икон
 	generateIcons: function(){
 	return [
-	//генерируем самую высокую картинку
-		Core.atlas.find(modName + "-Dilueur")
+	//генерируем иконку
+		Core.atlas.find(this.name)
 	];},
 	
 //запускаем функцую рисования
@@ -31,7 +27,5 @@ const Dilueur = extendContent(GenericSmelter, "Dilueur", {
 			Draw.rect(this.liquidRegion, tile.drawx(), tile.drawy());
 			Draw.color();
 		};
-		//загружаем картинку верхнюю завода (самую вехнюю часть)
-		Draw.rect(this.rimRegion, tile.drawx() + 5, tile.drawy() + 5, entity.totalProgress * 2.2);
 	}
 });

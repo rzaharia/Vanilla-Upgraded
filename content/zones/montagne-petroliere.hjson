@@ -1,5 +1,3 @@
-name: Oil Mountain
-description: !Made by Zerox! This card allows you to collect Lithium!
 loadout: basicFoundation
 startingItems: [
    copper/150

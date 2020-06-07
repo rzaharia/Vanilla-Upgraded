@@ -1,7 +1,6 @@
 name: Material melter
 description: A very powerful oven that can melt materials at over 5000 degrees!
 size: 2
-type: GenericSmelter
 hasItem: true
 hasPower: true
 hasLiquid: true
@@ -11,10 +10,10 @@ consumes: {
   power: 2
   items: {
     items: [
-      EmeraldObsidian/2
+      emeraldobsidian/2
     ]
   }
-  liquid: slag/3
+  liquid: slag/0.3
 }
 requirements: [
   tungstene/150
@@ -25,4 +24,4 @@ category: crafting
 research: melter
 idleSound: respawning
 idleSoundVolume: 0.5
-outputLiquid: EmeraldObsidian-liquid/3
+outputLiquid: emeraldobsidian-liquid/3

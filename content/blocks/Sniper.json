@@ -1,7 +1,7 @@
 {
-    "type": "ItemTurret"
-    "name": "Sniper swarm",
-    "description": "!Senri's idea! An elite sniper with a large reload but which does a lot of damage!",
+    "type": "ItemTurret",
+    "name": "Essaim type sniper",
+    "description": "!idée de Senri! Un sniper d'élite avec un gros rechargement maisqui fait beaucoup de dégat !",
     "outlineIcon": false,
     "targetAir": false,
     "targetGround": true,
@@ -26,12 +26,12 @@
              "shootEffect": "explosion",
              "hitEffect": "bigShockwave",
         }
-     }
+     },
     "requirements": [
         { "item": "copper", "amount": 125 },
         { "item": "lead", "amount": 125 },
         { "item": "titanium", "amount": 150 },
-    ]
+    ],
     "category": "turret",
     "shootSound": "explosion",
     "research": "swarmer",

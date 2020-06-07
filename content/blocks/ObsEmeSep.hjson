@@ -9,7 +9,7 @@ updateEffect: smeltsmoke
 craftTime: 80
 consumes: {
   power: 5
-  liquid: EmeraldObsidian-liquid/2
+  liquid: emeraldobsidian-liquid/0.2
 }
 requirements: [
   copper/200
@@ -19,8 +19,8 @@ requirements: [
 category: crafting
 idleSound: respawning
 idleSoundVolume: 0.5
-research: Four
+research: four
 results: [
-  Obsidienne/4
-  Emeraude/1
+  obsidienne/4
+  emeraude/1
 ]

@@ -1,7 +1,7 @@
 {
-    "type": "ItemTurret"
-    "name": "Machine gun type swarm",
-    "description": "!Senri's idea! An elite machine gun with a lot of imprecision and which does little damage!",
+    "type": "ItemTurret",
+    "name": "Essaim type Mitrailleuse",
+    "description": "!idée de Senri! Une mitrailleuse d'élite avec beaucoup d'imprécision et qui fait peu de dégat !",
     "outlineIcon": false,
     "targetAir": true,
     "targetGround": true,
@@ -28,13 +28,13 @@
              "shootEffect": "coreLand",
              "hitEffect": "shootSmall",
         }
-     }
+     },
     "requirements": [
         { "item": "copper", "amount": 75 },
         { "item": "lead", "amount": 75 },
         { "item": "titanium", "amount": 100 },
         { "item": "silicon", "amount": 50 },
-    ]
+    ],
     "category": "turret",
     "shootSound": "shoot",
     "research": "swarmer",

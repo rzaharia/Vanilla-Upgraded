@@ -1,7 +1,7 @@
 {
   "type": "liquidTurret",
   "name": "Geyser",
-  "Description": "The Geyser is a more advanced liquid turret than the 'Wave' turret but it can draw liquid thorium!",
+  "Description": "Le Geyser est une la tourelle liquid plus avancé que la tourelle 'Vague' mais celle-ci peut tirer du thorium liquid !",
 	"health": 1700,
 	"size": 3,
 	"reload": 3,
@@ -70,7 +70,22 @@
              "effect": "overdriven"
            }
 		},
-
+		
+		"emeraldobsidian-liquid": {
+		  "type": "LiquidBulletType",
+		  "drag": 0.03,
+		  "speed": 19,
+		  "knockback": 0.8, 
+		  "liquid": "emeraldobsidian-liquid"
+		  "ammoMultiplier": 1.2,
+		        "status": {
+		        "name": "Glacier",
+		        "speedMultiplier": 1.1,
+		        "armorMultiplier": 2,
+		        "effect": "melting",
+		      }
+		},
+  
 	},
 	"requirements": [
 	    {

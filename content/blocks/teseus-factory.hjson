@@ -1,7 +1,7 @@
-name: Factory in Teseus
-description: Create powerful little robot
+name: Usine a Teseus
+description: Creer de petit robot puissant
 type: UnitFactory
-unitType: Teseus
+unitType: teseus
 size: 2
 produceTime: 1200
 consumes: {

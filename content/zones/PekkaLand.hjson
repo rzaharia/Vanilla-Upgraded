@@ -1,5 +1,3 @@
-name: PekkaLand
-description: !Made by Pekka! This map is not a very easy map attack! So be ready because it starts!
 loadout: basicFoundation
 startingItems: [
   copper/200
@@ -14,7 +12,7 @@ configureObjective:
   {
     //Mode: Attack
     type: Launched
-    zone: PekkaLand
+    zone: pekkaland
   }
 requirements: [
   {

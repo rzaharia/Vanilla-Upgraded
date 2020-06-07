@@ -1,5 +1,5 @@
-name: Graphite wall
-description: The very first graphite wall! It is a little more resistant than that in copper.
+name: mur en graphite
+description: Le tout premier des murs en graphite ! Il est un peut plus résistant que celui en cuivre.
 type: Wall
 health: 390
 size: 1

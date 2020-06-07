@@ -1,0 +1,11 @@
+hasShadow: false
+health: 210
+update: false
+destructible: true
+solid: false
+targetable: false
+requirements: [
+	vibro-metall/8
+]
+category: effect
+research: shock-mine

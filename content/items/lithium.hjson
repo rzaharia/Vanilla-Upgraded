@@ -1,6 +1,4 @@
 type: material
-name: Lithium
-description: !Senri's idea! An ore that explodes when it is not transported in an airtight conveyor.
 hardness: 3
 cost: 2
 color: ffffff

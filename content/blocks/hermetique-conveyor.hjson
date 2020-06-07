@@ -1,6 +1,6 @@
 type: Conveyor
-name: Hermetic conveyor
-description: !Senri's idea! An airtight conveyor capable of transporting Lithium safely.
+name: Convoyeur hermétique
+description: !Idée de Senri! Un convoyeur hermétique capable de transporter le Lithium en toute sécurité.
 requirements: [
   titanium/2
   copper/2

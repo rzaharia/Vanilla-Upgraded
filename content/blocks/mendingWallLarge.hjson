@@ -6,8 +6,8 @@ update: true
 solid: true
 blockGround: walls
 requirements: [
-   Obsidienne/24
-   Emeraude/12
+   obsidienne/24
+   emeraude/12
 ]
 category: defense
-research: mendingWall
+research: mendingwall

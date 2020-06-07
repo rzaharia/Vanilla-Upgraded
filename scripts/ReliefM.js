@@ -1,4 +1,4 @@
-const ReliefM = extendContent(Floor, "ReliefM",{
+const ReliefM = extendContent(Floor, "reliefm",{
   load(){
     this.super$load();
         

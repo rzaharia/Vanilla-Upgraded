@@ -1,6 +1,6 @@
 {
-    "name": "Dilapidated Turret",
-    "description": "A turret so dilapidated that eventually explode!",
+    "name": "Tourelle Délabré",
+    "description": "Une tourelle tellement délabrés quel finis par exploser !",
     "buildVisibility": "sandboxOnly",
     "outlineIcon": false,
     "targetAir": true,

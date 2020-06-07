@@ -6,8 +6,8 @@ update: true
 solid: true
 blockGround: walls
 requirements: [
-   Obsidienne/12
-   Emeraude/6
+   obsidienne/12
+   emeraude/6
 ]
 category: defense
 research: titanium-wall

@@ -1,7 +1,7 @@
 name: Teseura Mech Pad
-description: Transform into Teseura
+description: Transformez-vous en Teseura
 type: MechPad
-mech: Teseura
+mech: teseura
 size: 2
 consumes: {
   power: 3.5

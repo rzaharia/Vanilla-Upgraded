@@ -1,7 +1,6 @@
 {
 	"type": "battery",
-	"name": "Very Large Battery",
-	"description": "A very large battery capable of storing an enormous amount of energy."
+	"name": "Très Grande Batterie",
 	"size": 4,
 	"health": 750
 	"category": "power",

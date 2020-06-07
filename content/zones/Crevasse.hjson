@@ -1,5 +1,3 @@
-name: Crevasse
-description: !Made by Neutron! A narrow map where titanium is rare. Will you measure up? 
 loadout: basicFoundation
 startingItems: [
   copper/100
@@ -12,7 +10,7 @@ configureObjective:
   {
     //Mode: Attack
     type: Launched
-    zone: Crevasse
+    zone: crevasse
   }
 requirements: [
   {
@@ -27,11 +25,11 @@ requirements: [
   }
   {
     type: Unlock
-    block: Mitrailleuse
+    block: mitrailleuse
   }
   {
     type: Unlock
-    block: Sniper
+    block: sniper
   }
 ]
 resources: [

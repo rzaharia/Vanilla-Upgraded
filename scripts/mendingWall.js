@@ -22,8 +22,8 @@ const EffetGrand = newEffect(60, e => {
 });
 
 //Petit mur
-const mendingWall = extendContent
-  (Block, "mendingWall", {
+const mendingwall = extendContent
+  (Block, "mendingwall", {
     update(tile){
       //quand sa s'active
       if((tile.entity.health < 390 && tile.entity.timer.get(0, cooldown2))){
@@ -35,8 +35,8 @@ const mendingWall = extendContent
 });
 
 //Grand mur
-const mendingWallLarge = extendContent
-  (Block, "mendingWallLarge", {
+const mendingwalllarge = extendContent
+  (Block, "mendingwalllarge", {
     update(tile){
       //quand sa s'active
       if((tile.entity.health < 1680 && tile.entity.timer.get(0, cooldown1))){

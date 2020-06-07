@@ -1,0 +1,18 @@
+size: 4
+update: true
+solid: true
+hasItems: true
+configurable: true
+category: turret
+buildVisibility: sandboxOnly
+requirements: [
+  surge-alloy/75,
+  vibro-metall/30
+]
+consumes: {
+  items: {
+    items: [
+      vibro-metall/10
+    ]
+  }
+}

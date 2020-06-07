@@ -1,6 +1,4 @@
 type: material
-name: Tungsten
-description: !Senri's idea! An ore that easily resists heat.
 hardness: 4
 cost: 3
 color: 614852

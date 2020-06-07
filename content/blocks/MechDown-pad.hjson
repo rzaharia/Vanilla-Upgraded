@@ -1,7 +1,7 @@
 name: MechDown Pad
-description: Transform yourself into one of the most powerful mecha! To shoot (on mobile) the activation of the control by the mouse and the keyboard is compulsory!
+description: Transformez-vous en l'un des plus puissant mécha ! Pour tirer (sur mobile) l'activation du controle par la souris et le clavier est obligatoire !
 type: MechPad
-mech: MechDown
+mech: mechdown
 size: 3
 consumes: {
   power: 5

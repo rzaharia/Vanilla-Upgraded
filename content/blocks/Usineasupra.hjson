@@ -1,5 +1,5 @@
-name: Alloy fuser-SupraConductor
-description: A machine that fuses niobium and titanium to be able to manufacture alloy-SupraConductive.
+name: Fusionneur à aliage-SupraConducteur
+description: Une machine qui fusionne le niobium et le titane pour pouvoir fabriquer de l'aliage-SupraConducteur.
 size: 5
 hasPower: true
 hasLiquids: false
@@ -10,8 +10,8 @@ consumes: {
   power: 3.5
   items: {
     items: [
-      niobium/3
-      titanium/2
+      niobium/9
+      titanium/10
     ]
   }
 }
@@ -23,7 +23,7 @@ requirements: [
   lead/200
 ]
 category: crafting
-research: Usinearesist
+research: alloy-smelter
 idleSound: explosion
 idleSoundVolume: 0.5
 outputItem: aliage-supra/1

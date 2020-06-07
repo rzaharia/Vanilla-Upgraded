@@ -1,5 +1,5 @@
-name: Factory has advanced manufacturer drone.
-description: A drone factory that will assist you. Better than normal manufacturer drones.
+name: Usine a drone constructeur avancé.
+description: Une usine a drone qui vont vous assistez. Meilleur que les drones constructeur normaux.
 type: UnitFactory
 unitType: drone-constructeur-avance
 size: 4

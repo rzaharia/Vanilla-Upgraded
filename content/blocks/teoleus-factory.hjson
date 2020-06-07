@@ -1,7 +1,7 @@
-name: Factory in Teoleus
-description: Create the flying unit: Teoleus
+name: Usine a Teoleus
+description: Creer de l'unité volante: Teoleus
 type: UnitFactory
-unitType: Teoleus
+unitType: teoleus
 size: 2
 produceTime: 900
 consumes: {

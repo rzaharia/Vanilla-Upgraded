@@ -1,10 +1,9 @@
-name: Resistant Alloy Compressor
-description: A machine which comes to compress lead and niobium to transform them into a resist alloy
+name: Compresseur à Aliage Résistant
+description: Une machine qui vient compressé le plomb et niobium pour les transformésen un aliage résistat
 size: 4
 hasPower: true
 hasLiquids: false
 hasItems: true
-craftTime: 180
 updateEffect: smeltsmoke
 consumes: {
   power: 2.6

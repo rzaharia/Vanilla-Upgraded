@@ -1,6 +1,6 @@
 type: GenericSmelter
-name: Carbonic Compactor
-description: A more advanced machine than the plastanium compressor which produces 3 plastanium but it does not need oil.
+name: Compacteur Carbonique
+description: Une machine plus avancée que le compresseur a plastanium qui produit 3 de plastanium mais elle na pas besoin de pétrole.
 size: 5
 hasPower: true
 hasLiquids: false

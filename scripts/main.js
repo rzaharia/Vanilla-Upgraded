@@ -1,7 +1,10 @@
 if(typeof(require) !== "undefined"){
 	require("tourelledelabres");
 	require("grif");
+	require("dd");
 	require("com");
+	require("st");
+	require("soundMine");
 	require("ReliefDs");
 	require("ReliefM");
 	require("ReliefN");
@@ -9,6 +12,7 @@ if(typeof(require) !== "undefined"){
 	require("reliefS");
 	require("ReliefSel");
 	require("ReliefSh");
-	/*require("dd")*/
-	require("mendingWall");
+	require("vib");
+	require("am");
+  require("mendingWall")
 }

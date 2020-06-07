@@ -1,5 +1,5 @@
-name: Gigantic titanium wall
-description: A titanium wall more resistant than ever!
+name: Gigantesque mur de titane
+description: Un mur de titane plus résistant que jamais !
 type: Wall
 health: 7060
 size: 4
@@ -7,4 +7,4 @@ requirements: [
   titanium/245
 ]
 category: defense
-research: Immense mur de titane
+research: immense mur de titane
