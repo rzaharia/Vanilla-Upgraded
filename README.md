@@ -19,9 +19,9 @@ English bundles have arrived!
 
 # Credits 
 Developers: `Mesokrix`
-<br>Co-Developers: `VozDuh`
+<br>Co-Developers: `VozDuh` and `Summet#4530`
 <br>
 <br>External:
 <br>Designer: `Valoche3000` and `Alexender`
 <br>Mapper: `Zerox`, `Pekka Angelo` and `Neutron`
-<br>Development aid: `Summet`, `Senri`, `Alexender` and `Pekka Angelo`
+<br>Development aid: `Senri`, `Alexender` and `Pekka Angelo`
