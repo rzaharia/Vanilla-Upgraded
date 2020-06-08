@@ -9,6 +9,7 @@ A mod that adds a lot more experience for the games!
 <br>`Mechs`: 3
 <br>`Liquids`: 2
 <br>`Units`: 3
+<br>`Maps`: 6
 
 # Bundle 
 English bundles have arrived! 
