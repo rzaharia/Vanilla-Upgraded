@@ -24,7 +24,7 @@ requirements: [
   aliage-resist/150
 ]
 category: crafting
-research: alloy-smelter
+research: usinearesist
 idleSound: respawning
 idleSoundVolume: 0.5
 outputItem: vibro-metall/1
