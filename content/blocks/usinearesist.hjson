@@ -1,30 +1,28 @@
-name: Vobrotiniter
-description: ...
+name: Compresseur à Aliage Résistant
+description: Une machine qui vient compressé le plomb et niobium pour les transformésen un aliage résistat
 size: 4
 hasPower: true
-hasLiquids: true
+hasLiquids: false
 hasItems: true
 updateEffect: smeltsmoke
-liquidCapacity: 50
 consumes: {
   power: 2.6
   items: {
     items: [
-      aliage-resist/5
-      aliage-supra/10
+      niobium/5
+      lead/10
     ]
   }
-  liquid: emeraldobsidian-liquid/1
 }
 requirements: [
-  aliage-supra/300
+  titanium/300
   silicon/250
   phase-fabric/200
   surge-alloy/150
-  aliage-resist/150
+  lithium/150
 ]
 category: crafting
 research: alloy-smelter
 idleSound: respawning
 idleSoundVolume: 0.5
-outputItem: vibro-metall/1
+outputItem: aliage-resist/1

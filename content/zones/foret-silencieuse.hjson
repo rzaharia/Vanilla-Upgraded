@@ -1,3 +1,5 @@
+name: Forêt Silencieuse
+description: !Fait par Zerox! Cette forêt est vraiment trop silencieuse mais en dessous de ces terres pur ce trouve du tsungtsene !
 startingItems: [
    copper/250
    lead/250
@@ -29,5 +31,5 @@ resources: [
   sand
   thorium
   lithium
-  tungstene
+  tsungtsene
 ]

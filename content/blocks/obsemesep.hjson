@@ -1,0 +1,26 @@
+name: Obsidian and Emerald Separator
+description: An advanced separator which separates the emerald obsidian liquid into two precious stones.
+type: Separator
+size: 2
+hasItems: true
+hasLiquids: true
+hasPower: true
+updateEffect: smeltsmoke
+craftTime: 80
+consumes: {
+  power: 5
+  liquid: emeraldobsidian-liquid/2
+}
+requirements: [
+  copper/200
+  lead/200
+  lithium/300
+]
+category: crafting
+idleSound: respawning
+idleSoundVolume: 0.5
+research: four
+results: [
+  obsidienne/4
+  emeraude/1
+]

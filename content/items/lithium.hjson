@@ -1,4 +1,6 @@
 type: material
+name: Lithium
+description: !idée de Senri! Un minerai qui explose quand il n'est pas transporté dans un convoyeur herméthique.
 hardness: 3
 cost: 2
 color: ffffff

@@ -1,3 +1,5 @@
+name: Montagne petrolière
+description: !Fait par Zerox! Cette carte permet de récolter du Lithium !
 loadout: basicFoundation
 startingItems: [
    copper/150

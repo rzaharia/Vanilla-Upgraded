@@ -1,0 +1,24 @@
+{
+	"name": "Coffre Quantique",
+	"description": "Un coffre relier aux noyeau avec une grande capacité de stockage, il est impossible de le déconstruire après l'avoir posés.",
+	"type": "CoreBlock",
+	"health": 500,
+	"size": 3,
+	"itemCapacity": 2500,
+	"requirements": [
+	    {
+			"item": "thorium",
+			"amount": 250
+		},
+		{
+			"item": "titanium",
+			"amount": 350
+		},
+		{
+			"item": "phase-fabric",
+			"amount": 350
+		}
+	],
+  "category": "effect",
+	"research": "vault"
+}

@@ -1,0 +1,6 @@
+type: OreBlock
+itemDrop: tsungtsene
+variant: 3
+oreDefault: true
+oreScale: 11.20
+oreThreshold: 0.850

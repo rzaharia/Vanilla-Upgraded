@@ -1,0 +1,13 @@
+name: Mending Wall
+description: A wall that can regenerate
+size: 1
+health: 420
+update: true 
+solid: true
+blockGround: walls
+requirements: [
+   obsidienne/12
+   emeraude/6
+]
+category: defense
+research: titanium-wall

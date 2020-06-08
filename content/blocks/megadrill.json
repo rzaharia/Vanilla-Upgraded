@@ -1,0 +1,40 @@
+{
+	"name": "Foreuse a implosion",
+	"description": "Une très grande foreuse pouvant miner le niobium.",
+	"type": "Drill",
+	"size": 5,
+	"tier": 6,
+	"drawRim": true,
+	"itemCapacity": 45,
+	"drillTime": 200,
+	"rotateSpeed": -5,
+	"consumes": {
+		"power": 8,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 0.5,
+			"booster": true,
+			"optional": true
+		},
+	},
+	"requirements": [
+	    {
+			"item": "titanium",
+			"amount": 200
+		},
+		{
+			"item": "silicon",
+			"amount": 200
+		},
+		{
+			"item": "thorium",
+			"amount": 200
+		},
+		{
+			"item": "plastanium",
+			"amount": 150
+		}
+	],
+	"category": "production",
+	"research": "blast-drill"
+}

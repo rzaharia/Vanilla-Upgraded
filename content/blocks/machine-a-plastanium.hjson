@@ -1,0 +1,29 @@
+type: GenericSmelter
+name: Compacteur Carbonique
+description: Une machine plus avancée que le compresseur a plastanium qui produit 3 de plastanium mais elle na pas besoin de pétrole.
+size: 5
+hasPower: true
+hasLiquids: false
+hasItems: true
+craftTime: 120
+updateEffect: smeltsmoke
+consumes: {
+  power: 3.5
+  items: {
+    items: [
+      titanium/4
+      coal/5
+    ]
+  }
+}
+requirements: [
+  silicon/160
+  titanium/160
+  graphite/120
+  lead/230
+]
+category: crafting
+research: plastanium-compressor
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: plastanium/3

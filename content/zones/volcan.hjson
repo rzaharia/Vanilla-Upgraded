@@ -1,0 +1,38 @@
+name: Le Volcan
+description: !Fait par Neutron! Ce Volcan est éteint mais il pourrait se réveiller a tout moment ! C'est aussi ici que vous trouverai du niobium.
+startingItems: [
+   copper/750
+   lead/750
+   graphite/500
+   silicon/500
+   metaglass/500
+   titanium/650
+]
+conditionWave: 10
+launchPeriod: 30
+requirements: [
+  {
+    type: ZoneWave
+    zone: tarFields
+    wave: 50
+  }
+  {
+    type: Unlock
+    block: megadrill
+  }
+  {
+    type: Unlock
+    block: cryofluidmixer
+  }
+]
+resources: [
+  copper
+  lead
+  titanium
+  scrap
+  coal
+  thorium
+  lithium
+  tsungtsene
+  niobium
+]

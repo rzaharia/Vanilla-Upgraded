@@ -3,8 +3,9 @@ update: true
 solid: true
 hasItems: true
 configurable: true
+localizedName: "Stop Time"
+description: "A player-activatable block that scatters bullets and stop time everywhere upon use."
 category: turret
-buildVisibility: sandboxOnly
 requirements: [
   surge-alloy/75,
   vibro-metall/30
@@ -12,7 +13,7 @@ requirements: [
 consumes: {
   items: {
     items: [
-      vibro-metall/10
+      silicon/10
     ]
   }
 }

@@ -1,3 +1,6 @@
+name: Thorium liquid
+description: Imaginer le thorium mais... liquide. Attention ! Exetrement explosif !
+temperature: 1
 viscosity: 0.8
 damage: 2
 explovisiness: 1.5
