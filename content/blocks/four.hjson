@@ -16,7 +16,7 @@ consumes: {
   liquid: slag/2
 }
 requirements: [
-  tsungtsene/150
+  tungstene/150
   copper/100
   lead/100
 ]
