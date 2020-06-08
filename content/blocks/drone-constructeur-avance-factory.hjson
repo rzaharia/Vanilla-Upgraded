@@ -12,8 +12,8 @@ consumes: {
     items: [
       graphite/30
       titanium/30
-	  lithium/30
-      tsungtsene/30
+      lithium/30
+      tungstene/30
     ]
   }
 }
