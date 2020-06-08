@@ -3,6 +3,13 @@ A mod that adds a lot more experience for the games!
 <br>Many new features will come in the next updates including original things made with script.
 <br>I just hope you enjoy the mod ^^
 
+#The mod add: 
+`Items`: 9
+`Blocks`: 44
+`Mechs`: 3
+`Liquids`: 2
+`Units`: 3
+
 # Bundle 
 English bundles have arrived! 
 <br>We have planned a Russian bundle.
