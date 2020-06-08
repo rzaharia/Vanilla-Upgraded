@@ -23,7 +23,7 @@ requirements: [
   lead/200
 ]
 category: crafting
-research: pyratite-mixer
+research: usinearesist
 idleSound: explosion
 idleSoundVolume: 0.5
 outputItem: aliage-supra/1
