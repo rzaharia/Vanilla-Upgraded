@@ -12,7 +12,6 @@ if(typeof(require) !== "undefined"){
 	require("reliefs");
 	require("reliefsel");
 	require("reliefsh");
-	require("testscript");
 	require("vib");
 	require("anti");
 	require("am");
