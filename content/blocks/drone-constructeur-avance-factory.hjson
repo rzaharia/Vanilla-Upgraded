@@ -21,7 +21,7 @@ category: units
 research: phantom-factory
 requirements: [
   copper/240
-  tsungtsene/300
+  tungstene/300
   titanium/500
   surge-alloy/100
 ]
