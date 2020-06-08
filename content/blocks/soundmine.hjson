@@ -1,6 +1,5 @@
 name: Sound mine
 description: Damages all units walking on it.
-
 hasShadow: false
 health: 210
 update: false
@@ -12,5 +11,5 @@ requirements: [
 	vibro-metall/8
 ]
 
-category: defense
+category: effect
 research: shock-mine
