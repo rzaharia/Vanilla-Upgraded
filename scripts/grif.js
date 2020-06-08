@@ -15,7 +15,7 @@ const Usineasupra = extendContent(GenericSmelter, "usineasupra", {
 	generateIcons: function(){
 	return [
 	//генерируем самую высокую картинку
-		Core.atlas.find("js?-Usineasupra-topB")
+		Core.atlas.find("js?-usineasupra-topB")
 	];},
 	
 //запускаем функцую рисования

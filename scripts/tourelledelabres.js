@@ -3,7 +3,7 @@ const explosionDamage = 400;
 
 const rot = [0, 1, 1, 0, 0, -1, -1, 0];
 
-const tourelleDelabres = extendContent(ItemTurret, "tourelle delabres", {
+const tourelleDelabres = extendContent(ItemTurret, "tourelle-delabres", {
 	update(tile) {
 		this.super$update(tile);
 		var near;
