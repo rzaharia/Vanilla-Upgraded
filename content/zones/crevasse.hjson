@@ -10,7 +10,7 @@ configureObjective:
   {
     //Mode: Attack
     type: Launched
-    zone: vrevasse
+    zone: crevasse
   }
 requirements: [
   {
