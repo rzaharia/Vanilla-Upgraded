@@ -36,6 +36,6 @@
         { "item": "silicon", "amount": 50 },
     ],
     "category": "turret",
-    "shootSound": "shoot",
+    "shootSound": "pan2",
     "research": "swarmer",
 }
