@@ -1,6 +1,4 @@
 type: BuilderDrone
-name: Drone Constructeur Avancé
-description: Une version plus avancé des drones constructeurs normaux.
 speed: 1.0
 drag: 0.125
 mass: 9
