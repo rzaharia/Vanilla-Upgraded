@@ -1,6 +1,4 @@
 {
-    "name": "MechDown",
-    "description": "La version mecha du fusion !",
     "speed": 0.35,
     "boostSpeed": 0.35,
     "itemCapacity": "100",
