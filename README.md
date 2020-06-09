@@ -5,9 +5,9 @@ A mod that adds a lot more experience for the games!
 
 # The mod add: 
 `Items`: 9
-<br>`Blocks`: 39
+<br>`Blocks`: 40
 <br>`Turrets`: 5
-<br>`Mechs`: 3
+<br>`Mechs`: 4
 <br>`Liquids`: 2
 <br>`Units`: 3
 <br>`Maps`: 6
