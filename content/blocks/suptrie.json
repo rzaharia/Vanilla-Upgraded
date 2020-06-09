@@ -1,15 +1,14 @@
 {
 	"type": "battery",
-	"name": "Très Grande Batterie",
 	"size": 6,
 	"health": 750,
 	"category": "power",
 	"requirements": [
-		{"item": "lead", "amount": 120},
-		{"item": "titanium", "amount": 100},
-		{"item": "silicon", "amount": 100},
-		{"item": "lithium", "amount": 100}
+		{"item": "lead", "amount": 800},
+		{"item": "thorium", "amount": 400},
+		{"item": "silicon", "amount": 600},
+		{"item": "lithium", "amount": 400}
 	],
-	"consumes": { "powerBuffered": 100000 },
+	"consumes": { "powerBuffered": 500000 },
 	"research": "battery-large"
 }
