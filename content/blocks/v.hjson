@@ -23,6 +23,6 @@ requirements: [
 ]
 category: crafting
 research: usinearesist
-idleSound: respawning
-idleSoundVolume: 0.5
+idleSound: v
+idleSoundVolume: 0.4
 outputItem: vibro-metall/1
