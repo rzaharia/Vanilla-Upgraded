@@ -1,5 +1,5 @@
 type: GroundUnit
-mspeed: 0.05
+speed: 0.05
 flying: false
 health: 100
 engineOffset: 5.5
