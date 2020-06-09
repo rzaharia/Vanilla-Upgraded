@@ -22,7 +22,7 @@ requirements: [
   aliage-resist/150
 ]
 category: crafting
-research: usinearesist
+research: usineasupra
 idleSound: v
 idleSoundVolume: 0.5
 outputItem: vibro-metall/1
