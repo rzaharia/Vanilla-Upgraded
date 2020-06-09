@@ -1,5 +1,3 @@
-name: Fusionneur à aliage-SupraConducteur
-description: Une machine qui fusionne le niobium et le titane pour pouvoir fabriquer de l'aliage-SupraConducteur.
 size: 5
 hasPower: true
 hasLiquids: false

@@ -1,7 +1,5 @@
 {
     "type": "ItemTurret",
-    "name": "Essaim type Mitrailleuse",
-    "description": "!idée de Senri! Une mitrailleuse d'élite avec beaucoup d'imprécision et qui fait peu de dégat !",
     "outlineIcon": false,
     "targetAir": true,
     "targetGround": true,

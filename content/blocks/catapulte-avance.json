@@ -1,7 +1,5 @@
 {
     "type": "MassDriver",
-    "name": "Catapulte améliorer",
-    "description": "Une catapulte électromagnétique qui est capable de lancer plus d'item et qui a plus de portée.",
     "health": 720,
     "requirements": [
         {"item": "lead", "amount": 250},

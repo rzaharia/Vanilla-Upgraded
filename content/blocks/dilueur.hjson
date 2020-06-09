@@ -1,5 +1,3 @@
-name: "Dilueur"
-description: "Transforme le liquide cryogénique et le thorium en thorium liquid"
 liquidCapacity: 50
 outputLiquid: {
   liquid: thorium-liquid

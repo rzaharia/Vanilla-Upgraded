@@ -1,6 +1,4 @@
 {
-	"localizedName": "Antim Ship Pad",
-	"description": "Provides transformation into a fast ship that shoots lasers.",
 	"size": 4,
 	"consumes": {
 		"power": 1.2

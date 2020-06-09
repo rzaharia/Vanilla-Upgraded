@@ -1,6 +1,4 @@
 type: GenericSmelter
-name: Mixeur à thorium
-description: Une machine couteuse mais qui permet de faire du thorium
 size: 3
 hasPower: true
 hasLiquids: false

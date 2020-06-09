@@ -1,6 +1,4 @@
 {
-	"name": "Foreuse a implosion",
-	"description": "Une très grande foreuse pouvant miner le niobium.",
 	"type": "Drill",
 	"size": 5,
 	"tier": 6,

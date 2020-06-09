@@ -1,5 +1,3 @@
-name: Mending Wall Large
-description: A wall that can regenerate more faster.
 health: 1680
 size: 2
 update: true 

@@ -1,5 +1,3 @@
-name: Usine a Teseus
-description: Creer de petit robot puissant
 type: UnitFactory
 unitType: teseus
 size: 2

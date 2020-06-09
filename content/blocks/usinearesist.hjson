@@ -1,5 +1,3 @@
-name: Compresseur à Aliage Résistant
-description: Une machine qui vient compressé le plomb et niobium pour les transformésen un aliage résistat
 size: 4
 hasPower: true
 hasLiquids: false

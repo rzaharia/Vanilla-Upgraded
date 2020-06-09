@@ -1,5 +1,3 @@
-name: Gigantesque mur d'aliage superchargé
-description: Un mur d'aliage superchagé plus résistant que jamais !
 type: SurgeWall
 lightningChance: 0.29
 lightningDamage: 24

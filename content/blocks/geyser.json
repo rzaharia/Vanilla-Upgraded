@@ -1,7 +1,5 @@
 {
   "type": "liquidTurret",
-  "name": "Geyser",
-  "Description": "Le Geyser est une la tourelle liquid plus avancé que la tourelle 'Vague' mais celle-ci peut tirer du thorium liquid !",
 	"health": 1700,
 	"size": 3,
 	"reload": 3,

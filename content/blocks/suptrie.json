@@ -1,14 +1,14 @@
 {
 	"type": "battery",
 	"size": 6,
-	"health": 750,
+	"health": 1500,
 	"category": "power",
 	"requirements": [
 		{"item": "lead", "amount": 800},
-		{"item": "thorium", "amount": 400},
-		{"item": "silicon", "amount": 600},
-		{"item": "lithium", "amount": 400}
+		{"item": "thorium", "amount": 600},
+		{"item": "silicon", "amount": 800},
+		{"item": "niobium", "amount": 600}
 	],
-	"consumes": { "powerBuffered": 500000 },
+	"consumes": { "powerBuffered": 1000000 },
 	"research": "battery-large"
 }

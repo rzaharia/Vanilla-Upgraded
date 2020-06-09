@@ -1,5 +1,3 @@
-name: Material melter
-description: A very powerful oven that can melt materials at over 5000 degrees!
 size: 2
 hasItem: true
 hasPower: true

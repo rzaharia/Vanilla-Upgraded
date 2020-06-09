@@ -1,5 +1,3 @@
-name: MechDown Pad
-description: Transformez-vous en l'un des plus puissant mécha ! Pour tirer (sur mobile) l'activation du controle par la souris et le clavier est obligatoire !
 type: MechPad
 mech: mechdown
 size: 3

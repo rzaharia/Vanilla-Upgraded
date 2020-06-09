@@ -1,5 +1,3 @@
-name: Usine a drone constructeur avancé.
-description: Une usine a drone qui vont vous assistez. Meilleur que les drones constructeur normaux.
 type: UnitFactory
 unitType: drone-constructeur-avance
 size: 4

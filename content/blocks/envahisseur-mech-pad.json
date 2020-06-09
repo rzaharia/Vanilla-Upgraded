@@ -1,6 +1,4 @@
 {
-	"localizedName": "Envahisseur Ship Pad",
-	"description": "Provides transformation into a fast ship that shoot envahisseurs bullet.",
 	"size": 5,
 	"consumes": {
 		"power": 1.2
