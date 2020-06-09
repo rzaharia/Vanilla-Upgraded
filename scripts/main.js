@@ -2,6 +2,7 @@ if(typeof(require) !== "undefined"){
 	require("tourelledelabres");
 	require("grif");
 	require("dd");
+	require("envahisseur");
 	require("com");
 	require("st");
 	require("soundmine");
@@ -12,11 +13,11 @@ if(typeof(require) !== "undefined"){
 	require("reliefs");
 	require("reliefsel");
 	require("reliefsh");
+	require("testscript");
 	require("vib");
 	require("anti");
 	require("am");
 	require("effectlib");
 	require("rturret");
 	require("funclib");
-        require("mendingwall");
 }

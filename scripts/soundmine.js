@@ -35,3 +35,5 @@ const sm = extendContent(ShockMine, "soundmine", {
         }
     }
 });
+
+sm.localizedName = "Shock Mine";

@@ -1,14 +1,14 @@
 {
-	"localizedName": "Antim Ship Pad",
-	"description": "Provides transformation into a fast ship that shoots lasers.",
-	"size": 4,
+	"localizedName": "Envahisseur Ship Pad",
+	"description": "Provides transformation into a fast ship that shoot envahisseurs bullet.",
+	"size": 5,
 	"consumes": {
 		"power": 1.2
 	},
 	"category": "upgrade",
-	"research": "omega-mech-pad",
+	"research": "antim-ship-pad",
 	"requirements": [
-		{ "item": "lead", "amount": 190 },
+		{ "item": "vibro-metall", "amount": 190 },
 		{ "item": "graphite", "amount": 150 },
 		{ "item": "silicon", "amount": 270 },
 		{ "item": "titanium", "amount": 280 },
