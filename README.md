@@ -13,7 +13,7 @@ A mod that adds a lot more experience for the games!
 <br>`Maps`: 6
 
 # Bundle 
-English bundles have arrived! 
+English bundle have arrived! 
 <br>We have planned a Russian bundle.
 <br>We plan to add bundles based on player requests. 
 
