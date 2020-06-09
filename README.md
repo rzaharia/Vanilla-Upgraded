@@ -18,7 +18,7 @@ English bundles have arrived!
 <br>We plan to add bundles based on player requests. 
 
 # Credits 
-Developers: `Mesokrix`
+Developer: `Mesokrix`
 <br>Co-Developers: `VozDuh` and `Summet#4530`
 <br>
 <br>External:
