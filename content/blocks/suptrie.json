@@ -9,6 +9,6 @@
 		{"item": "silicon", "amount": 800},
 		{"item": "niobium", "amount": 600}
 	],
-	"consumes": { "powerBuffered": 1000000 },
+	"consumes": { "powerBuffered": 500000},
 	"research": "battery-large"
 }
