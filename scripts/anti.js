@@ -7,7 +7,7 @@ const shipTrail = newEffect(44, e => {
 });
 
 const shipLight = newEffect(24, e => {
-	const lightRegion = Core.atlas.find("[cyan]vanilla-upgraded-antim-lights");
+	const lightRegion = Core.atlas.find("vanilla-upgraded-antim-lights");
 	
 	if(!Core.settings.getBool("bloom")){
 		Draw.blend(Blending.additive);
