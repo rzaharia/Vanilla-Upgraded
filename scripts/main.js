@@ -20,4 +20,5 @@ if(typeof(require) !== "undefined"){
 	require("effectlib");
 	require("rturret");
 	require("funclib");
+        require("mendingwall");
 }
