@@ -68,16 +68,15 @@
             "shootEffect": "explosion"
             "hitEffect": "bigShockwave",
         }
-        "vibro-metall": {
-            "type": "BasicBulletType",
-            "speed": 31,
+        "vibro": {
+            "speed": 30,
             "bulletHeight": 28,
-            "bulletWidth": 15,
+            "bulletWidth": 18,
             "lifetime": 100,
-            "damage": 125,
-            "knockback": 1.0,
-            "splashDamage": 25,
-            "splashDamageRadius": 100,
+            "damage": 175,
+            "knockback": 1.1,
+            "splashDamage": 20,
+            "splashDamageRadius": 70,
             "frontColor": "d49fb5",
             "backColor": "b08295",
             "shootEffect": "explosion",
