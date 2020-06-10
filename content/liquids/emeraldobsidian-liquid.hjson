@@ -1,6 +1,4 @@
-name: Emerald Obsidian Liquid
-description: A very cold liquid which after being melted at 5000 degrees, will serve for something more interesting
-temperature: 0.2
+heatCapacity: 1
 viscosity: 3
 explovisiness: 0
 effect: none
