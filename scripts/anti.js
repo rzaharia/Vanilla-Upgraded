@@ -1,49 +1,6 @@
 const antimGreen = Color.valueOf("ffffff");
 const lib = require("funclib");
 
-const antimShootEffect = newEffect(10, e => {
-	const vec1 = new Vec2();
-	const vec2 = new Vec2();
-	const vec3 = new Vec2();
-	
-	for(var i = 0; i < 7; i++){
-		var rndRot = Mathf.randomSeedRange(e.id + i, 45);
-		var rndRot2 = Mathf.randomSeedRange(e.id + 15 + i, 45);
-		var rndRot3 = Mathf.randomSeedRange(e.id + 30 + i, 45);
-		var rndRot4 = Mathf.randomSeedRange(e.id + 45 + i, 30);
-		var rndRange = Mathf.randomSeed(e.id + 7 + i, 25, 50) / 50;
-		var rndStroke = Mathf.randomSeed(e.id + 16 + i, 35, 50) / 50;
-		
-		vec1.trns(rndRot * e.fout() + (e.rotation + rndRot4), 15 * e.finpow() * rndRange);
-		vec2.trns(rndRot2 * e.fout() + (e.rotation + rndRot4), 30 * e.finpow() * rndRange);
-		vec3.trns(rndRot3 * e.fout() + (e.rotation + rndRot4), 45 * e.finpow() * rndRange);
-	
-		var posAx = e.x + vec1.x;
-		var posAy = e.y + vec1.y;
-	
-		var posBx = e.x + vec2.x;
-		var posBy = e.y + vec2.y;
-	
-		var posCx = e.x + vec3.x;
-		var posCy = e.y + vec3.y;
-	
-		Draw.color(antimGreen);
-		Lines.stroke((e.fout() * 2) * rndStroke);
-		Lines.curve(e.x, e.y, posAx, posAy, posBx, posBy, posCx, posCy, 16);
-	}
-});
-
-const changeTeamEffect = newEffect(15, e => {
-	Draw.color(antimGreen, Color.valueOf("a3e3ff00"), e.fin());
-	Fill.square(e.x, e.y, e.rotation * Vars.tilesize / 2);
-	
-	Draw.blend(Blending.additive);
-	Draw.color(antimGreen, Color.valueOf("2857ff"), e.fin());
-	Lines.stroke(e.fout() * 4);
-	Lines.square(e.x, e.y, (e.rotation * Vars.tilesize / 2) * e.fin());
-	Draw.blend();
-});
-
 const shipTrail = newEffect(44, e => {
 	Draw.color(antimGreen);
 	Fill.circle(e.x, e.y, 1.6 * e.fout());
@@ -105,7 +62,7 @@ const antimLaser = extend(BasicBulletType, {
 	}
 });
 antimLaser.speed = 0.001;
-antimLaser.damage = 150;
+antimLaser.damage = 50;
 antimLaser.hitEffect = Fx.hitFuse;
 antimLaser.despawnEffect = Fx.none;
 antimLaser.hitSize = 4;
@@ -118,7 +75,7 @@ antimLaser.smokeEffect = Fx.none;
 const pestilenceShot = extend(BasicBulletType, {});
 
 pestilenceShot.lifetime = 35;
-pestilenceShot.damage = 10;
+pestilenceShot.damage = 5;
 pestilenceShot.speed = 6.7;
 pestilenceShot.bulletWidth = 6;
 pestilenceShot.bulletHeight = 8.7;
@@ -158,7 +115,7 @@ pestilenceFly.pierce = true;
 pestilenceFly.collidesTiles = true;
 pestilenceFly.backColor = Color.valueOf("cbd97f");
 pestilenceFly.frontColor = Color.valueOf("edf3a9");
-pestilenceFly.damage = 56;
+pestilenceFly.damage = 6;
 pestilenceFly.speed = 3.5;
 pestilenceFly.bulletWidth = 7;
 pestilenceFly.bulletHeight = 10;
@@ -201,7 +158,7 @@ const antimBullet = extend(BasicBulletType, {
 	}
 });
 antimBullet.speed = 8;
-antimBullet.damage = 78;
+antimBullet.damage = 8;
 antimBullet.lifetime = 24;
 antimBullet.splashDamageRadius = 20;
 antimBullet.splashDamage = 8;
@@ -230,14 +187,14 @@ const antimSnake = extend(BasicBulletType, {
 	}
 });
 antimSnake.lifetime = 47;
-antimSnake.damage = 120;
+antimSnake.damage = 20;
 antimSnake.speed = 5.3;
 antimSnake.pierce = true;
 antimSnake.bulletWidth = 11;
 antimSnake.bulletHeight = 13;
 antimSnake.bulletSprite = "missile";
-antimSnake.backColor = Color.valueOf("cbd97f");
-antimSnake.frontColor = Color.valueOf("edf3a9");
+antimSnake.backColor = Color.valueOf("ffffff");
+antimSnake.frontColor = Color.valueOf("fffff1");
 
 const antimFinalEffect = extend(BasicBulletType, {
 	range: function(){
@@ -266,7 +223,7 @@ antimFinalEffect.collides = false;
 antimFinalEffect.instantDisappear = true;
 antimFinalEffect.keepVelocity = false;
 antimFinalEffect.despawnEffect = Fx.none;
-antimFinalEffect.shootEffect = antimShootEffect;
+antimFinalEffect.shootEffect = antimLaserShoot;
 antimFinalEffect.smokeEffect = Fx.none;
 
 const antimWeapon = extendContent(Weapon, "antim-weapon", {

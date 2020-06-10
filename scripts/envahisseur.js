@@ -100,7 +100,7 @@ const envahisseurBullet = extend(BasicBulletType, {
 	}
 });
 envahisseurBullet.speed = 8;
-envahisseurBullet.damage = 12;
+envahisseurBullet.damage = 2;
 envahisseurBullet.lifetime = 24;
 envahisseurBullet.splashDamageRadius = 20;
 envahisseurBullet.splashDamage = 8;
@@ -153,7 +153,7 @@ const unitEnvahisseurBullet = extend(BasicBulletType, {
 	}
 });
 unitEnvahisseurBullet.speed = 8;
-unitEnvahisseurBullet.damage = 12;
+unitEnvahisseurBullet.damage = 2;
 unitEnvahisseurBullet.lifetime = 24;
 unitEnvahisseurBullet.splashDamageRadius = 20;
 unitEnvahisseurBullet.splashDamage = 8;
@@ -209,7 +209,7 @@ const envahisseurBullett = extend(BasicBulletType, {
 	}
 });
 envahisseurBullett.speed = 8;
-envahisseurBullett.damage = 12;
+envahisseurBullett.damage = 2;
 envahisseurBullett.lifetime = 24;
 envahisseurBullett.splashDamageRadius = 20;
 envahisseurBullett.splashDamage = 8;
@@ -265,7 +265,7 @@ const unitEnvahisseurBullett = extend(BasicBulletType, {
 	}
 });
 unitEnvahisseurBullett.speed = 8;
-unitEnvahisseurBullett.damage = 12;
+unitEnvahisseurBullett.damage = 2;
 unitEnvahisseurBullett.lifetime = 24;
 unitEnvahisseurBullett.splashDamageRadius = 20;
 unitEnvahisseurBullett.splashDamage = 8;
@@ -289,7 +289,7 @@ const envahisseurFinalEffect = extend(BasicBulletType, {
 	draw: function(b){}
 });
 envahisseurFinalEffect.speed = 0.001;
-envahisseurFinalEffect.damage = 300;
+envahisseurFinalEffect.damage = 0;
 envahisseurFinalEffect.frags = [envahisseurBullet, unitEnvahisseurBullet, envahisseurBullett, unitEnvahisseurBullett];
 envahisseurFinalEffect.lifetime = 8;
 envahisseurFinalEffect.minRotation = 16;
@@ -335,7 +335,6 @@ const envahisseur = extendContent(Mech, "envahisseur", {
 			var sn = Mathf.signs[i];
 			vectA.trns(player.rotation - 90, 9.5 * sn, -3.75 + (shift * 2));
 			Effects.effect(shipTrail, player.x + vectA.x, player.y + vectA.y, (size + Mathf.absin(Time.time(), 2, size / 4)) / 2);
-			Effects.effect(envahisseurShootEffect, player.x + vectA.x, player.y + vectA.y, (size + Mathf.absin(Time.time(), 2, size / 4)) / 2);
 		};
 		vectA.trns(player.rotation + 90, 0, this.engineOffset - (shift * 2));
 		Effects.effect(shipTrail, player.x + vectA.x, player.y + vectA.y, (size + Mathf.absin(Time.time(), 2, size / 4)) / 2);
