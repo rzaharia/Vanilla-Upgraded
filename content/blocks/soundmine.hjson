@@ -5,7 +5,7 @@ destructible: true
 solid: false
 targetable: false
 requirements: [
-	vibro-metall/8
+	vibro/8
 ]
 
 category: effect

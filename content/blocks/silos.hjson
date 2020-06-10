@@ -7,12 +7,12 @@ buildVisibility: sandboxOnly
 category: turret
 requirements: [
   surge-alloy/75,
-  vibro-metall/30
+  vibro/30
 ]
 consumes: {
   items: {
     items: [
-      silicon/10
+      vibro/12
     ]
   }
 }

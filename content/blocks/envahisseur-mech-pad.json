@@ -6,7 +6,7 @@
 	"category": "upgrade",
 	"research": "antim-ship-pad",
 	"requirements": [
-		{ "item": "vibro-metall", "amount": 190 },
+		{ "item": "vibro", "amount": 190 },
 		{ "item": "graphite", "amount": 150 },
 		{ "item": "silicon", "amount": 270 },
 		{ "item": "titanium", "amount": 280 },
