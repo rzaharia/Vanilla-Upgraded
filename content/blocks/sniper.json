@@ -69,6 +69,7 @@
             "hitEffect": "bigShockwave",
         }
         "vibro": {
+            "type": "BasicBulletType",
             "speed": 30,
             "bulletHeight": 28,
             "bulletWidth": 18,
