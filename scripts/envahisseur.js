@@ -384,8 +384,6 @@ envahisseur.engineSize = 5;
 envahisseur.mineSpeed = 1.7;
 envahisseur.buildPower = 1.6;
 envahisseur.itemCapacity = 80;
-envahisseur.localizedName = "Envahisseur";
-envahisseur.description = "Shoots a bullet that turns weakened enemy blocks into your team.";
 
 const envahisseurPad = extendContent(MechPad, "envahisseur-mech-pad", {});
 
