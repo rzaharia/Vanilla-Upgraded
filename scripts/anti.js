@@ -228,7 +228,7 @@ antimFinalEffect.smokeEffect = Fx.none;
 
 const antimWeapon = extendContent(Weapon, "antim-weapon", {
 	load: function(){
-		this.region = Core.atlas.find("[cyan]vanilla-upgraded-antim-weapon");
+		this.region = Core.atlas.find("vanilla-upgraded-antim-weapon");
 	}
 });
 
@@ -292,8 +292,6 @@ anti.weapon = antimWeapon;
 anti.engineColor = antimGreen;
 anti.mineSpeed = 3.2;
 anti.buildPower = 1.2;
-anti.localizedName = "Antim";
-anti.description = "Shoot an armour piercing laser. can also create lightning at high speeds.";
 
 const antimPad = extendContent(MechPad, "antim-ship-pad", {});
 
