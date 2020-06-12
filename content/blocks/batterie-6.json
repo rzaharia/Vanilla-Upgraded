@@ -4,10 +4,10 @@
 	"health": 1500,
 	"category": "power",
 	"requirements": [
-		{"item": "lead", "amount": 800},
-		{"item": "thorium", "amount": 600},
-		{"item": "silicon", "amount": 800},
-		{"item": "niobium", "amount": 600}
+		{"item": "lead", "amount": 320},
+		{"item": "thorium", "amount": 160},
+		{"item": "silicon", "amount": 160},
+		{"item": "niobium", "amount": 160}
 	],
 	"consumes": { "powerBuffered": 500000},
 	"research": "battery-large"
