@@ -1,3 +1,4 @@
+![Logo](sprites-override/ui/logo.png)
 # Vanilla-Upgraded
 A mod that adds a lot more experience for the games!
 <br>Many new features will come in the next updates including original things made with script.
