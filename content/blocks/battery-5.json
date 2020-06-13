@@ -10,5 +10,5 @@
     {"item": "lithium", "amount": 80} 
   ], 
   "consumes": { "powerBuffered":  250000}, 
-  "research": "batterie-large" 
+  "research": "battery-large" 
 }
