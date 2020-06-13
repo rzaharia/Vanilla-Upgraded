@@ -1,0 +1,14 @@
+{ 
+  "type": "battery", 
+  "size": 5, 
+  "health": 1200, 
+  "category": "power", 
+  "requirements": [ 
+    {"item": "lead", "amount": 160}, 
+    {"item": "titanium", "amount": 80}, 
+    {"item": "silicon", "amount": 80}, 
+    {"item": "copper"/*"lithium"*/, "amount": 80} 
+  ], 
+  "consumes": { "powerBuffered":  250000}, 
+  "research": "batterie-4" 
+}
