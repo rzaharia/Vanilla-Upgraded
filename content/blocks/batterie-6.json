@@ -10,5 +10,5 @@
 		{"item": "niobium", "amount": 160}
 	],
 	"consumes": { "powerBuffered": 500000},
-	"research": "battery-large"
+	"research": "batterie-5"
 }
