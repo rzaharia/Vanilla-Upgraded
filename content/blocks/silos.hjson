@@ -4,6 +4,7 @@ solid: true
 hasItems: true
 configurable: true
 buildVisibility: sandboxOnly
+itemCapacity: 12
 category: turret
 requirements: [
   surge-alloy/75,
