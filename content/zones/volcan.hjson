@@ -1,3 +1,4 @@
+loadout: basicNucleus
 startingItems: [
    copper/750
    lead/750
@@ -7,6 +8,7 @@ startingItems: [
    titanium/650
 ]
 conditionWave: 10
+
 launchPeriod: 30
 requirements: [
   {
