@@ -5,7 +5,7 @@ health: 100
 engineOffset: 5.5
 range: 170
 weapon: {
-  name: Teseus-blaster
+  name: teseus-blaster
   lenght: 1.5
   reload: 35
   alternate: true
