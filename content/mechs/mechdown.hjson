@@ -14,7 +14,7 @@
         "lenght": 7,
         "shootSound":"corexplode",
         "shotDelay":0,
-        "name":"MechDown-blaster",
+        "name":"mechdown-blaster",
         "inaccuracy":0,
         "spacing":20,
         "velocityRnd":0,

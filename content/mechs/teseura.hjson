@@ -9,7 +9,7 @@ flying: false
 health: 350
 weaponOffsetX: 4
 weapon: {
-  name: Teseus-blaster
+  name: teseus-blaster
   length: 1.5
   reload: 15
   alternate: true
