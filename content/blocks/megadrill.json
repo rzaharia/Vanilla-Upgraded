@@ -5,6 +5,7 @@
 	"drawRim": true,
 	"itemCapacity": 45,
 	"drillTime": 200,
+	"liquidCapacity": 30,
 	"rotateSpeed": -5,
 	"consumes": {
 		"power": 8,
