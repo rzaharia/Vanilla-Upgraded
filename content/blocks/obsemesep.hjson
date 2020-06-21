@@ -7,7 +7,7 @@ updateEffect: smeltsmoke
 craftTime: 80
 consumes: {
   power: 5
-  liquid: emeraldobsidian-liquid/2
+  liquid: emeraldobsidian-liquid/0.1
 }
 requirements: [
   copper/200

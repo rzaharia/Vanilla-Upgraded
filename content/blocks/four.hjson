@@ -8,7 +8,7 @@ consumes: {
   power: 2
   items: {
     items: [
-      emeraldobsidian/2
+      emeraldobsidian/0.1
     ]
   }
   liquid: slag/2
