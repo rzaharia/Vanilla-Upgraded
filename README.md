@@ -4,7 +4,7 @@ A mod that adds a lot more experience for the games!
 <br>Many new features will come in the next updates including original things made with script.
 <br>I just hope you enjoy the mod ^^
 
-# The mod add: 
+## The mod add: 
 `Items`: 9
 <br>`Blocks`: 43
 <br>`Turrets`: 5
@@ -13,12 +13,12 @@ A mod that adds a lot more experience for the games!
 <br>`Units`: 3
 <br>`Maps`: 6
 
-# Bundle 
+## Bundle 
 English bundle have arrived! 
 <br>We have planned a Russian bundle.
 <br>We plan to add bundles based on player requests. 
 
-# Credits 
+## Credits 
 Developer: `Mesokrix`
 <br>Co-Developers: `VozDuh` and `Summet#4530`
 <br>
