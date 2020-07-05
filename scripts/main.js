@@ -1,24 +1,23 @@
 if(typeof(require) !== "undefined"){
+  //turret
 	require("tourelledelabres");
-	require("grif");
-	require("dd");
-	require("envahisseur");
-	require("com");
-	require("st");
-	require("soundmine");
-	require("reliefds");
-	require("reliefm");
-	require("reliefn");
-	require("reliefp");
-	require("reliefs");
-	require("reliefsel");
-	require("reliefsh");
-	require("testscript");
-	require("vib");
+  //walls
+  require("mendingwall");
 	require("anti");
+  //units
+  //mechas
+	require("envahisseur");
+  //power
+  //crafting
+	require("dd");
+	require("grif");
+	require("com");
 	require("am");
+	require("vib");
+	require("st");
+  //rest
+	require("soundmine");
+	require("relief");
 	require("effectlib");
-	require("rturret");
 	require("funclib");
-        require("mendingwall");
 }
