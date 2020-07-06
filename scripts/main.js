@@ -15,8 +15,9 @@ if(typeof(require) !== "undefined"){
 	require("am");
 	require("vib");
 	require("st");
-  //rest
+	//extras
 	require("soundmine");
+  //rest
 	require("relief");
 	require("effectlib");
 	require("funclib");
