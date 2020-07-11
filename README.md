@@ -18,11 +18,3 @@ English bundle have arrived!
 <br>We have planned a Russian bundle.
 <br>We plan to add bundles based on player requests. 
 
-## Credits 
-Developer: `Mesokrix`
-<br>Co-Developers: `VozDuh` and `Summet#4530`
-<br>
-<br>External:
-<br>Designer: `Valoche3000` and `Alexender`
-<br>Mapper: `Zerox`, `Pekka Angelo` and `Neutron`
-<br>Development aid: `Senri`, `Alexender` and `Pekka Angelo`
