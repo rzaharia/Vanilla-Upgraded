@@ -1,3 +1,4 @@
+![Logo](sprites-override/ui/logo.png)
 Co-Developers: `VozDuh` and `Summet#4530`
 
 External:
