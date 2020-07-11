@@ -1,5 +1,6 @@
 
-Co-Developers: `VozDuh` and `Summet#4530`
+
+-Developers: `VozDuh` and `Summet#4530`
 
 External:
 <br>Designer: `Valoche3000` and `Alexender`
