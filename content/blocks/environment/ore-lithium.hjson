@@ -1,6 +1,2 @@
 type: OreBlock
 itemDrop: lithium
-variant: 3
-oreDefault: true
-oreScale: 17.23
-oreThreshold: 0.800
