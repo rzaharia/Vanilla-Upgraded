@@ -13,7 +13,7 @@ consumes: {
       aliage-supra/10
     ]
   }
-  liquid: emeraldobsidian-liquid/1
+  liquid: oberald-liquid/1
 }
 requirements: [
   aliage-supra/300

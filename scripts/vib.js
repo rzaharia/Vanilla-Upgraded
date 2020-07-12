@@ -1,4 +1,4 @@
-const v = extendContent(GenericSmelter, "v", {
+const v = extendContent(GenericSmelter, "vobrotiniter", {
 	load(){
 		this.super$load();
 		
@@ -36,5 +36,5 @@ const v = extendContent(GenericSmelter, "v", {
 		Draw.rect(this.wheelRegion, tile.drawx(), tile.drawy(), tile.entity.totalProgress / 2);
 	},
 });
-v.craftTime = 380;
-v.update = true; 
+vobrotiniter.craftTime = 380;
+vobrotiniter.update = true; 

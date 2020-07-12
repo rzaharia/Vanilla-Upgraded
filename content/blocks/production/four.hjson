@@ -8,10 +8,10 @@ consumes: {
   power: 2
   items: {
     items: [
-      emeraldobsidian/0.1
+      oberald/2
     ]
   }
-  liquid: slag/2
+  liquid: slag/0.2
 }
 requirements: [
   tungstene/150
@@ -22,4 +22,4 @@ category: crafting
 research: melter
 idleSound: respawning
 idleSoundVolume: 0.5
-outputLiquid: emeraldobsidian-liquid/3
+outputLiquid: oberald-liquid/3
