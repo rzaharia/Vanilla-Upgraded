@@ -1,8 +1,0 @@
-type: Wall
-health: 390
-size: 1
-requirements: [
-   graphite/6
-]
-category: defense
-research: copper-wall-large

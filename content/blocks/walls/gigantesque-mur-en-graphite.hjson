@@ -1,8 +1,0 @@
-type: Wall
-health: 6240
-size: 4
-requirements: [
-   graphite/245
-]
-category: defense
-research: grand-mur-en-graphite

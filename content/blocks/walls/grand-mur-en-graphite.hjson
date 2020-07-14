@@ -1,8 +1,0 @@
-type: Wall
-health: 1560
-size: 2
-requirements: [
-   graphite/24
-]
-category: defense
-research: mur-en-graphite
