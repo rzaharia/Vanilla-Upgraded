@@ -42,8 +42,8 @@ const mendingWall = extendContent(Block, "mendingwall", {
       this.requirements(
         Category.defense, 
         ItemStack.with(
-          Vars.content.getByName(ContentType.item, "dev-obsidienne"), 12,
-          Vars.content.getByName(ContentType.item, "dev-emeraude"), 6
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 12,
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 6
         )
       );
     this.super$init();
@@ -68,8 +68,8 @@ const mendingWallLarge = extendContent(Block, "mendingwalllarge", {
       this.requirements(
         Category.defense, 
         ItemStack.with(
-          Vars.content.getByName(ContentType.item, "dev-obsidienne"), 24,
-          Vars.content.getByName(ContentType.item, "dev-emeraude"), 12
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 24,
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 12
         )
       );
     this.super$init();
@@ -94,8 +94,8 @@ const ImmenseMendingWall = extendContent(Block, "immensemendingwall", {
       this.requirements(
         Category.defense, 
         ItemStack.with(
-          Vars.content.getByName(ContentType.item, "dev-obsidienne"), 30,
-          Vars.content.getByName(ContentType.item, "dev-emeraude"), 18
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 30,
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 18
         )
       );
     this.super$init();
@@ -120,8 +120,8 @@ const GiganticMendingWall = extendContent(Block, "giganticmendingwall", {
       this.requirements(
         Category.defense, 
         ItemStack.with(
-          Vars.content.getByName(ContentType.item, "dev-obsidienne"), 42,
-          Vars.content.getByName(ContentType.item, "dev-emeraude"), 30
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 42,
+          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 30
         )
       );
     this.super$init();
