@@ -89,7 +89,7 @@ mendingWallLarge.solid = true;
 mendingWallLarge.blockGround = BlockGroup.walls;
 TechTree.create(mendingWall, mendingWallLarge);
 
-const ImmenseMendingWall = extendContent(Block, "ImmenseMendingWall", {
+const ImmenseMendingWall = extendContent(Block, "immensemendingwall", {
     init(){
       this.requirements(
         Category.defense, 
@@ -115,7 +115,7 @@ ImmenseMendingWall.solid = true;
 ImmenseMendingWall.blockGround = BlockGroup.walls;
 TechTree.create(mendingWallLarge, ImmenseMendingWall);
 
-const GiganticMendingWall = extendContent(Block, "GiganticMendingWall", {
+const GiganticMendingWall = extendContent(Block, "giganticmendingwall", {
     init(){
       this.requirements(
         Category.defense, 
