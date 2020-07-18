@@ -1,4 +1,4 @@
-const v = extendContent(GenericSmelter, "vobrotiniter", {
+const vobrotiniter = extendContent(GenericSmelter, "vobrotiniter", {
 	load(){
 		this.super$load();
 		
