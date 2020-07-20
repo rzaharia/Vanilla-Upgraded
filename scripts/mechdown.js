@@ -19,7 +19,7 @@ const mechLaser = extend(BasicBulletType, {
 		}
 	},
 	
-	draw: function(b){
+	draw(b){
 		const colors = [Color.valueOf("ec745855"), Color.valueOf("ec7458aa"), Color.valueOf("ff9c5a"), Color.white];
 		const tscales = [1, 0.7, 0.5, 0.2];
 		const strokes = [2, 1.5, 1, 0.3];
@@ -48,7 +48,11 @@ mechLaser.despawnEffect = Fx.none;
 mechLaser.shootEffect = Fx.shootBigSmoke2;
 mechLaser.smokeEffect = Fx.none;
 
-const mechDownEquip = extendContent(Weapon, "mechdown-blaster", {});
+const mechDownEquip = extendContent(Weapon, "mechdown-blaster", {
+  load(){
+    this.region = Core.atlas.find("vanilla-upgraded-mechdown-blaster");
+  }
+});
 mechDownEquip.lenght = 7;
 mechDownEquip.shootSound = Sounds.corexplode;
 mechDownEquip.shotDelay = 0;
