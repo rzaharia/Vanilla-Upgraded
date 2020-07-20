@@ -1,14 +1,15 @@
 if(typeof(require) !== "undefined"){
-  //turret
+  	//turret
 	require("tourelledelabres");
-  //walls
-  require("mendingwall");
-	require("anti");
-  //units
-  //mechas
+  	//walls
+  	require("mendingwall");
+ 	//units
+  	//mechas
 	require("envahisseur");
-  //power
-  //crafting
+	require("anti");
+	require("mechdown");
+  	//power
+  	//crafting
 	require("dd");
 	require("grif");
 	require("com");
@@ -17,7 +18,7 @@ if(typeof(require) !== "undefined"){
 	require("st");
 	//extras
 	require("soundmine");
-  //rest
+  	//rest
 	require("relief");
 	require("effectlib");
 	require("funclib");
