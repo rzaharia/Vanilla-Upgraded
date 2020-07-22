@@ -1,0 +1,8 @@
+type: Door
+size: 4
+requirements: [
+  graphite/140
+  silicon/60
+]
+category: defense
+research: door

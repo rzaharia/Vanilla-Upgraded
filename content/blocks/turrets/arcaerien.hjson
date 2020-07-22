@@ -1,0 +1,27 @@
+type: ChargeTurret
+category: turret
+range: 140
+chargeTime: 20
+shootType: arc
+recoilAmount: 2
+reload: 60
+shots: 2
+cooldown: 0.03
+powerUse: 2
+shootShake: 5
+shootEffect: lancerLaserShoot
+smokeEffect: lancerLaserShootSmoke
+chargeEffect: lancerLaserCharge
+chargeBeginEffect: lancerLaserChargeBegin
+size: 2
+health: 670
+targetAir: true
+targetGround: false
+heatColor: 000e78
+shootSound: spark
+research: arc
+requirements: [
+  copper/80
+  lead/70
+  silicon/70
+]

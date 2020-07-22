@@ -1,0 +1,31 @@
+type: MendProjector
+health: 960
+size: 3
+hasPower: true
+baseColor: "84f491"
+phaseColor: "ffd59e"
+healPercent: 24
+phaseBoost: 6
+range: 135
+reload: 300
+phaseRangeBoost: 30
+itemCapacity: 20
+useTime: 450
+consumes: {
+  power: 3
+  items: {
+    items: [
+      phase-fabric/2
+    ]
+    booster: true
+    optional: true
+  }
+}
+requirements: [
+  lead/200
+  titanium/50
+  silicon/80
+  lithium/110
+]
+category: effect
+research: mend-projector

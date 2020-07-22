@@ -1,4 +1,4 @@
-const antimGreen = Color.valueOf("ffffff");
+const antimGreen = Color.valueOf("000000");
 const lib = require("funclib");
 
 const shipTrail = newEffect(44, e => {
@@ -15,7 +15,7 @@ const shipLight = newEffect(24, e => {
 		Draw.rect(lightRegion, e.x, e.y, e.rotation - 90);
 		Draw.blend();
 	}else{
-		Draw.mixcol(Color.valueOf("ffffff"), 1);
+		Draw.mixcol(Color.valueOf("000000"), 1);
 		Draw.alpha(e.fout());
 		Draw.rect(lightRegion, e.x, e.y, e.rotation - 90);
 	}
@@ -79,8 +79,8 @@ pestilenceShot.damage = 5;
 pestilenceShot.speed = 6.7;
 pestilenceShot.bulletWidth = 6;
 pestilenceShot.bulletHeight = 8.7;
-pestilenceShot.backColor = Color.valueOf("cbd97f");
-pestilenceShot.frontColor = Color.valueOf("edf3a9");
+pestilenceShot.backColor = Color.valueOf("000000");
+pestilenceShot.frontColor = Color.valueOf("000000");
 pestilenceShot.hitEffect = Fx.hitBulletSmall;
 
 const pestilenceFly = extend(MissileBulletType, {
@@ -113,8 +113,8 @@ pestilenceFly.homingRange = 110;
 pestilenceFly.lifetime = 90;
 pestilenceFly.pierce = true;
 pestilenceFly.collidesTiles = true;
-pestilenceFly.backColor = Color.valueOf("cbd97f");
-pestilenceFly.frontColor = Color.valueOf("edf3a9");
+pestilenceFly.backColor = Color.valueOf("000000");
+pestilenceFly.frontColor = Color.valueOf("000000");
 pestilenceFly.damage = 6;
 pestilenceFly.speed = 3.5;
 pestilenceFly.bulletWidth = 7;
@@ -137,7 +137,7 @@ const antimBullet = extend(BasicBulletType, {
 		Draw.reset();*/
 		
 		const lengthB = 8;
-		const colors = [Color.valueOf("a3e3ff80"), Color.valueOf("a3e3ff"), Color.valueOf("ffffff")];
+		const colors = [Color.valueOf("ffffff"), Color.valueOf("7F7F7F"), Color.valueOf("000000")];
 		const tscales = [1, 0.8, 0.6];
 		const strokes = [1.13, 0.6, 0.28];
 		const lenscales = [1.0, 1.61, 1.97];
@@ -193,8 +193,8 @@ antimSnake.pierce = true;
 antimSnake.bulletWidth = 11;
 antimSnake.bulletHeight = 13;
 antimSnake.bulletSprite = "missile";
-antimSnake.backColor = Color.valueOf("ffffff");
-antimSnake.frontColor = Color.valueOf("fffff1");
+antimSnake.backColor = Color.valueOf("000000");
+antimSnake.frontColor = Color.valueOf("000000");
 
 const antimFinalEffect = extend(BasicBulletType, {
 	range: function(){

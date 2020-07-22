@@ -1,25 +1,73 @@
-const primeColor = Color.valueOf("a3e3ff");
+const primeColor = Color.valueOf("000000");
 const lib = require("funclib");
+const elib = require("effectlib");
+
+const shipLight = newEffect(24, e => {
+	const lightRegion = Core.atlas.find("vanilla-upgraded-envahisseur-lights");
+	
+	if(!Core.settings.getBool("bloom")){
+		Draw.blend(Blending.additive);
+		Draw.color(Color.valueOf("FFD9C4"), Color.valueOf("36080230"), e.fin());
+		Draw.rect(lightRegion, e.x, e.y, e.rotation - 90);
+		Draw.blend();
+	}else{
+		Draw.mixcol(Color.valueOf("000000"), 1);
+		Draw.alpha(e.fout());
+		Draw.rect(lightRegion, e.x, e.y, e.rotation - 90);
+	}
+});
 
 const changeTeamEffect = newEffect(15, e => {
-	Draw.color(primeColor, Color.valueOf("a3e3ff00"), e.fin());
+	Draw.color(primeColor, Color.valueOf("ffffff"), e.fin());
 	Fill.square(e.x, e.y, e.rotation * Vars.tilesize / 2);
 	
 	Draw.blend(Blending.additive);
-	Draw.color(primeColor, Color.valueOf("2857ff"), e.fin());
+	Draw.color(primeColor, Color.valueOf("000000"), e.fin());
 	Lines.stroke(e.fout() * 4);
 	Lines.square(e.x, e.y, (e.rotation * Vars.tilesize / 2) * e.fin());
 	Draw.blend();
 });
 
+const corruptEffect = newEffect(18, e => {
+	Draw.color(Color.valueOf("000000"), Color.white, e.fin());
+	
+	Fill.square(e.x, e.y, 0.1 + e.fout() * 2.8, 45);
+});
+
+const corrupted = new StatusEffect("corrupted");
+corrupted.speedMultiplier = 0.95;
+corrupted.armorMultiplier = 0.333;
+corrupted.damageMultiplier = 0.5;
+corrupted.effect = corruptEffect;
+
+const changeTeam = elib.newEffectWDraw(78, 512, e => {
+	const type = e.data.getType();
+	const base = e.data;
+	const vec = new Vec2();
+	
+	Draw.blend(Blending.additive);
+	Draw.alpha(e.fout());
+	Draw.mixcol(Color.valueOf("000000"), 1);
+	Draw.rect(type.region, base.x, base.y, base.rotation - 90);
+	
+	Draw.reset();
+	Draw.blend();
+});
+
+const convertDamage = newEffect(67, e => {
+	Draw.blend(Blending.additive);
+	Draw.color(Color.valueOf("000000"), Color.valueOf("ffffff"), e.fin());
+	Fill.square(e.x, e.y, (7 * Vars.tilesize / 2));
+	
+	Draw.reset();
+	Draw.blend();
+});
+
 const shipTrail = newEffect(39, e => {
 	Draw.blend(Blending.additive);
-	Draw.color(Color.valueOf("59a7ff"), Color.valueOf("2857ff"), e.fin());
+	Draw.color(Color.valueOf("000000"), Color.valueOf("ffffff"), e.fin());
 	Fill.circle(e.x, e.y, ((2 * e.fout()) * e.rotation) / 1.7);
 	Draw.blend();
-	
-	//Draw.color(Color.valueOf("ffffff"));
-	//Fill.circle(e.x, e.y, (1 * e.fout()) * (e.rotation / 1.3));
 });
 
 const envahisseurShootEffect = newEffect(10, e => {
@@ -55,113 +103,164 @@ const envahisseurShootEffect = newEffect(10, e => {
 });
 
 const envahisseurBullet = extend(BasicBulletType, {
-	hitUnit: function(b, unit){
-		this.hit(b);
-		if(unit.entity != null){
-			if(unit.entity.health() < unit.entity.maxHealth() * 0.1){
-				unit.setTeam(b.getTeam());
-				if(unit.block() != null){
-					Effects.effect(changeTeamEffect, unit.drawx(), unit.drawy(), unit.block().size);
-				}
-			};
-			//print(tile.entity.health());
-			//print(tile.entity.maxHealth() / 90)
-		}
-		//tile.setTeam(b.getTeam());
+	update: function(b){
+		Effects.shake(1.2, 1.2, b.x, b.y);
+		if(b.timer.get(1, 17)){
+			this.scanUnits(b);
+			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 170.0, false);
+		};
 	},
-	
-	draw: function(b){
-		/*Draw.color(primeColor);
-		Lines.stroke(2);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 9);
-		Draw.color(Color.white);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 4);
-		Draw.reset();*/
-		
-		const lengthB = 8;
-		const colors = [Color.valueOf("ffffff"), Color.valueOf("F4E8E8"), Color.valueOf("DCC6C6")];
-		const tscales = [1, 0.8, 0.6];
-		const strokes = [1.13, 0.6, 0.28];
-		const lenscales = [1.0, 1.61, 1.97];
-		const tmpColor = new Color();
 
-		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+	scanUnits: function(b){
+		const vec = new Vec2();
+		
+		for(var i = 0; i < this.searchAccuracy; i++){
+			vec.trns(b.rot(), (this.lengthB / this.searchAccuracy) * i);
+			vec.add(b.x, b.y);
+			
+			var radius = (this.lengthB / this.searchAccuracy) * 2;
+			
+			Units.nearbyEnemies(b.getTeam(), vec.x - radius, vec.y - radius, radius * 2, radius * 2, cons(unit => {
+				if(unit != null){
+					if(Mathf.within(vec.x, vec.y, unit.x, unit.y, radius) && unit.getTeam() != b.getTeam() && unit instanceof BaseUnit && !unit.isDead()){
+						if(unit.health() < Math.max(unit.maxHealth() * 0.05, 85)){
+							var lastUnit = unit;
+							unit.kill();
+							var newUnit = lastUnit.getType().create(b.getTeam());
+							newUnit.set(lastUnit.x, lastUnit.y);
+							newUnit.rotation = lastUnit.rotation;
+							newUnit.add();
+							newUnit.health(lastUnit.health());
+							newUnit.applyEffect(corrupted, Number.MAX_VALUE);
+							newUnit.velocity().set(lastUnit.velocity());
+							Effects.effect(changeTeam, newUnit.x, newUnit.y, newUnit.rotation, newUnit);
+						}
+					}
+				}
+			}));
+		}
+	},
+
+	range: function(){
+		return 190.0;
+	},
+
+	hit: function(b, hitx, hity){
+		if(hitx != null && hity != null){
+			Effects.effect(this.hitEffect, hitx, hity);
+		}
+	},
+
+	draw: function(b){
+		const colors = [primeColor.cpy().mul(1.0, 1.0, 1.0, 0.4), primeColor, Color.white];
+		const tscales = [1.0, 0.7, 0.5, 0.2];
+		const lenscales = [1, 1.1, 1.13, 1.14];
+		const length = 170.0;
+		const f = Mathf.curve(b.fin(), 0.0, 0.2);
+		const baseLen = length * f;
+
 		for(var s = 0; s < 3; s++){
-			//Draw.color(colors[s]);
-			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
-			for(var i = 0; i < 3; i++){
-				Lines.stroke((3 + Mathf.absin(Time.time(), 3.2, 1)) * strokes[s] * tscales[i]);
-				Tmp.v1.trns(b.rot() + 180, lengthB * lenscales[i] / 2);
-				//Lines.lineAngleCenter(b.x, b.y, b.rot(), 5 * lenscales[i]);
-				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), lengthB * lenscales[i], CapStyle.none);
+			Draw.color(colors[s]);
+			for(var i = 0; i < 4; i++){
+				Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
+				Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
 			}
 		};
 		Draw.reset();
 	}
 });
-envahisseurBullet.speed = 8;
-envahisseurBullet.damage = 2;
-envahisseurBullet.lifetime = 24;
-envahisseurBullet.splashDamageRadius = 20;
-envahisseurBullet.splashDamage = 8;
-envahisseurBullet.hitSize = 8;
-envahisseurBullet.bulletWidth = 7;
-envahisseurBullet.bulletHeight = 9;
-envahisseurBullet.bulletShrink = 0;
-envahisseurBullet.keepVelocity = true;
+envahisseurBullet.lengthB = 210;
+envahisseurBullet.searchAccuracy = 64;
+envahisseurBullet.speed = 0.001;
+envahisseurBullet.damage = 40;
+envahisseurBullet.hitEffect = Fx.hitFuse;
+envahisseurBullet.despawnEffect = Fx.none;
+envahisseurBullet.hitSize = 4;
+envahisseurBullet.lifetime = 11;
+envahisseurBullet.keepVelocity = false;
+envahisseurBullet.pierce = true;
+envahisseurBullet.shootEffect = Fx.none;
+envahisseurBullet.smokeEffect = Fx.none;
 
 const unitEnvahisseurBullet = extend(BasicBulletType, {
-	hitUnit: function(b, unit){
-		this.hit(b);
-		if(unit.entity != null){
-			if(unit.entity.health() < unit.entity.maxHealth() * 0.5){
-				unit.setTeam(b.getTeam());
-			};
-			//print(tile.entity.health());
-			//print(tile.entity.maxHealth() / 90)
-		}
-		//tile.setTeam(b.getTeam());
+	update: function(b){
+		Effects.shake(1.2, 1.2, b.x, b.y);
+		if(b.timer.get(1, 17)){
+			this.scanUnits(b);
+			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 170.0, false);
+		};
 	},
-	
-	draw: function(b){
-		/*Draw.color(primeColor);
-		Lines.stroke(2);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 9);
-		Draw.color(Color.white);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 4);
-		Draw.reset();*/
-		
-		const lengthB = 8;
-		const colors = [Color.valueOf("ffffff"), Color.valueOf("F4E8E8"), Color.valueOf("DCC6C6")];
-		const tscales = [1, 0.8, 0.6];
-		const strokes = [1.13, 0.6, 0.28];
-		const lenscales = [1.0, 1.61, 1.97];
-		const tmpColor = new Color();
 
-		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+	scanUnits: function(b){
+		const vec = new Vec2();
+		
+		for(var i = 0; i < this.searchAccuracy; i++){
+			vec.trns(b.rot(), (this.lengthB / this.searchAccuracy) * i);
+			vec.add(b.x, b.y);
+			
+			var radius = (this.lengthB / this.searchAccuracy) * 2;
+			
+			Units.nearbyEnemies(b.getTeam(), vec.x - radius, vec.y - radius, radius * 2, radius * 2, cons(unit => {
+				if(unit != null){
+					if(Mathf.within(vec.x, vec.y, unit.x, unit.y, radius) && unit.getTeam() != b.getTeam() && unit instanceof BaseUnit && !unit.isDead()){
+						if(unit.health() < Math.max(unit.maxHealth() * 0.05, 85)){
+							var lastUnit = unit;
+							unit.kill();
+							var newUnit = lastUnit.getType().create(b.getTeam());
+							newUnit.set(lastUnit.x, lastUnit.y);
+							newUnit.rotation = lastUnit.rotation;
+							newUnit.add();
+							newUnit.health(lastUnit.health());
+							newUnit.applyEffect(corrupted, Number.MAX_VALUE);
+							newUnit.velocity().set(lastUnit.velocity());
+							Effects.effect(changeTeam, newUnit.x, newUnit.y, newUnit.rotation, newUnit);
+						}
+					}
+				}
+			}));
+		}
+	},
+
+	range: function(){
+		return 190.0;
+	},
+
+	hit: function(b, hitx, hity){
+		if(hitx != null && hity != null){
+			Effects.effect(this.hitEffect, hitx, hity);
+		}
+	},
+
+	draw: function(b){
+		const colors = [primeColor.cpy().mul(1.0, 1.0, 1.0, 0.4), primeColor, Color.white];
+		const tscales = [1.0, 0.7, 0.5, 0.2];
+		const lenscales = [1, 1.1, 1.13, 1.14];
+		const length = 170.0;
+		const f = Mathf.curve(b.fin(), 0.0, 0.2);
+		const baseLen = length * f;
+
 		for(var s = 0; s < 3; s++){
-			//Draw.color(colors[s]);
-			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
-			for(var i = 0; i < 3; i++){
-				Lines.stroke((3 + Mathf.absin(Time.time(), 3.2, 1)) * strokes[s] * tscales[i]);
-				Tmp.v1.trns(b.rot() + 180, lengthB * lenscales[i] / 2);
-				//Lines.lineAngleCenter(b.x, b.y, b.rot(), 5 * lenscales[i]);
-				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), lengthB * lenscales[i], CapStyle.none);
+			Draw.color(colors[s]);
+			for(var i = 0; i < 4; i++){
+				Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
+				Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
 			}
 		};
 		Draw.reset();
 	}
 });
-unitEnvahisseurBullet.speed = 8;
-unitEnvahisseurBullet.damage = 2;
-unitEnvahisseurBullet.lifetime = 24;
-unitEnvahisseurBullet.splashDamageRadius = 20;
-unitEnvahisseurBullet.splashDamage = 8;
-unitEnvahisseurBullet.hitSize = 8;
-unitEnvahisseurBullet.bulletWidth = 7;
-unitEnvahisseurBullet.bulletHeight = 9;
-unitEnvahisseurBullet.bulletShrink = 0;
-unitEnvahisseurBullet.keepVelocity = true;
+unitEnvahisseurBullet.lengthB = 210;
+unitEnvahisseurBullet.searchAccuracy = 64;
+unitEnvahisseurBullet.speed = 0.001;
+unitEnvahisseurBullet.damage = 40;
+unitEnvahisseurBullet.hitEffect = Fx.hitFuse;
+unitEnvahisseurBullet.despawnEffect = Fx.none;
+unitEnvahisseurBullet.hitSize = 4;
+unitEnvahisseurBullet.lifetime = 11;
+unitEnvahisseurBullet.keepVelocity = false;
+unitEnvahisseurBullet.pierce = true;
+unitEnvahisseurBullet.shootEffect = Fx.none;
+unitEnvahisseurBullet.smokeEffect = Fx.none;
 
 const envahisseurBullett = extend(BasicBulletType, {
 	hitTile: function(b, tile){
@@ -173,35 +272,22 @@ const envahisseurBullett = extend(BasicBulletType, {
 					Effects.effect(changeTeamEffect, tile.drawx(), tile.drawy(), tile.block().size);
 				}
 			};
-			//print(tile.entity.health());
-			//print(tile.entity.maxHealth() / 90)
 		}
-		//tile.setTeam(b.getTeam());
 	},
 	
-	draw: function(b){
-		/*Draw.color(primeColor);
-		Lines.stroke(2);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 9);
-		Draw.color(Color.white);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 4);
-		Draw.reset();*/
-		
+	draw: function(b){	
 		const lengthB = 8;
-		const colors = [Color.valueOf("ffffff"), Color.valueOf("F4E8E8"), Color.valueOf("DCC6C6")];
+		const colors = [Color.valueOf("ffffff"), Color.valueOf("7F7F7F"), Color.valueOf("000000")];
 		const tscales = [1, 0.8, 0.6];
 		const strokes = [1.13, 0.6, 0.28];
 		const lenscales = [1.0, 1.61, 1.97];
 		const tmpColor = new Color();
 
-		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
 		for(var s = 0; s < 3; s++){
-			//Draw.color(colors[s]);
 			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
 			for(var i = 0; i < 3; i++){
 				Lines.stroke((3 + Mathf.absin(Time.time(), 3.2, 1)) * strokes[s] * tscales[i]);
 				Tmp.v1.trns(b.rot() + 180, lengthB * lenscales[i] / 2);
-				//Lines.lineAngleCenter(b.x, b.y, b.rot(), 5 * lenscales[i]);
 				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), lengthB * lenscales[i], CapStyle.none);
 			}
 		};
@@ -229,35 +315,22 @@ const unitEnvahisseurBullett = extend(BasicBulletType, {
 					Effects.effect(changeTeamEffect, tile.drawx(), tile.drawy(), tile.block().size);
 				}
 			};
-			//print(tile.entity.health());
-			//print(tile.entity.maxHealth() / 90)
 		}
-		//tile.setTeam(b.getTeam());
 	},
 	
 	draw: function(b){
-		/*Draw.color(primeColor);
-		Lines.stroke(2);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 9);
-		Draw.color(Color.white);
-		Lines.lineAngleCenter(b.x, b.y, b.rot(), 4);
-		Draw.reset();*/
-		
 		const lengthB = 8;
-		const colors = [Color.valueOf("ffffff"), Color.valueOf("F4E8E8"), Color.valueOf("DCC6C6")];
+		const colors = [Color.valueOf("ffffff"), Color.valueOf("7F7F7F"), Color.valueOf("000000")];
 		const tscales = [1, 0.8, 0.6];
 		const strokes = [1.13, 0.6, 0.28];
 		const lenscales = [1.0, 1.61, 1.97];
 		const tmpColor = new Color();
 
-		//Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
 		for(var s = 0; s < 3; s++){
-			//Draw.color(colors[s]);
 			Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.5, 0.1)));
 			for(var i = 0; i < 3; i++){
 				Lines.stroke((3 + Mathf.absin(Time.time(), 3.2, 1)) * strokes[s] * tscales[i]);
 				Tmp.v1.trns(b.rot() + 180, lengthB * lenscales[i] / 2);
-				//Lines.lineAngleCenter(b.x, b.y, b.rot(), 5 * lenscales[i]);
 				Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), lengthB * lenscales[i], CapStyle.none);
 			}
 		};
@@ -359,10 +432,11 @@ const envahisseur = extendContent(Mech, "envahisseur", {
 		};
 		
 		Draw.color(Color.black, Color.white, health + Mathf.absin(Time.time(), health * 5.0, 1.0 - health));
-		Draw.blend(Blending.additive);
-		Draw.rect(this.lightRegion, player.x, player.y, player.rotation - 90);
-		Draw.blend();
-		Draw.reset();
+		Draw.color();
+		if(player.getTimer().get(5, 1)){
+			vectA.trns(player.velocity().angle() - 90, 0, shift * 2);
+			Effects.effect(shipLight, player.x + vectA.x + Mathf.range(1.0), player.y + vectA.y + Mathf.range(1.0), player.rotation);
+		};
 	}
 });
 
@@ -388,5 +462,4 @@ envahisseur.itemCapacity = 80;
 const envahisseurPad = extendContent(MechPad, "envahisseur-mech-pad", {});
 
 envahisseurPad.mech = envahisseur;
-envahisseurPad.buildTime = 1;
 envahisseurPad.buildTime = 700;
