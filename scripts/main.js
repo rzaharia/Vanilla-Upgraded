@@ -5,6 +5,7 @@ if(typeof(require) !== "undefined"){
   require("volcano");
   require("endduo");
   require("tourelledelabres");
+  require("blizzard");
   //units
   require("explocryo");
   require("bigheal");
