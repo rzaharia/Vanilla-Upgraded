@@ -24,6 +24,6 @@ requirements: [
 ]
 category: crafting
 research: usineasupra
-idleSound: v
-idleSoundVolume: 0.3
+idleSound: respawning
+idleSoundVolume: 0.5
 outputItem: vibro/1
