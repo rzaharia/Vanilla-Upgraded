@@ -90,6 +90,6 @@
         { "item": "titanium", "amount": 150 },
     ],
     "category": "turret",
-    "shootSound": "explosion",
+    "shootSound": "snipershots",
     "research": "swarmer",
 }
