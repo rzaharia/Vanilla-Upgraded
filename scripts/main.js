@@ -34,7 +34,6 @@ if(typeof(require) !== "undefined"){
   require("soundmine");
   //rest
   require("relief");
-  require("st");
   require("funclib");
   require("effectlib");
 }
