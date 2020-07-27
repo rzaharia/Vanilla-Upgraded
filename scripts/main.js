@@ -12,6 +12,7 @@ if(typeof(require) !== "undefined"){
   require("haos");
   require("scorpio");
   require("crounder");
+  require("renit");
   //mechs
   require("anti");
   require("mechdown");
