@@ -37,7 +37,7 @@ const renitLaser = extend(BasicBulletType, {
 });
 renitLaser.length = 160;
 renitLaser.speed = 0.001;
-renitLaser.damage = 26;
+renitLaser.damage = 12;
 renitLaser.lifetime = 16;
 renitLaser.hitSize = 12;
 renitLaser.keepVelocity = false;
@@ -70,7 +70,7 @@ const renit = extendContent(UnitType, "renit", {});
 renit.weapon = renitEquip;
 renit.create(renitBase);
 renit.health = 540;
-renit.mass = 1;
+renit.mass = 2;
 renit.speed = 0.05;
 renit.hitsize = 3;
 renit.drag = 0.12;
@@ -80,7 +80,7 @@ renit.maxVelocity = 1.1;
 renit.baseRotateSpeed = 0.1;
 renit.rotatespeed = 0.17;
 renit.targetGround = true;
-renit.targetAir = false;
+renit.targetAir = true;
 
 const renitFac = extendContent(UnitFactory, "renit-fac", {
   /*load(){
