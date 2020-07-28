@@ -157,4 +157,4 @@ const thunderPad = extendContent(MechPad, "thunder-ship-pad", {
 thunderPad.size = 5;
 thunderPad.mech = thunder;
 thunderPad.buildTime = 300;
-TechTree.create(Blocks.omegaPad, thunderPad);
+TechTree.create(Blocks.glaivePad, thunderPad);
