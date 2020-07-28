@@ -17,16 +17,6 @@ const elecMine = extendContent(ShockMine, "electromine", {
     Draw.rect(this.region, tile.drawx(), tile.drawy());
   },
   
-  init(){
-    this.requirements(
-      Category.effect, 
-      ItemStack.with(
-        Items.surgealloy, 2
-      )
-    );
-    this.super$init();
-  },
-  
   unitOn(tile, entity, bullet){
     if (tile.entity.timer.get(0, cooldown)) {
       for(var i = 0; i < 4; i++){
@@ -43,4 +33,3 @@ elecMine.update = false;
 elecMine.destructible = true;
 elecMine.solid = false;
 elecMine.targetable = false;
-TechTree.create(Blocks.shockMine, elecMine);

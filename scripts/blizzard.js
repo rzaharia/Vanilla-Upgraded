@@ -57,19 +57,7 @@ blizzardBullet.shootEffect = Fx.none;
 blizzardBullet.smokeEffect = Fx.none;
 
 
-const blizzard = extendContent(PowerTurret, "blizzard", {
-	init(){
-    this.requirements(
-      Category.turret, 
-      ItemStack.with(
-        Items.silicon, 35,
-        Items.titanium, 60,
-        Vars.content.getByName(ContentType.item, "vanilla-upgraded-lithium"), 40
-      )
-    );
-    this.super$init();
-  }
-});
+const blizzard = extendContent(PowerTurret, "blizzard", {});
 blizzard.shootType = blizzardBullet;
 blizzard.health = 330;
 blizzard.reload = 3;
@@ -84,4 +72,3 @@ blizzard.hasPower = true;
 blizzard.targetAir = true;
 blizzard.shootSound = Sounds.flame;
 blizzard.cooldown = 0.002;
-TechTree.create(Blocks.scorch, blizzard);
