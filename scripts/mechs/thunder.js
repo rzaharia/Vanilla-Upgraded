@@ -141,20 +141,10 @@ thunder.engineOffset = 9;
 
 const thunderPad = extendContent(MechPad, "thunder-ship-pad", {
 	init(){
-    	this.requirements(
-      		Category.upgrade, 
-      		ItemStack.with(
-        		Items.surgealloy, 190,
-        		Items.silicon, 150,
-        		Items.graphite, 270,
-        		Vars.content.getByName(ContentType.item, "vanilla-upgraded-aliage-resist"), 190
-      		)
-    	);
-   	 	this.consumes.power(4.5);
+   	 this.consumes.power(4.5);
     this.super$init();
   },
 });
 thunderPad.size = 5;
 thunderPad.mech = thunder;
 thunderPad.buildTime = 300;
-TechTree.create(Blocks.glaivePad, thunderPad);
