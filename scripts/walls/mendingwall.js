@@ -38,17 +38,6 @@ const EffetGigantic = newEffect(60, e => {
 });
 
 const mendingWall = extendContent(Block, "mendingwall", {
-    init(){
-      this.requirements(
-        Category.defense, 
-        ItemStack.with(
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 12,
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 6
-        )
-      );
-    this.super$init();
-    },
-    
     update(tile){
       if((tile.entity.health < 621 && tile.entity.timer.get(0, cooldown2))){
         tile.entity.health += 12;
@@ -61,20 +50,8 @@ mendingWall.health = 620;
 mendingWall.update = true;
 mendingWall.solid = true;
 mendingWall.blockGround = BlockGroup.walls;
-TechTree.create(Blocks.titaniumWall, mendingWall);
 
 const mendingWallLarge = extendContent(Block, "mendingwalllarge", {
-    init(){
-      this.requirements(
-        Category.defense, 
-        ItemStack.with(
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 24,
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 12
-        )
-      );
-    this.super$init();
-    },
-    
     update(tile){
       if((tile.entity.health < 2481 && tile.entity.timer.get(0, cooldown1))){
         tile.entity.health += 24;
@@ -87,20 +64,8 @@ mendingWallLarge.health = 2480;
 mendingWallLarge.update = true;
 mendingWallLarge.solid = true;
 mendingWallLarge.blockGround = BlockGroup.walls;
-TechTree.create(mendingWall, mendingWallLarge);
 
 const ImmenseMendingWall = extendContent(Block, "immensemendingwall", {
-    init(){
-      this.requirements(
-        Category.defense, 
-        ItemStack.with(
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 30,
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 18
-        )
-      );
-    this.super$init();
-    },
-    
     update(tile){
       if((tile.entity.health < 5581 && tile.entity.timer.get(0, cooldown1))){
         tile.entity.health += 36; 
@@ -113,20 +78,8 @@ ImmenseMendingWall.health = 5580;
 ImmenseMendingWall.update = true;
 ImmenseMendingWall.solid = true;
 ImmenseMendingWall.blockGround = BlockGroup.walls;
-TechTree.create(mendingWallLarge, ImmenseMendingWall);
 
 const GiganticMendingWall = extendContent(Block, "giganticmendingwall", {
-    init(){
-      this.requirements(
-        Category.defense, 
-        ItemStack.with(
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-obsidienne"), 42,
-          Vars.content.getByName(ContentType.item, "vanilla-upgraded-emeraude"), 30
-        )
-      );
-    this.super$init();
-    },
-    
     update(tile){
       if((tile.entity.health < 9921 && tile.entity.timer.get(0, cooldown1))){
         tile.entity.health += 48; 
