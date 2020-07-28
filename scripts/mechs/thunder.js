@@ -141,7 +141,7 @@ thunder.engineOffset = 9;
 
 const thunderPad = extendContent(MechPad, "thunder-ship-pad", {
 	init(){
-   	 this.consumes.power(4.5);
+   	this.consumes.power(4.5);
     this.super$init();
   },
 });
