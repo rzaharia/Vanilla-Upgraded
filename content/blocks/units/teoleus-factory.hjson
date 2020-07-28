@@ -13,7 +13,7 @@ consumes: {
   }
 }
 category: units
-research: teseus-factory
+research: wraith-factory
 requirements: [
   graphite/140
   thorium/80
