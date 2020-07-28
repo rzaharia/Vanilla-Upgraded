@@ -4,7 +4,7 @@
 		"power": 1.2
 	},
 	"category": "upgrade",
-	"research": "omega-mech-pad",
+	"research": "thunder-ship-pad",
 	"requirements": [
 		{ "item": "lead", "amount": 1900 },
 		{ "item": "aliage-resist", "amount": 1500 },
