@@ -47,9 +47,9 @@ renitLaser.shootEffect = Fx.shootBigSmoke2;
 renitLaser.smokeEffect = Fx.none;
 
 const renitEquip = extendContent(Weapon, "renit-equip", {
-  /*load(){
+  load(){
     this.region = Core.atlas.find("vanilla-upgraded-renit-equip");
-  }*/
+  }
 });
 renitEquip.bullet = renitLaser;
 renitEquip.alternate = true;
@@ -66,7 +66,14 @@ const renitBase = prov(() => new JavaAdapter(GroundUnit, {
 		this.super$onDeath();
 }}));   
 
-const renit = extendContent(UnitType, "renit", {});
+const renit = extendContent(UnitType, "renit", {
+	load(){
+		this.weapon.load();
+		this.region = Core.atlas.find(this.name);
+		this.baseRegion = Core.atlas.find(this.name + "-base");
+		this.legRegion = Core.atlas.find(this.name + "-leg");
+	}
+});
 renit.weapon = renitEquip;
 renit.create(renitBase);
 renit.health = 540;
@@ -83,15 +90,17 @@ renit.targetGround = true;
 renit.targetAir = true;
 
 const renitFac = extendContent(UnitFactory, "renit-fac", {
-  /*load(){
+  load(){
+    this.super$load();
+    
     this.region = Core.atlas.find(this.name);
-    this.topRegion = Core.atlas.find("");
-  },*/
+    this.topRegion = Core.atlas.find("vanilla-upgraded-drone-constructeur-avance-factory-top");
+  },
 
-  /*generateIcons(){
+  generateIcons(){
   return [
     Core.atlas.find(this.name),
-    Core.atlas.find("")
-  ];}*/
+    Core.atlas.find("vanilla-upgraded-drone-constructeur-avance-factory-top")
+  ];}
 });
 renitFac.unitType = renit;
