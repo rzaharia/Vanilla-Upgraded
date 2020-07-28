@@ -4,7 +4,7 @@
 		"power": 1.2
 	},
 	"category": "upgrade",
-	"research": "omega-mech-pad",
+	"research": "glaive-ship-pad",
 	"requirements": [
 		{ "item": "lead", "amount": 190 },
 		{ "item": "graphite", "amount": 150 },
