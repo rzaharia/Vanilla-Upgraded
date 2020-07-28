@@ -2,8 +2,7 @@ const cooldown = 30;
 
 const regeneration = newEffect(20, e => {
 	Draw.color(Pal.heal);
-	Lines.stroke(2 * e.fout() + 0.5);
-	Lines.square(e.x, e.y, 1 + (e.fin() * e.rotation * 2 / 2 - 1));
+	Fill.square(e.x, e.y, 0.1 + e.fout() * 2.8, 45);,
 });
 
 const renitLaser = extend(BasicBulletType, {
@@ -79,6 +78,7 @@ const renitBase = prov(() => new JavaAdapter(GroundUnit, {
 		if(this.health < this.maxHealth()){
 			if(Mathf.chance(0.20)){
 				this.healBy(Time.delta() * 2.5);
+				Effects.effect(regeneration, this.x, this.y);
 			}	
 		}
 	}
