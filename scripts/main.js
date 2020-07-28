@@ -18,6 +18,7 @@ if(typeof(require) !== "undefined"){
   require("mechdown");
   require("envahisseur");
   require("thunder");
+  require("glare");
   //power
   require("surge-tower-huge");
   //walls
