@@ -1,41 +1,41 @@
 if(typeof(require) !== "undefined"){
-  //turrret
-  require("canson");
-  require("rct-launcher");
-  require("volcano");
-  require("endduo");
-  require("tourelledelabres");
-  require("blizzard");
+  //turret
+  require("turret/canson");
+  require("turret/rct-launcher");
+  require("turret/volcano");
+  require("turret/endduo");
+  require("turret/tourelledelabres");
+  require("turret/blizzard");
   //units
-  require("explocryo");
-  require("bigheal");
-  require("haos");
-  require("scorpio");
-  require("crounder");
-  require("renit");
+  require("units/explocryo");
+  require("units/bigheal");
+  require("units/haos");
+  require("units/scorpio");
+  require("units/crounder");
+  require("units/renit");
   //mechs
-  require("anti");
-  require("mechdown");
-  require("envahisseur");
-  require("thunder");
-  require("glare");
+  require("mechs/anti");
+  require("mechs/mechdown");
+  require("mechs/envahisseur");
+  require("mechs/thunder");
+  require("mechs/glare");
   //power
-  require("surge-tower-huge");
+  require("power/surge-tower-huge");
   //walls
-  require("wallen");
-  require("mendingwall");
+  require("walls/wallen");
+  require("walls/mendingwall");
   //production
-  require("am");
-  require("dd");
-  require("com");
-  require("grif");
-  require("vib");
+  require("production/am");
+  require("production/dd");
+  require("production/com");
+  require("production/grif");
+  require("production/vib");
   //extra
-  require("shield");
-  require("electromine");
-  require("soundmine");
+  require("extra/shield");
+  require("extra/electromine");
+  require("extra/soundmine");
   //rest
-  require("relief");
-  require("funclib");
-  require("effectlib");
+  require("rest/relief");
+  require("rest/funclib");
+  require("rest/effectlib");
 }

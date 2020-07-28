@@ -1,6 +1,6 @@
 const primeColor = Color.valueOf("000000");
-const lib = require("funclib");
-const elib = require("effectlib");
+const lib = require("rest/funclib");
+const elib = require("rest/effectlib");
 
 const shipLight = newEffect(24, e => {
 	const lightRegion = Core.atlas.find("vanilla-upgraded-envahisseur-lights");

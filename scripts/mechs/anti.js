@@ -1,5 +1,5 @@
 const antimGreen = Color.valueOf("000000");
-const lib = require("funclib");
+const lib = require("rest/funclib");
 
 const shipTrail = newEffect(44, e => {
 	Draw.color(antimGreen);
