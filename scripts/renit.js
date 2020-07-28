@@ -1,3 +1,11 @@
+const cooldown = 30;
+
+const regeneration = newEffect(20, e => {
+	Draw.color(Pal.heal);
+	Lines.stroke(2 * e.fout() + 0.5);
+	Lines.square(e.x, e.y, 1 + (e.fin() * e.rotation * 2 / 2 - 1));
+});
+
 const renitLaser = extend(BasicBulletType, {
 	range(){
 		return 160.0;
@@ -54,17 +62,27 @@ const renitEquip = extendContent(Weapon, "renit-equip", {
 renitEquip.bullet = renitLaser;
 renitEquip.alternate = true;
 renitEquip.reload = 90;
-renitEquip.lenght = 0;
 renitEquip.width = 10;
 renitEquip.shootSound = Sounds.laser;
 renitEquip.recoil = 5.5;
 
 const renitBase = prov(() => new JavaAdapter(GroundUnit, {
-  onDeath(){
+	onDeath(){
         Sounds.explosionbig.at(this);
         // maybe other effect
 		this.super$onDeath();
-}}));   
+	},
+
+	update(){
+		this.super$update();
+
+		if(this.health < this.maxHealth()){
+			if(Mathf.chance(0.20)){
+				this.healBy(Time.delta() * 2.5);
+			}	
+		}
+	}
+}));   
 
 const renit = extendContent(UnitType, "renit", {
 	load(){
@@ -76,14 +94,14 @@ const renit = extendContent(UnitType, "renit", {
 });
 renit.weapon = renitEquip;
 renit.create(renitBase);
-renit.health = 540;
-renit.mass = 2;
-renit.speed = 0.05;
-renit.hitsize = 3;
-renit.drag = 0.12;
+renit.health = 750;
+renit.mass = 5;
+renit.speed = 0.15;
+renit.hitsize = 10;
+renit.drag = 0.4;
 renit.range = 90;
 renit.shootCone = 10;
-renit.maxVelocity = 1.1;
+renit.maxVelocity = 0.78;
 renit.baseRotateSpeed = 0.1;
 renit.rotatespeed = 0.17;
 renit.targetGround = true;
