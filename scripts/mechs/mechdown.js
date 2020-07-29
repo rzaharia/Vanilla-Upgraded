@@ -77,7 +77,7 @@ const mechDown = extendContent(Mech, "mechdown", {
 	draw(player){
 		const health = player.healthf();
 		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5, 1 - health));
-		Draw.rect(this.cellRegion, player.x, player.x, player.rotation - 90);
+		Draw.rect(this.cellRegion, player.x, player.y, player.rotation - 90);
 		Draw.color();
 	}
 });
