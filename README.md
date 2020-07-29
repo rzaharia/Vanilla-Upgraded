@@ -1,4 +1,5 @@
 ![Logo](sprites-override/ui/logo.png)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE.txt)
 # Vanilla-Upgraded
 A mod that adds a lot more experience for the games!
 <br>I just hope you enjoy the mod ^^
