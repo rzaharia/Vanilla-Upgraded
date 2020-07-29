@@ -93,9 +93,10 @@ thunderEquipe.shootSound = Sounds.none;
 
 const thunder = extendContent(Mech, "thunder", {
 	load(){
-	  this.super$load();
+		this.super$load();
 	  
 		this.region = Core.atlas.find(this.name);
+		this.cellRegion = Core.atlas.find(this.name + "-cell");
 	},
 
 	updateAlt(player){
@@ -121,8 +122,16 @@ const thunder = extendContent(Mech, "thunder", {
 		};
 		vectA.trns(player.rotation + 90, 0, this.engineOffset - (shift * 2));
 		Effects.effect(biggerThunderTrail, player.x + vectA.x + Mathf.range(1.0), player.y + vectA.y + Mathf.range(1.0), (size + Mathf.absin(Time.time(), 2, size / 4)) / 2);
+	},
+	
+	draw(player){
+		const health = player.healthf();
+		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5f, 1f - health));
+		Draw.rect(this.cellRegion, player.x, player.x, player.rotation - 90);
+		Draw.color();
 	}
 });
+thunder.drawCell = false;
 thunder.flying = true;
 thunder.health = 520;
 thunder.drag = 0.06;
