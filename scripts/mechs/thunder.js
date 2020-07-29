@@ -34,7 +34,7 @@ const thunderBall = extend(BasicBulletType, {
 	},
 
 	despawned(b){
-		Sounds.spark.at(b);
+		Sounds.explosionbig.at(b);
 		for(var i = 0; i < 4; i++){
 			Lightning.create(b.getTeam(), yellow, 12, b.x, b.y, b.rot() + Mathf.random(0, 360), 24);
 		}
