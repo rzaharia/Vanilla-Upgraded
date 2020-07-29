@@ -92,4 +92,3 @@ GiganticMendingWall.health = 9920;
 GiganticMendingWall.update = true;
 GiganticMendingWall.solid = true;
 GiganticMendingWall.blockGround = BlockGroup.walls;
-TechTree.create(ImmenseMendingWall, GiganticMendingWall);
