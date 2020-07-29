@@ -16,13 +16,12 @@ const thunderBall = extend(BasicBulletType, {
 		const vec = new Vec2();
 		
 		if(Mathf.chance(0.15)){
-			Sounds.spark.at(player);
+			Sounds.spark.at(b);
 			vec.trns(b.rot() + Mathf.range(2.0), 12);
 			Lightning.create(b.getTeam(), yellow, 26, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), Mathf.random(4, 18));
 		};
 
 		if(Mathf.chance(0.15)){
-			Sounds.spark.at(player);
 			vec.trns(b.rot() + Mathf.range(2.0), 12);
 			Lightning.create(b.getTeam(), orange, 28, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), Mathf.random(4, 18));
 		}
@@ -35,7 +34,7 @@ const thunderBall = extend(BasicBulletType, {
 	},
 
 	despawned(b){
-		Sounds.spark.at(player);
+		Sounds.spark.at(b);
 		for(var i = 0; i < 4; i++){
 			Lightning.create(b.getTeam(), yellow, 12, b.x, b.y, b.rot() + Mathf.random(0, 360), 24);
 		}
@@ -61,7 +60,7 @@ const finalThunder = extend(BasicBulletType, {
   },
   
   despawned(b){
-	  	Sounds.spark.at(player);
+	  	Sounds.spark.at(b);
 		for(var i = 0; i < 4; i++){
 			Lightning.create(b.getTeam(), yellow, 22, b.x, b.y, b.rot() + Mathf.range(46.0), 24);
 		};
