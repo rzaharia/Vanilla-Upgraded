@@ -2,7 +2,7 @@ const cooldown = 30;
 
 const regeneration = newEffect(20, e => {
 	Draw.color(Pal.heal);
-	Fill.square(e.x, e.y, 0.1 + e.fout() * 2.8, 45);,
+	Fill.square(e.x, e.y, 0.1 + e.fout() * 2.8, 45);
 });
 
 const renitLaser = extend(BasicBulletType, {
