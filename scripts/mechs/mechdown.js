@@ -73,8 +73,15 @@ const mechDown = extendContent(Mech, "mechdown", {
 		this.legRegion = Core.atlas.find(this.name + "-leg");
 		this.baseRegion = Core.atlas.find(this.name + "-base");
 		this.cellRegion = Core.atlas.find(this.name + "-cell");
+	},
+	draw(player){
+		const health = player.healthf();
+		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5f, 1f - health));
+		Draw.rect(this.cellRegion, player.x, player.x, player.rotation - 90);
+		Draw.color();
 	}
 });
+mechDown.drawCell = false;
 mechDown.weapon = mechDownEquip;
 mechDown.speed = 0.35;
 mechDown.boostSpeed = 0.35;
