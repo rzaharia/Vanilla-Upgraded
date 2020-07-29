@@ -53,14 +53,14 @@ const mechDownEquip = extendContent(Weapon, "mechdown-blaster", {
     this.region = Core.atlas.find("vanilla-upgraded-mechdown-blaster");
   }
 });
-mechDownEquip.lenght = 7;
-mechDownEquip.shootSound = Sounds.corexplode;
+mechDownEquip.lenght = -7;
+mechDownEquip.shootSound = Sounds.laserbig;
 mechDownEquip.shotDelay = 0;
 mechDownEquip.inaccuracy = 0;
 mechDownEquip.spacing = 20;
 mechDownEquip.velocityRnd = 0;
-mechDownEquip.shootDuration = 7;
-mechDownEquip.reload = 50;
+mechDownEquip.shootDuration = 14;
+mechDownEquip.reload = 70;
 mechDownEquip.shots = 1;
 mechDownEquip.ejectEffect = Fx.none;
 mechDownEquip.alternate = false;
