@@ -1,5 +1,5 @@
 const vibroEffect = newEffect(50, e => {
-    Draw.color(Color.valueOf("00ffff"), Color.white, e.fin());
+    Draw.color(Color.white, Color.blue, e.fin());
     Lines.stroke(e.fout() * 10);
     Lines.circle(e.x, e.y, e.fin() * 40);
 });
