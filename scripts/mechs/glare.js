@@ -5,7 +5,7 @@ const trailEffect = newEffect(18, e => {
 
 const glareLaser = extend(BasicBulletType, {
 	range(){
-		return 190.0;
+		return 450.0;
 	},
 	
 	update(b){
@@ -43,7 +43,9 @@ glareLaser.shootEffect = Fx.none;
 glareLaser.smokeEffect = Fx.none;
 
 const none = extend(BasicBulletType, {
-	range(){},
+	range(){
+	  return 450.0;
+	},
 	
 	update(b){},
 	
@@ -106,7 +108,7 @@ glareWeapon.minPlayerDist = 45;
 
 const glare = extendContent(Mech, "glare", {
 	range(){
-	return 28;
+	return 450.0;
 	},
 
 	draw(player){
