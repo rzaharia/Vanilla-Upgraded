@@ -51,6 +51,9 @@ haosEquip.shootSound = Sounds.shootBig;
 haosEquip.bullet = bullet;
 
 const haosDead = prov(() => new JavaAdapter(HoverUnit, {
+  getPowerCellRegion(){
+	return Core.atlas.find("vanilla-upgraded-haos-antologist-cell");
+  },
   onDeath(){
         Sounds.explosionbig.at(this);
         for(var i = 0; i < 50; i++){
