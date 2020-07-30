@@ -74,11 +74,9 @@ const mechDown = extendContent(Mech, "mechdown", {
 		this.baseRegion = Core.atlas.find(this.name + "-base");
 		this.cellRegion = Core.atlas.find(this.name + "-cell");
 	},
-	draw(player){
-		const health = player.healthf();
-		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5, 1 - health));
-		Draw.rect(this.cellRegion, player.x, player.y, player.rotation - 90);
-		Draw.color();
+
+	getPowerCellRegion(){
+		return Core.atlas.find(this.name + "-cell");
 	}
 });
 mechDown.drawCell = false;
