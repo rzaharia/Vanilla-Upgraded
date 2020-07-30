@@ -11,7 +11,7 @@
 		"power": 8,
 		"liquid": {
 			"liquid": "cryofluid",
-			"amount": 0.5,
+			"amount": 0.2,
 			"booster": true,
 			"optional": true
 		},
