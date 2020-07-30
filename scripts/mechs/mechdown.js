@@ -79,7 +79,6 @@ const mechDown = extendContent(Mech, "mechdown", {
 		return Core.atlas.find(this.name + "-cell");
 	}
 });
-mechDown.drawCell = false;
 mechDown.weapon = mechDownEquip;
 mechDown.speed = 0.35;
 mechDown.boostSpeed = 0.35;
