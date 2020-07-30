@@ -7,6 +7,7 @@ if(typeof(require) !== "undefined"){
   require("turret/tourelledelabres");
   require("turret/blizzard");
   require("turret/sniper");
+  require("turret/bigfuse");
   //units
   require("units/explocryo");
   require("units/bigheal");
@@ -39,4 +40,5 @@ if(typeof(require) !== "undefined"){
   require("rest/relief");
   require("rest/funclib");
   require("rest/effectlib");
+  require("rest/colorlib");
 }
