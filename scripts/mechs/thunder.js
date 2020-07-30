@@ -127,11 +127,8 @@ const thunder = extendContent(Mech, "thunder", {
 		Effects.effect(biggerThunderTrail, player.x + vectA.x + Mathf.range(1.0), player.y + vectA.y + Mathf.range(1.0), (size + Mathf.absin(Time.time(), 2, size / 4)) / 2);
 	},
 	
-	draw(player){
-		const health = player.healthf();
-		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5, 1 - health));
-		Draw.rect(this.cellRegion, player.x, player.y, player.rotation - 90);
-		Draw.color();
+	getPowerCellRegion(){
+		return Core.atlas.find(this.name + "-cell");
 	}
 });
 thunder.drawCell = false;
