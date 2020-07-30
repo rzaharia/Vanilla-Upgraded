@@ -35,11 +35,7 @@ bullet.smokeEffect = Fx.none;
 bullet.fragBullet = Bullets.missileSwarm;
 bullet.fragBullets = 12;
 
-const haosEquip = extendContent(Weapon, "haos-equip", {
-  load: function(){
-    this.region = Core.atlas.find("vanilla-upgraded-haos-equip");
-  }
-});
+const haosEquip = extendContent(Weapon, "haos-equip", {});
 haosEquip.length = 21;
 haosEquip.shootCone = 23;
 haosEquip.width = 70;
