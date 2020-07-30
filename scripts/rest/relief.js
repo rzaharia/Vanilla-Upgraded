@@ -8,7 +8,7 @@ const ReliefDs = extendContent(Floor, "reliefds",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefds")
+    Core.atlas.find(modName + "-reliefds1")
   ];},
     
 });
@@ -23,7 +23,7 @@ const ReliefM = extendContent(Floor, "reliefm",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefm")
+    Core.atlas.find(modName + "-reliefm1")
   ];},
     
 });
@@ -38,7 +38,7 @@ const ReliefN = extendContent(Floor, "reliefn",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefn")
+    Core.atlas.find(modName + "-reliefn1")
   ];},
     
 });
@@ -53,7 +53,7 @@ const ReliefP = extendContent(Floor, "reliefp",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefp")
+    Core.atlas.find(modName + "-reliefp1")
   ];},
     
 });
@@ -68,7 +68,7 @@ const reliefS = extendContent(Floor, "reliefs",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefs")
+    Core.atlas.find(modName + "-reliefs1")
   ];},
     
 });
@@ -98,7 +98,7 @@ const ReliefSh = extendContent(Floor, "reliefsh",{
   generateIcons: function(){
   return [
     Core.atlas.find(modName + "-edgu"),
-    Core.atlas.find(modName + "-reliefsh")
+    Core.atlas.find(modName + "-reliefsh1")
   ];},
     
 });
