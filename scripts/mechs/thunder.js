@@ -131,7 +131,6 @@ const thunder = extendContent(Mech, "thunder", {
 		return Core.atlas.find(this.name + "-cell");
 	}
 });
-thunder.drawCell = false;
 thunder.flying = true;
 thunder.health = 520;
 thunder.drag = 0.06;
