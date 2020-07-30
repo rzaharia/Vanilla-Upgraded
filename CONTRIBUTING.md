@@ -1,6 +1,4 @@
-![Logo](sprites-override/ui/logo.png)
-
-<br>Co-Developers: `VozDuh` and `Summet#4530`
+Co-Developers: `VozDuh` and `Summet#4530`
 
 External:
 <br>Designer: `Valoche3000` and `Alexender`
