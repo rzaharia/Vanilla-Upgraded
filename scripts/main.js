@@ -21,6 +21,7 @@ if(typeof(require) !== "undefined"){
   require("mechs/envahisseur");
   require("mechs/thunder");
   require("mechs/glare");
+  require("mechs/builder");
   //power
   require("power/surge-tower-huge");
   //walls
