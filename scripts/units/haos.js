@@ -52,7 +52,7 @@ const haosDead = prov(() => new JavaAdapter(HoverUnit, {
   },
   onDeath(){
         Sounds.explosionbig.at(this);
-        for(var i = 0; i < 50; i++){
+        for(var i = 0; i < 180; i++){
             Calls.createBullet(Bullets.missileSwarm, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 		}
 		this.super$onDeath();
