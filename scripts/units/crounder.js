@@ -59,7 +59,7 @@ crounderEquipe.alternate = false;
 crounderEquipe.reload = 30;
 crounderEquipe.lenght = 0;
 crounderEquipe.width = -60;
-crounderEquipe.shootSound = Sounds.laser;
+crounderEquipe.shootSound = Sounds.shootBig;
 crounderEquipe.recoil = 9;
 
 const crounderBase =  prov(() => new JavaAdapter(GroundUnit, {

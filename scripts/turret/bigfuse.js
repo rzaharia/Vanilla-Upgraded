@@ -3,7 +3,7 @@ const colors = require("rest/colorlib");
 const bigfuseBullet = extend(BasicBulletType, {
 	update: function(b){
 		if(b.timer.get(1, 17)){
-			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), this.rayLength, false);
+			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), this.rayLength, true);
 		};
 	},
 	
