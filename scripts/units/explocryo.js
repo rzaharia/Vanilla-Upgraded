@@ -58,6 +58,9 @@ exploCryoEquipe.shootSound = Sounds.shootBig;
 exploCryoEquipe.recoil = 5.5;
 
 const exploCryoBase = prov(() => new JavaAdapter(GroundUnit, {
+  getPowerCellRegion(){
+      return Core.atlas.find("vanilla-upgraded-explocryo-cell");
+  },
   onDeath(){
         Sounds.explosionbig.at(this);
         for(var i = 0; i < 1000; i++){
@@ -95,5 +98,70 @@ exploCryo.immunities = ObjectSet.with(StatusEffects.freezing, StatusEffects.burn
 exploCryo.targetAir = true;
 exploCryo.targetGround = true;
 
-const exploCryoFac = extendContent(UnitFactory, "explocryo-fac", {})
+const exploCryoFac = extendContent(UnitFactory, "explocryo-fac", {
+  load() {
+    this.super$load();
+    this.topRegion = Core.atlas.find("clear");
+    this.explocryoDrone = Core.atlas.find(this.name + "-drone");
+    this.explocryo = Core.atlas.find("vanilla-upgraded-explocryo");
+
+    this.explocryoDroneWork = Core.atlas.find(this.name + "-drone-work");
+    this.laser = Core.atlas.find(this.name + "-laser");
+    this.laserEnd = Core.atlas.find(this.name + "-laser-end");
+  },
+
+  generateIcons() {
+    return [this.region];
+  },
+
+  draw(tile) {
+    const dx = tile.drawx(), dy = tile.drawy();
+    const ent = tile.ent();
+    Draw.rect(this.region, dx, dy);
+
+
+    ent.progress = Mathf.lerp(ent.progress, Math.min(ent.efficiency(), 1), 0.02);
+    const rot = Time.time() * ent.progress * ent.timeScale;
+    const chaining = ent.cons.valid();
+
+    ent.dist = Mathf.lerp(ent.dist, chaining ? 24 : 5 * ent.progress + 10, 0.04);
+
+    for (var i = 0; i < 8; i++) {
+      var angle = rot + 360 * i / 8;
+      var x = dx + Angles.trnsx(angle, ent.dist - 7);
+      var y = dy + Angles.trnsy(angle, ent.dist - 7);
+
+      if (chaining) {
+        Draw.shader(Shaders.blockbuild, true);
+        Shaders.blockbuild.color = Color.valueOf("7DFFFF");
+        Shaders.blockbuild.region = this.explocryo;
+        Shaders.blockbuild.progress = 0;
+        Draw.rect(this.explocryo, dx, dy, 23.0 + Mathf.absin(Time.time(), 10.0, 5.0), 23.0 + Mathf.absin(Time.time(), 10.0, 5.0))
+        Draw.shader();
+        Drawf.laser(this.laser, this.laserEnd, x, y, dx, dy, Math.sqrt(Math.sin(angle / 50) / 5));
+        Draw.rect(this.explocryoDroneWork, x, y, Mathf.slerp(0, angle, ent.dist / 24) + 90);
+      } else {
+        Draw.rect(this.explocryoDrone, x, y, Mathf.slerp(0, angle, ent.dist / 24) + 90);
+      }
+    }
+  }
+});
+
+exploCryoFac.entityType = prov(() => {
+  const ent = extend(UnitFactory.UnitFactoryEntity, {
+    getProgress() {return this._progress;},
+    setProgress(set) {this._progress = set;},
+
+    getDist() {return this._dist;},
+    setDist(set) {this._dist = set;}
+  });
+
+  ent._progress = 0;
+  ent._dist = 0;
+
+  return ent;
+});
+
 exploCryoFac.unitType = exploCryo;
+
+module.exports = exploCryoFac;
