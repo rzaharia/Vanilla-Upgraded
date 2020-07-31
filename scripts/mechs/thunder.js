@@ -130,7 +130,7 @@ const thunder = extendContent(Mech, "thunder", {
 	draw(player){
 		const health = player.healthf();
 
-		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5f, 1f - health));
+		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5, 1 - health));
 		Draw.rect(Core.atlas.find(this.name + "-cell"), player.x, player.y, player.rotation - 90);
 		Draw.color();
 	}
