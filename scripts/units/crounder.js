@@ -56,11 +56,12 @@ const crounderEquipe = extendContent(Weapon, "crounder-weapon", {
 });
 crounderEquipe.bullet = fireball;
 crounderEquipe.alternate = false;
-crounderEquipe.reload = 30;
+crounderEquipe.reload = 280;
 crounderEquipe.lenght = 0;
 crounderEquipe.width = -60;
 crounderEquipe.shootSound = Sounds.shootBig;
 crounderEquipe.recoil = 9;
+crounderEquipe.shots = 3;
 
 const crounderBase =  prov(() => new JavaAdapter(GroundUnit, {
   onDeath(){
@@ -84,7 +85,7 @@ crounder.weapon = crounderEquipe;
 crounder.health = 22000;
 crounder.mass = 3;
 crounder.speed = 0.06;
-crounder.hitsize = 55;
+crounder.hitsize = 70;
 crounder.drag = 0.12;
 crounder.range = 14;
 crounder.maxVelocity = 0.1;
