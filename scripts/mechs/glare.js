@@ -126,6 +126,7 @@ const glare = extendContent(Mech, "glare", {
 	}
 });
 glare.drawItems = false;
+glare.drawCell = false;
 glare.drawLight = false;
 glare.flying = true;
 glare.health = 2100;

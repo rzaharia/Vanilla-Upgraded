@@ -139,6 +139,7 @@ thunder.flying = true;
 thunder.health = 520;
 thunder.drag = 0.06;
 thunder.engineSize = 2.25;
+thunder.drawCell = false;
 thunder.speed = 0.4;
 thunder.boostSpeed = 0.6;
 thunder.mass = 5;

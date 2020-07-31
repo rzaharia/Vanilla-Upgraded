@@ -84,6 +84,7 @@ const mechDown = extendContent(Mech, "mechdown", {
 	}
 });
 mechDown.weapon = mechDownEquip;
+mechDown.drawCell = false;
 mechDown.speed = 0.35;
 mechDown.boostSpeed = 0.35;
 mechDown.itemCapacity = 100;
