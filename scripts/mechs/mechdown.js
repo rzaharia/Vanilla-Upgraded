@@ -75,8 +75,12 @@ const mechDown = extendContent(Mech, "mechdown", {
 		this.cellRegion = Core.atlas.find(this.name + "-cell");
 	},
 
-	getPowerCellRegion(){
-		return Core.atlas.find(this.name + "-cell");
+	draw(player){
+		const health = player.healthf();
+
+		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5f, 1f - health));
+		Draw.rect(Core.atlas.find(this.name + "-cell"), player.x, player.y, player.rotation - 90);
+		Draw.color();
 	}
 });
 mechDown.weapon = mechDownEquip;
