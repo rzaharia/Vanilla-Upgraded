@@ -110,19 +110,19 @@ const glare = extendContent(Mech, "glare", {
 	range(){
 	return 450.0;
 	},
-	
-	getPowerCellRegion(){
-		return Core.atlas.find(this.name + "-cell");
-	},
 
 	draw(player){
 		const vectA = new Vec2();
 		const shift = Mathf.clamp(player.velocity().len(), 0, 4);
 		const minV = 3.6;
 		const maxV = 7;
+		const health = player.healthf();
 
 		vectA.trns(player.rotation + 90, 0, this.engineOffset - (shift * 2));
 		Effects.effect(trailEffect, player.getTeam().color, player.x + vectA.x, player.y + vectA.y);
+		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5f, 1f - health));
+		Draw.rect(Core.atlas.find(this.name + "-cell"), player.x, player.y, player.rotation - 90);
+		Draw.color();
 	}
 });
 glare.drawItems = false;
