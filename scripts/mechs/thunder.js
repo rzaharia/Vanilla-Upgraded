@@ -53,6 +53,7 @@ thunderBall.collides = true;
 thunderBall.collidesTiles = true;
 thunderBall.collidesAir = true;
 thunderBall.pierce = true;
+thunderBall.keepVelocity = false;
 
 const finalThunder = extend(BasicBulletType, {
   range(){
