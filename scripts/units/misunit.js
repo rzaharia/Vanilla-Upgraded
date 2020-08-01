@@ -1,3 +1,5 @@
+const colors = require("rest/colorlib");
+
 const missile = extend(ArtilleryBulletType, {
 	range(){
 		return 400;
@@ -21,8 +23,8 @@ missile.splashDamageRadius = 25;
 missile.bulletWidth = 16;
 missile.bulletHeight = 16;
 missile.lifetime = 60;
-missile.frontColor = Color.valueOf("dd9933");
-missile.backColor = Color.valueOf("ffcc22");
+missile.frontColor = colors.ormisfront;
+missile.backColor = colors.ormisback;
 missile.shootEffect = Fx.shootBig;
 missile.despawnEffect = Fx.explosion;
 missile.hitEffect = Fx.flakExplosionBig;
@@ -79,5 +81,18 @@ misunit.rotatespeed = 1;
 misunit.targetGround = true;
 misunit.targetAir = false;
 
-const misunitFac = extendContent(UnitFactory, "misunit-fac", {});
+const misunitFac = extendContent(UnitFactory, "misunit-fac", {
+  load(){
+    this.super$load();
+    
+    this.region = Core.atlas.find(this.name);
+    this.topRegion = Core.atlas.find("vanilla-upgraded-renit-fac-top");
+  },
+
+  generateIcons(){
+  return [
+    Core.atlas.find(this.name),
+    Core.atlas.find("vanilla-upgraded-renit-fac-top")
+  ];}
+});
 misunitFac.unitType = misunit;

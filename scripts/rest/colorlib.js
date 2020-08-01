@@ -24,7 +24,9 @@ module.exports = {
 	teamb: Color.valueOf("4169e1"), // Team blue
 	teamd: Color.valueOf("4d4e58"), // Team darkGray
 	teamg: Color.valueOf("4dd98b"), // Team green
-	teamp: Color.valueOf("9a4bdf") // Team purple
+	teamp: Color.valueOf("9a4bdf"), // Team purple
 	// Other color
+	ormisfront: Color.valueOf("dd9933"), // Orange missile front
+	ormisback: Color.valueOf("ffcc22") // Orange missile back
 }
 // U can add other color if u want
