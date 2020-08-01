@@ -67,14 +67,17 @@ const misunit = extendContent(UnitType, "misunit", {
 misunit.weapon = misunitEquipe;
 misunit.create(misunitBase);
 misunit.health = 320;
-misunit.mass = 7;
-misunit.speed = 0.25;
+misunit.mass = 1;
+misunit.speed = 1;
 misunit.hitsize = 15;
 misunit.drag = 0.048;
 misunit.range = 400;
 misunit.shootCone = 20;
-misunit.maxVelocity = 0.3;
+misunit.maxVelocity = 1.25;
 misunit.baseRotateSpeed = 1;
 misunit.rotatespeed = 1;
 misunit.targetGround = true;
 misunit.targetAir = false;
+
+const misunitFac = extendContent(UnitFactory, "misunit-fac", {});
+misunitFac.unitType = misunit;
