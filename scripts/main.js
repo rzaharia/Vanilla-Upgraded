@@ -15,6 +15,7 @@ if(typeof(require) !== "undefined"){
   require("units/scorpio");
   require("units/crounder");
   require("units/renit");
+  require("units/misunit");
   //mechs
   require("mechs/anti");
   require("mechs/mechdown");
