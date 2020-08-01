@@ -76,7 +76,7 @@ const renitBase = prov(() => new JavaAdapter(GroundUnit, {
 		this.super$update();
 
 		if(this.health < this.maxHealth()){
-			if(Mathf.chance(0.20)){
+			if(Mathf.chance(0.5)){
 				this.healBy(Time.delta() * 2.5);
 				Effects.effect(regeneration, this.x, this.y);
 			}	
