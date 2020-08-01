@@ -112,13 +112,13 @@ const renitFac = extendContent(UnitFactory, "renit-fac", {
     this.super$load();
     
     this.region = Core.atlas.find(this.name);
-    this.topRegion = Core.atlas.find("vanilla-upgraded-drone-constructeur-avance-factory-top");
+    this.topRegion = Core.atlas.find("vanilla-upgraded-renit-fac-top");
   },
 
   generateIcons(){
   return [
     Core.atlas.find(this.name),
-    Core.atlas.find("vanilla-upgraded-drone-constructeur-avance-factory-top")
+    Core.atlas.find("vanilla-upgraded-renit-fac-top")
   ];}
 });
 renitFac.unitType = renit;
