@@ -7,10 +7,10 @@ const missile = extend(ArtilleryBulletType, {
 
 	despawned(b){
 		Sounds.explosionbig.at(b);
-		for(var i = 0; i <= Mathf.random(2, 5); i++){
+		for(var i = 0; i <= Mathf.random(1, 2); i++){
 			Calls.createBullet(Bullets.missileSwarm, b.getTeam(), b.x, b.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 		}
-		for(var i = 0; i <= Mathf.random(2, 5); i++){
+		for(var o = 0; o <= Mathf.random(1, 2); o++){
 			Calls.createBullet(Bullets.missileExplosive, b.getTeam(), b.x, b.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
 		}
 	}
@@ -47,12 +47,12 @@ misunitEquipe.alternate = true;
 misunitEquipe.reload = 135;
 misunitEquipe.width = 8;
 misunitEquipe.shootSound = Sounds.shootBig;
-misunitEquipe.recoil = 1;
+misunitEquipe.recoil = 4;
 
 const misunitBase = prov(() => new JavaAdapter(GroundUnit, {
 	onDeath(){
     Sounds.explosionbig.at(this);
-    for (var i = 0; i <= Mathf.random(1, 3); i++){
+    for (var i = 0; i <= Mathf.random(0, 1); i++){
     	Calls.createBullet(missile, this.getTeam(), this.x, this.y, Mathf.random(360), Mathf.random(0.45, 1.2), Mathf.random(0.4, 1.0));
     };
 	this.super$onDeath();
@@ -70,7 +70,7 @@ const misunit = extendContent(UnitType, "misunit", {
 });
 misunit.weapon = misunitEquipe;
 misunit.create(misunitBase);
-misunit.health = 320;
+misunit.health = 650;
 misunit.mass = 5;
 misunit.speed = 0.15;
 misunit.hitsize = 15;
