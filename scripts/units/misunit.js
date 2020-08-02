@@ -38,14 +38,14 @@ missile.splashDamageRadius = 48;
 missile.bulletSprite = "missile";
 
 const misunitEquipe = extendContent(Weapon, "misunit-equip", {
-	/*load(){
+	load(){
 		this.region = Core.atlas.find("vanilla-upgraded-misunit-equip");
-	}*/
+	}
 });
 misunitEquipe.bullet = missile;
 misunitEquipe.alternate = true;
 misunitEquipe.reload = 135;
-misunitEquipe.width = 10;
+misunitEquipe.width = 8;
 misunitEquipe.shootSound = Sounds.shootBig;
 misunitEquipe.recoil = 1;
 
@@ -59,12 +59,14 @@ const misunitBase = prov(() => new JavaAdapter(GroundUnit, {
 }}));
 
 const misunit = extendContent(UnitType, "misunit", {
-	/*load(){
+	load(){
+		this.super$load();
+
 		this.weapon.load();
 		this.region = Core.atlas.find(this.name);
 		this.legRegion = Core.atlas.find(this.name + "-leg");
 		this.baseRegion = Core.atlas.find(this.name + "-base");
-  	}*/
+  	}
 });
 misunit.weapon = misunitEquipe;
 misunit.create(misunitBase);
