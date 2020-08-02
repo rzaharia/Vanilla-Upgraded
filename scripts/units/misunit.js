@@ -71,15 +71,14 @@ const misunit = extendContent(UnitType, "misunit", {
 misunit.weapon = misunitEquipe;
 misunit.create(misunitBase);
 misunit.health = 320;
-misunit.mass = 1;
-misunit.speed = 1;
+misunit.mass = 5;
+misunit.speed = 0.15;
 misunit.hitsize = 15;
-misunit.drag = 0.048;
+misunit.drag = 0.4;
 misunit.range = 400;
 misunit.shootCone = 20;
-misunit.maxVelocity = 1.25;
-misunit.baseRotateSpeed = 1;
-misunit.rotatespeed = 1;
+misunit.maxVelocity = 0.78;
+misunit.rotatespeed = 0.06;
 misunit.targetGround = true;
 misunit.targetAir = false;
 

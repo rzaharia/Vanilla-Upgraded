@@ -1,5 +1,8 @@
 type: GroundUnit
-speed: 0.05
+speed: 0.2
+mass: 1.75
+maxVelocity: 1.1
+drag: 0.4
 flying: false
 health: 100
 engineOffset: 5.5
