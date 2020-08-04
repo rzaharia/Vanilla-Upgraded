@@ -5,7 +5,13 @@ flying: true
 drag: 0.02
 maxVelocity: 1.4
 range: 90
-minePower: 3
+minePower: 3.5
+toMine: [
+  copper, 
+  lead, 
+  titanium, 
+  lithium
+]
 itemCapacity: "50"
 engineSize: 3
 engineOffset: 10
