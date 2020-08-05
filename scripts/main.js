@@ -26,7 +26,6 @@ if(typeof(require) !== "undefined"){
   //power
   require("power/surge-tower-huge");
   //walls
-  require("walls/wallen");
   require("walls/mendingwall");
   //production
   require("production/am");
