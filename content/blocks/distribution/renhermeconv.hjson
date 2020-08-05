@@ -1,0 +1,10 @@
+type: ArmoredConveyor
+health: 200
+requirements: [
+  plastanium/2
+  thorium/2
+  lithium/2
+]
+category: distribution
+speed: 0.12
+research: hermetique-conveyor
