@@ -267,7 +267,7 @@ heavybomb.fragVelocityMin = 0.1;
 heavybomb.fragVelocityMax = 2;
 heavybomb.fragBullet = heavymine;
 
-const bombTurret = extendContent(ItemTurret, "bombturret", {
+const bombTurret = extendContent(ItemTurret, "grabomb", {
 	init(){
 		this.ammo(
 			Items.graphite, graphbomb,
