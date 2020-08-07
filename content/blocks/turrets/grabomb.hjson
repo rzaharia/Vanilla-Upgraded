@@ -10,7 +10,11 @@ range: 200
 recoil: 3
 cooldown: 0.5
 requirements: [
-    copper/1
+    graphite/150
+    silicon/175
+    lead/225
+    titanium/175
+    lithium/150
 ]
 category: turret
-research: swarmer
+research: salvo
