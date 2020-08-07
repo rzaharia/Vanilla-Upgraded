@@ -1,0 +1,15 @@
+targetAir: true
+targetGround: true
+health: 1250
+size: 3
+inaccuracy: 0
+reload: 220
+shootCone: 20
+shots: 1
+range: 200
+cooldown: 0.5
+requirements: [
+    copper/1
+]
+category: turret
+research: swarmer

@@ -8,6 +8,7 @@ if(typeof(require) !== "undefined"){
   require("turret/blizzard");
   require("turret/sniper");
   require("turret/bigfuse");
+  require("turret/grabomb");
   //units
   require("units/explocryo");
   require("units/bigheal");
