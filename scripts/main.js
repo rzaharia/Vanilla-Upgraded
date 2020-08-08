@@ -36,6 +36,7 @@ if(typeof(require) !== "undefined"){
   require("production/vib");
   //extra
   require("extra/shield");
+  require("extra/conv");
   require("extra/electromine");
   require("extra/soundmine");
   //rest
