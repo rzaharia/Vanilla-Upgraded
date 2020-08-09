@@ -10,5 +10,9 @@ shootSound: bigShoot
 category: turret
 research: lancer
 requirements: [
-  copper/1
+	lithium/175
+	silicon/220
+	lead/280
+	graphite/220
+	titanium/175
 ]
