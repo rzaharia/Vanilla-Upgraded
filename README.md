@@ -11,7 +11,7 @@ U can join the official discord server of Vanilla-Upgraded now with this link!
 ## The mod add: 
 `Items`: 9
 <br>`Blocks`: 61 + 5
-<br>`Turrets`: 11 + 2
+<br>`Turrets`: 11 + 3
 <br>`Mechs`: 6 + 1
 <br>`Liquids`: 2
 <br>`Units`: 10 + 1
