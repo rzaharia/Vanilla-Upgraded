@@ -1,4 +1,4 @@
-const colors = require("rest/colorlib");
+const multi = require("rest/multilib");
 
 const missile = extend(ArtilleryBulletType, {
 	range(){
@@ -23,8 +23,8 @@ missile.splashDamageRadius = 25;
 missile.bulletWidth = 16;
 missile.bulletHeight = 16;
 missile.lifetime = 60;
-missile.frontColor = colors.ormisfront;
-missile.backColor = colors.ormisback;
+missile.frontColor = multi.ormisfront;
+missile.backColor = multi.ormisback;
 missile.shootEffect = Fx.shootBig;
 missile.despawnEffect = Fx.explosion;
 missile.hitEffect = Fx.flakExplosionBig;

@@ -1,0 +1,14 @@
+recoil: 2
+cooldown: 0.03
+powerUse: 2.5
+shootShake: 2
+heatColor: 0000ff
+size: 3
+health: 1350
+targetAir: true
+shootSound: bigShoot
+category: turret
+research: lancer
+requirements: [
+  copper/1
+]

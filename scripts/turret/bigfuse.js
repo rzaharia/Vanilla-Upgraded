@@ -1,4 +1,4 @@
-const colors = require("rest/colorlib");
+const multi = require("rest/multilib");
 
 const bigfuseBullet = extend(BasicBulletType, {
 	update: function(b){
@@ -8,7 +8,7 @@ const bigfuseBullet = extend(BasicBulletType, {
 	},
 	
 	draw: function(b){
-		Draw.color(Color.white, colors.thorium, b.fin());
+		Draw.color(Color.white, multi.thorium, b.fin());
 		
 		for(var i = 0; i < 7; i++){
 			Tmp.v1.trns(b.rot(), i * 8);

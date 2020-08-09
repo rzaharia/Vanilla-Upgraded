@@ -1,4 +1,4 @@
-const colors = require("rest/colorlib");
+const multi = require("rest/multilib");
 
 const graphmine = extend(FlakBulletType, {
 	hit(b, hitx, hity){
@@ -6,7 +6,7 @@ const graphmine = extend(FlakBulletType, {
 		if(hitx != null && hity != null){
 			Effects.effect(this.hitEffect, hitx, hity);
 			for (var i = 0; i <= 2; i++){
-				Lightning.create(b.getTeam(), colors.graphite, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
+				Lightning.create(b.getTeam(), multi.graphite, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
 			}
 		}
 	},
@@ -17,9 +17,9 @@ const graphmine = extend(FlakBulletType, {
     },
 
 	draw(b){
-        Draw.color(colors.graphite);
+        Draw.color(multi.graphite);
         Draw.rect(this.backRegion, b.x, b.y, 6, 6, b.rot() - 90);
-        Draw.color(colors.graphite);
+        Draw.color(multi.graphite);
         Draw.rect(this.frontRegion, b.x, b.y, 6, 6, b.rot() - 90);
         Draw.color();
 	}
@@ -50,8 +50,8 @@ graphbomb.splashDamageRadius = 20;
 graphbomb.bulletWidth = 20;
 graphbomb.bulletHeight = 20;
 graphbomb.lifetime = 160;
-graphbomb.frontColor = colors.graphite;
-graphbomb.backColor = colors.graphite;
+graphbomb.frontColor = multi.graphite;
+graphbomb.backColor = multi.graphite;
 graphbomb.shootEffect = Fx.none;
 graphbomb.despawnEffect = Fx.none;
 graphbomb.hitEffect = Fx.none;
@@ -69,7 +69,7 @@ const pyramine = extend(FlakBulletType, {
 		if(hitx != null && hity != null){
 			Effects.effect(this.hitEffect, hitx, hity);
 			for (var i = 0; i <= 2; i++){
-				Lightning.create(b.getTeam(), colors.pyratite, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
+				Lightning.create(b.getTeam(), multi.pyratite, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
 			}
 			if(Mathf.chance(0.12)){
 		  		Damage.createIncend(hitx, hity, 7, 1);
@@ -83,9 +83,9 @@ const pyramine = extend(FlakBulletType, {
     },
 
 	draw(b){
-        Draw.color(colors.pyratite);
+        Draw.color(multi.pyratite);
         Draw.rect(this.backRegion, b.x, b.y, 6, 6, b.rot() - 90);
-        Draw.color(colors.pyratite);
+        Draw.color(multi.pyratite);
         Draw.rect(this.frontRegion, b.x, b.y, 6, 6, b.rot() - 90);
         Draw.color();
 	}
@@ -116,8 +116,8 @@ pyrabomb.splashDamageRadius = 20;
 pyrabomb.bulletWidth = 20;
 pyrabomb.bulletHeight = 20;
 pyrabomb.lifetime = 160;
-pyrabomb.frontColor = colors.pyratite;
-pyrabomb.backColor = colors.pyratite;
+pyrabomb.frontColor = multi.pyratite;
+pyrabomb.backColor = multi.pyratite;
 pyrabomb.shootEffect = Fx.none;
 pyrabomb.despawnEffect = Fx.none;
 pyrabomb.hitEffect = Fx.none;
@@ -130,7 +130,7 @@ pyrabomb.fragVelocityMax = 2;
 pyrabomb.fragBullet = pyramine;
 
 const vibroEffect = newEffect(70, e => {
-    Draw.color(Color.white, colors.vibrocyan, e.fin());
+    Draw.color(Color.white, multi.vibrocyan, e.fin());
     Lines.stroke(e.fout() * 10);
     Lines.circle(e.x, e.y, e.fin() * 40);
 });
@@ -141,7 +141,7 @@ const vibromine = extend(FlakBulletType, {
 		if(hitx != null && hity != null){
 			Effects.effect(vibroEffect, hitx, hity);
 			for (var i = 0; i <= 2; i++){
-				Lightning.create(b.getTeam(), colors.vibrocyan, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
+				Lightning.create(b.getTeam(), multi.vibrocyan, 21, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
 			}		
 		}
 	},
@@ -152,9 +152,9 @@ const vibromine = extend(FlakBulletType, {
     },
 
 	draw(b){
-        Draw.color(colors.vibrocyan);
+        Draw.color(multi.vibrocyan);
         Draw.rect(this.backRegion, b.x, b.y, 6, 6, b.rot() - 90);
-        Draw.color(colors.vibrocyan);
+        Draw.color(multi.vibrocyan);
         Draw.rect(this.frontRegion, b.x, b.y, 6, 6, b.rot() - 90);
         Draw.color();
 	}
@@ -185,8 +185,8 @@ vibrobomb.splashDamageRadius = 20;
 vibrobomb.bulletWidth = 20;
 vibrobomb.bulletHeight = 20;
 vibrobomb.lifetime = 160;
-vibrobomb.frontColor = colors.vibrocyan;
-vibrobomb.backColor = colors.vibrocyan;
+vibrobomb.frontColor = multi.vibrocyan;
+vibrobomb.backColor = multi.vibrocyan;
 vibrobomb.shootEffect = Fx.none;
 vibrobomb.despawnEffect = Fx.none;
 vibrobomb.hitEffect = Fx.none;
@@ -210,7 +210,7 @@ const heavymine = extend(FlakBulletType, {
 		if(hitx != null && hity != null){
 			Effects.effect(heavyImpact, hitx, hity);
 			for (var i = 0; i <= 2; i++){
-				Lightning.create(b.getTeam(), colors.obsidian, 28, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
+				Lightning.create(b.getTeam(), multi.obsidian, 28, b.x + vec.x + Mathf.range(24.0), b.y + vec.y + Mathf.range(24.0), b.rot() + Mathf.range(46.0), 25);
 			}		
 		}
 	},
@@ -221,9 +221,9 @@ const heavymine = extend(FlakBulletType, {
     },
 
 	draw(b){
-        Draw.color(colors.obsidian);
+        Draw.color(multi.obsidian);
         Draw.rect(this.backRegion, b.x, b.y, 8, 8, b.rot() - 90);
-        Draw.color(colors.obsidian);
+        Draw.color(multi.obsidian);
         Draw.rect(this.frontRegion, b.x, b.y, 8, 8, b.rot() - 90);
         Draw.color();
 	}
@@ -254,8 +254,8 @@ heavybomb.splashDamageRadius = 20;
 heavybomb.bulletWidth = 25;
 heavybomb.bulletHeight = 25;
 heavybomb.lifetime = 160;
-heavybomb.frontColor = colors.obsidian;
-heavybomb.backColor = colors.obsidian;
+heavybomb.frontColor = multi.obsidian;
+heavybomb.backColor = multi.obsidian;
 heavybomb.shootEffect = Fx.none;
 heavybomb.despawnEffect = Fx.none;
 heavybomb.hitEffect = Fx.none;
