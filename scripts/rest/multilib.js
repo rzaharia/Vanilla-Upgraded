@@ -1,5 +1,5 @@
 // Made by Mesokrix
-// Color, Effects, Update for bullet, sUpdate for block
+// Color, Effects, Update for bullet, Update for block
 module.exports = {
 	// Color
 	// In game items color

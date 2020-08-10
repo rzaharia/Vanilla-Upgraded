@@ -10,6 +10,7 @@ if(typeof(require) !== "undefined"){
   require("turret/bigfuse");
   require("turret/grabomb");
   require("turret/plasma");
+  require("turret/quantum");
   //units
   require("units/explocryo");
   require("units/bigheal");
