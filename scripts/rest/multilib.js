@@ -51,17 +51,17 @@ module.exports = {
 		Draw.color();
 	},
 
-	circleBackOne(x, y, col, radius, thickness, fin, fout){
-		Draw.color(col);
-		Lines.stroke(fin * thickness);
-		Lines.circle(x, y, fout * radius)
-		Draw.color();
-	},
-
 	circleTwo(x, y, col1, col2, radius, thickness, fin, fout){
 		Draw.color(col1, col2, fin);
 		Lines.stroke(fout * thickness);
 		Lines.circle(x, y, fin * radius);
+		Draw.color();
+	},	
+
+	circleBackOne(x, y, col, radius, thickness, fin, fout){
+		Draw.color(col);
+		Lines.stroke(fin * thickness);
+		Lines.circle(x, y, fout * radius)
 		Draw.color();
 	},
 

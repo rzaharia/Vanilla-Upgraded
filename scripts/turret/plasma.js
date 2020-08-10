@@ -20,6 +20,10 @@ const plasmacharge = newEffect(300, e => {
     multi.circleBackTwo(e.x, e.y, Color.blue, Color.white, 120, 6, e.fin(), e.fout());
 });
 
+const plasmaShoot = newEffect(30, e => {
+	multi.circleTwo(e.x, e.y, Color.blue, Color.white, 50, 4, e.fin(), e.fout());
+});
+
 const smallPlasmabul = extend(ArtilleryBulletType, {
 	load(){
     	this.backRegion = Core.atlas.find("vanilla-upgraded-bullet-explo-back");
@@ -144,7 +148,7 @@ const plasma = extendContent(ChargeTurret, "plasma", {});
 plasma.chargeEffects = 1;
 plasma.shootType = plasmabul;
 plasma.chargeEffect = plasmacharge;
-plasma.shootEffect = Fx.lancerLaserShoot;
+plasma.shootEffect = plasmaShoot;
 plasma.smokeEffect = Fx.lancerLaserShootSmoke;
 plasma.chargeBeginEffect = plasmaChargeBegin;
 plasma.chargeTime = 280;
