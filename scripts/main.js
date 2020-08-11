@@ -11,6 +11,7 @@ if(typeof(require) !== "undefined"){
   require("turret/grabomb");
   require("turret/plasma");
   require("turret/quantum");
+  require("turret/neutron");
   //units
   require("units/explocryo");
   require("units/bigheal");
