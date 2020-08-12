@@ -46,6 +46,6 @@ if(typeof(require) !== "undefined"){
   require("rest/funclib");
   require("rest/effectlib");
   require("rest/multilib");
-  //no replase
+  //no replace
   require("extra/conv");
 }
