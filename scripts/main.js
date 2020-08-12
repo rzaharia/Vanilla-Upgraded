@@ -39,7 +39,6 @@ if(typeof(require) !== "undefined"){
   require("production/vib");
   //extra
   require("extra/shield");
-  require("extra/conv");
   require("extra/electromine");
   require("extra/soundmine");
   //rest
@@ -47,4 +46,6 @@ if(typeof(require) !== "undefined"){
   require("rest/funclib");
   require("rest/effectlib");
   require("rest/multilib");
+  //no replase
+  require("extra/conv");
 }
