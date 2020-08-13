@@ -38,7 +38,8 @@ require("production/grif");
 require("production/vib");
 //extra
 require("extra/shield");
-require("extra/electromine");
+require("extra/electromine")
+require("extra/extreminator");
 require("extra/soundmine");
 //rest
 require("rest/relief");
