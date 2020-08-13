@@ -117,143 +117,22 @@ exterminatorEquip.bullet = Bullets.standardMechSmall;
 exterminatorEquip.bullet1 = exterminatorLaser;
 exterminatorEquip.bullet2 = Bullets.artilleryUnit;
 
-const exterminatorUnitEquip = extendContent(Weapon, "exterminator-gutling", {
-  load(){
-    this.region = Core.atlas.find("vanilla-upgraded-exterminator-equip");
-  },
-
-  shoot(b){
-  	Tmp.v1.set(b.x, b.y).sub(b.getX(), b.getY());
-  	const cx = Tmp.v1.x + b.getX(), cy = Tmp.v1.y + b.getY();
-  	const vectA = new Vec2();
-  	const vectU = new Vec2();
-	const shift = Mathf.clamp(b.velocity().len(), 0, 2);
-	if(this.i == 0){
-		this.i++;
-		this.reload = 50;
-		this.shootSound2.at(b);
-		Effects.effect(Fx.hitMeltdown, b.x, b.y);
-	  	Calls.createBullet(this.bullet2, b.getTeam(), b.x, b.y, b.rotation, 3.4, 1);
-	  	vectA.trns(b.rotation, 0, 4.5 - (shift * 2));
-  		vectU.trns(b.rotation - 90, 0, 6.5 - (shift * 2));
-	  	Effects.effect(Fx.smoke, cx + vectA.x + vectU.x + Mathf.range(4.0), cy + vectA.y + vectU.y + Mathf.range(4.0));
-  		Effects.effect(Fx.smoke, cx - vectA.x + vectU.x - Mathf.range(4.0), cy - vectA.y + vectU.y - Mathf.range(4.0));
-		Calls.createBullet(this.bullet, b.getTeam(), cx + vectA.x + vectU.x, cy + vectA.y + vectU.y, b.rotation, 1, 1);
-		Calls.createBullet(this.bullet, b.getTeam(), cx - vectA.x + vectU.x, cy - vectA.y + vectU.y, b.rotation, 1, 1);
-	}else if(this.i == 1){
-		this.i++;
-		this.reload = 45;
-	  	this.shootSound.at(b);
-  		vectA.trns(b.rotation, 0, 6.5 - (shift * 2));
-	  	vectU.trns(b.rotation - 90, 0, 6.5 - (shift * 2));
-  		Effects.effect(Fx.hitMeltdown, cx + vectA.x + vectU.x + Mathf.range(4.0), cy + vectA.y + vectU.y + Mathf.range(4.0));
-	  	Effects.effect(Fx.hitMeltdown, cx - vectA.x + vectU.x - Mathf.range(4.0), cy - vectA.y + vectU.y - Mathf.range(4.0));
-  		Calls.createBullet(this.bullet1, b.getTeam(), cx + vectA.x + vectU.x, cy + vectA.y + vectU.y, b.rotation, 1, 1);
-	  	Calls.createBullet(this.bullet1, b.getTeam(), cx - vectA.x + vectU.x, cy - vectA.y + vectU.y, b.rotation, 1, 1);
-	  	vectA.trns(b.rotation, 0, 4.5 - (shift * 2));
-  		vectU.trns(b.rotation - 90, 0, 6.5 - (shift * 2));
-	  	Effects.effect(Fx.smoke, cx + vectA.x + vectU.x + Mathf.range(4.0), cy + vectA.y + vectU.y + Mathf.range(4.0));
-  		Effects.effect(Fx.smoke, cx - vectA.x + vectU.x - Mathf.range(4.0), cy - vectA.y + vectU.y - Mathf.range(4.0));
-		Calls.createBullet(this.bullet, b.getTeam(), cx + vectA.x + vectU.x, cy + vectA.y + vectU.y, b.rotation, 1, 1);
-		Calls.createBullet(this.bullet, b.getTeam(), cx - vectA.x + vectU.x, cy - vectA.y + vectU.y, b.rotation, 1, 1);
-	}else{
-		this.i = 0;
-		this.reload = 70;
-		this.shootSound1.at(b);
-	  	vectA.trns(b.rotation, 0, 4.5 - (shift * 2));
-  		vectU.trns(b.rotation - 90, 0, 6.5 - (shift * 2));
-	  	Effects.effect(Fx.smoke, cx + vectA.x + vectU.x + Mathf.range(4.0), cy + vectA.y + vectU.y + Mathf.range(4.0));
-  		Effects.effect(Fx.smoke, cx - vectA.x + vectU.x - Mathf.range(4.0), cy - vectA.y + vectU.y - Mathf.range(4.0));
-		Calls.createBullet(this.bullet, b.getTeam(), cx + vectA.x + vectU.x, cy + vectA.y + vectU.y, b.rotation, 1, 1);
-		Calls.createBullet(this.bullet, b.getTeam(), cx - vectA.x + vectU.x, cy - vectA.y + vectU.y, b.rotation, 1, 1);
-	}
-  }
-});
-exterminatorUnitEquip.width = 0;
-exterminatorUnitEquip.shootSound = Sounds.laserbig;
-exterminatorUnitEquip.shootSound1 = Sounds.pew;
-exterminatorUnitEquip.shootSound2 = Sounds.bigshot;
-exterminatorUnitEquip.shotDelay = 0;
-exterminatorUnitEquip.inaccuracy = 0;
-exterminatorUnitEquip.spacing = 20;
-exterminatorUnitEquip.velocityRnd = 0;
-exterminatorUnitEquip.shootDuration = 14;
-exterminatorUnitEquip.reload = 70;
-exterminatorUnitEquip.shots = 1;
-exterminatorUnitEquip.ejectEffect = Fx.none;
-exterminatorUnitEquip.alternate = false;
-exterminatorUnitEquip.bullet = Bullets.standardMechSmall;
-exterminatorUnitEquip.bullet1 = exterminatorLaser;
-exterminatorUnitEquip.bullet2 = Bullets.artilleryUnit;
-
-const exterminator = extendContent(Mech, "exterminator", {
-	load(){
-		this.weapon.load();
-		this.region = Core.atlas.find(this.name);
-		this.legRegion = Core.atlas.find(this.name + "-leg");
-		this.baseRegion = Core.atlas.find(this.name + "-base");
-		this.cellRegion = Core.atlas.find(this.name + "-cell");
-	},
-
-	draw(player){
-		const health = player.healthf();
-		const vectA = new Vec2();
-		for(var i = 0; i < 2; i++){
-			const size = (this.engineSizeA * 1.5) * player.boostHeat;
-			const sizeB = (size + Mathf.absin(Time.time(), 2, size / 4)) / 2;
-			const shift = Mathf.clamp(player.velocity().len(), 0, 2);
-			var sn = Mathf.signs[i];
-			vectA.trns(player.rotation - 90, 4 * sn, -4.75);
-			
-			Draw.color(player.getTeam().color);
-			Fill.circle(player.x + vectA.x, player.y + vectA.y, sizeB);
-	
-			vectA.trns(player.rotation - 90, 4 * sn, -4.75 + (shift / 1.5));
-			Draw.color(Color.valueOf("ffffff"));
-			Fill.circle(player.x + vectA.x, player.y + vectA.y, sizeB / 1.7);
-		};
-		Draw.rect(this.region, player.x, player.y, player.rotation - 90);
-		Draw.color(Color.black, player.getTeam().color, health + Mathf.absin(Time.time(), health * 5, 1 - health));
-		Draw.rect(this.cellRegion, player.x, player.y, player.rotation - 90);
-		Draw.color();
-	}
-});
-exterminator.weapon = exterminatorEquip;
-exterminator.drawCell = false;
-exterminator.speed = 0.35;
-exterminator.boostSpeed = 0.35;
-exterminator.itemCapacity = 100;
-exterminator.mineSpeed = 2;
-exterminator.drillPower = 2;
-exterminator.mass = 15;
-exterminator.buildPower = 2.2;
-exterminator.engineColor = Color.yellow;
-exterminator.engineSize = 0;
-exterminator.engineSizeA = 3;
-exterminator.flying = false;
-exterminator.health = 1200;
-exterminator.weaponOffsetX = 0;
-
 const exterminatorUnit = extendContent(UnitType, "exterminator", {});
 exterminatorUnit.create(prov(() => new JavaAdapter(GroundUnit, {
 	getPowerCellRegion(){
     	return Core.atlas.find("vanilla-upgraded-exterminator-cell");
   	},
 })));
-exterminatorUnit.weapon = exterminatorUnitEquip;
-exterminatorUnit.speed = 0.35 / 4;
-exterminatorUnit.boostSpeed = 0.35;
-exterminatorUnit.itemCapacity = 100;
-exterminatorUnit.mineSpeed = 2;
-exterminatorUnit.drillPower = 2;
-exterminatorUnit.mass = 15;
-exterminatorUnit.buildPower = 2.2;
-exterminatorUnit.flying = false;
-exterminatorUnit.health = 1200;
-
-
-const exterminatorPad = extendContent(MechPad, "exterminator-pad", {});
-exterminatorPad.mech = exterminator;
+exterminator.weapon = exterminatorEquip;
+exterminator.speed = 0.35 / 4;
+exterminator.boostSpeed = 0.35;
+exterminator.itemCapacity = 100;
+exterminator.mineSpeed = 2;
+exterminator.drillPower = 2;
+exterminator.mass = 15;
+exterminator.buildPower = 2.2;
+exterminator.flying = false;
+exterminator.health = 1200;
 
 const exterminatorFac = extendContent(UnitFactory, "exterminator-factory", {});
 exterminatorFac.unitType = exterminatorUnit;
