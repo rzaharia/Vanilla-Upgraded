@@ -107,18 +107,5 @@ renit.rotatespeed = 0.17;
 renit.targetGround = true;
 renit.targetAir = true;
 
-const renitFac = extendContent(UnitFactory, "renit-fac", {
-  load(){
-    this.super$load();
-    
-    this.region = Core.atlas.find(this.name);
-    this.topRegion = Core.atlas.find("vanilla-upgraded-renit-fac-top");
-  },
-
-  generateIcons(){
-  return [
-    Core.atlas.find(this.name),
-    Core.atlas.find("vanilla-upgraded-renit-fac-top")
-  ];}
-});
+const renitFac = extendContent(UnitFactory, "renit-fac", {});
 renitFac.unitType = renit;
