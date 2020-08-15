@@ -47,14 +47,11 @@ require("production/vib");
 //extra
 require("extra/shield");
 require("extra/electromine")
-require("extra/extreminator");
 require("extra/soundmine");
+require("extra/conv");
 
 //rest
 require("rest/relief");
 require("rest/funclib");
 require("rest/effectlib");
-require("rest/multilib");
-
-//no replace
-require("extra/conv");
+require("rest/multilib");
