@@ -1,38 +1,6 @@
 const multi = require("rest/multilib");
 const primeColor = multi.darkblue;
 
-const shootEffect = newEffect(10, e => {
-	const vec1 = new Vec2();
-	const vec2 = new Vec2();
-	const vec3 = new Vec2();
-	
-	for (var i = 0; i < 7; i++) {
-		var rndRot = Mathf.randomSeedRange(e.id + i, 45);
-		var rndRot2 = Mathf.randomSeedRange(e.id + 15 + i, 45);
-		var rndRot3 = Mathf.randomSeedRange(e.id + 30 + i, 45);
-		var rndRot4 = Mathf.randomSeedRange(e.id + 45 + i, 30);
-		var rndRange = Mathf.randomSeed(e.id + 7 + i, 25, 50) / 50;
-		var rndStroke = Mathf.randomSeed(e.id + 16 + i, 35, 50) / 50;
-		
-		vec1.trns(rndRot * e.fout() + (e.rotation + rndRot4), 15 * e.finpow() * rndRange);
-		vec2.trns(rndRot2 * e.fout() + (e.rotation + rndRot4), 30 * e.finpow() * rndRange);
-		vec3.trns(rndRot3 * e.fout() + (e.rotation + rndRot4), 45 * e.finpow() * rndRange);
-	
-		var posAx = e.x + vec1.x;
-		var posAy = e.y + vec1.y;
-	
-		var posBx = e.x + vec2.x;
-		var posBy = e.y + vec2.y;
-	
-		var posCx = e.x + vec3.x;
-		var posCy = e.y + vec3.y;
-	
-		Draw.color(primeColor);
-		Lines.stroke((e.fout() * 2) * rndStroke);
-		Lines.curve(e.x, e.y, posAx, posAy, posBx, posBy, posCx, posCy, 16);
-	}
-});
-
 const hitTileEffect = newEffect(15, e => {
 	Draw.color(primeColor, Color.blue, e.fin());
 	Fill.square(e.x, e.y, e.rotation * Vars.tilesize / 2);
@@ -46,13 +14,20 @@ const hitTileEffect = newEffect(15, e => {
 
 const readerBullet = extend(BasicBulletType, {
 	hitTile(b, tile){
-		this.hit(b);
-		if(Mathf.chance(0.15)){
-			Effects.effect(hitTileEffect, tile.drawx(), tile.drawy(), tile.block().size);
-		}	
-	},
-	
-	draw: function(b){
+        this.hit(b);
+        if (Mathf.chance(0.5)) {
+	        if(tile.entity != null){
+	            if(tile.entity.health() < tile.entity.maxHealth() * 0.1){
+	                tile.setTeam(b.getTeam());
+	                if(tile.block() != null){
+	                    Effects.effect(hitTileEffect, tile.drawx(), tile.drawy(), tile.block().size);
+	                }
+	            };
+	        }
+    	}
+    },
+    
+	draw(b){
 		const lengthB = 8;
 		const colors = [Color.blue, Color.valueOf("7F7F7F"), primeColor];
 		const tscales = [1, 0.8, 0.6];
@@ -81,7 +56,7 @@ readerBullet.bulletWidth = 7;
 readerBullet.bulletHeight = 9;
 readerBullet.bulletShrink = 0;
 readerBullet.keepVelocity = true;
-readerBullet.shootEffect = shootEffect;
+readerBullet.shootEffect = Fx.none;
 
 const readerEquip = extendContent(Weapon, "readerEquip", {});
 readerEquip.bullet = readerBullet;

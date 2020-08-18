@@ -22,6 +22,7 @@ require("units/crounder");
 require("units/renit");
 require("units/misunit");
 require("units/reader");
+require("units/librarian");
 
 //mechs
 require("mechs/anti");
@@ -54,4 +55,6 @@ require("extra/conv");
 require("rest/relief");
 require("rest/funclib");
 require("rest/effectlib");
-require("rest/multilib");
+require("rest/multilib");
+
+
