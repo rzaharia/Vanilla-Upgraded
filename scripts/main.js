@@ -23,6 +23,7 @@ require("units/renit");
 require("units/misunit");
 require("units/reader");
 require("units/librarian");
+require("units/eruptsupr");
 
 //mechs
 require("mechs/anti");
