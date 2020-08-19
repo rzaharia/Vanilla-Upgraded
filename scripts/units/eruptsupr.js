@@ -30,16 +30,16 @@ bomb.fragBullet = Bullets.slagShot;
 bomb.fragBullets = 1000;
 
 const eruptsuprEquipe = extendContent(Weapon, "eruptsupr-equip", {
-	/*load(){
+	load(){
 		this.region = Core.atlas.find("vanilla-upgraded-eruptsupr-equip");
-	}*/
+	}
 });
 eruptsuprEquipe.bullet = bomb;
 eruptsuprEquipe.alternate = true;
 eruptsuprEquipe.reload = 700;
 eruptsuprEquipe.width = 10;
 eruptsuprEquipe.shootSound = Sounds.shootBig;
-eruptsuprEquipe.recoil = 5.5;
+eruptsuprEquipe.recoil = 3;
 
 const eruptsuprBase = prov(() => new JavaAdapter(GroundUnit, {}));
 
@@ -47,7 +47,7 @@ const eruptsupr = extendContent(UnitType, "eruptsupr", {
 	load(){
 		this.super$load();
 
-		// this.weapon.load();
+		this.weapon.load();
 		this.region = Core.atlas.find(this.name);
 		this.legRegion = Core.atlas.find(this.name + "-leg");
 		this.baseRegion = Core.atlas.find(this.name + "-base");
