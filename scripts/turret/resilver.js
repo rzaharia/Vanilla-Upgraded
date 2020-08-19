@@ -85,7 +85,9 @@ const resilverBullet = extend(BasicBulletType, {
 	update: function(b){
 		Effects.shake(1.2, 1.2, b.x, b.y);
 		if(b.timer.get(1, 17)){
-			this.scanUnits(b);
+			if (Mathf.chance(0.25)) {
+				this.scanUnits(b);
+			}
 			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 170.0, false);
 		};
 	},
