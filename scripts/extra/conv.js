@@ -16,12 +16,7 @@ const conveyor = extendContent(Conveyor, "hermetique-conveyor", {
 });
 
 const conduit = extendContent(Conduit, "hermetique-conduit", {
-	load(){
-        this.liquidRegion = Core.atlas.find("conduit-liquid");
-        for(var i = 0; i < 6; i++){
-            this.topRegions[i] = Core.atlas.find(this.name + "-top-" + i);
-            this.botRegions[i] = Core.atlas.find(this.name + "-bottom-" + i);
-        }
+    load(){
         this.glassRegion = Core.atlas.find("vanilla-upgraded-hermetique-conveyor-top");
     },
     draw(tile){
