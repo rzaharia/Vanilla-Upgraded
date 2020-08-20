@@ -1,6 +1,5 @@
 {
     "type": "ItemTurret",
-    "outlineIcon": false,
     "targetAir": true,
     "targetGround": true,
     "shootShake": 2,

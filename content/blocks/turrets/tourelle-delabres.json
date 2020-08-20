@@ -1,6 +1,5 @@
 {
     "buildVisibility": "sandboxOnly",
-    "outlineIcon": false,
     "targetAir": true,
     "targetGround": true,
     "health": 550,
