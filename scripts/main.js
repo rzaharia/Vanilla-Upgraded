@@ -40,11 +40,11 @@ require("power/surge-tower-huge");
 require("walls/mendingwall");
 
 //production
-require("production/am");
-require("production/dd");
-require("production/com");
-require("production/grif");
-require("production/vib");
+require("production/four");
+require("production/dilueur");
+require("production/usinearesist");
+require("production/usineasupra");
+require("production/vobrotiniter");
 
 //extra
 require("extra/shield");
