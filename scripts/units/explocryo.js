@@ -15,11 +15,12 @@ const exploShootCryo = newEffect(40, p => {
   Lines.circle(p.x, p.y, p.fin() * 120);
 });
 
-const CryoExploBullet = extend(BasicBulletType, {
-  load: function(){
+const cryoExploBullet = extend(BasicBulletType, {
+  load(){
     this.backRegion = Core.atlas.find("vanilla-upgraded-bullet-explo-back");
     this.frontRegion = Core.atlas.find("vanilla-upgraded-bullet-explo");
   },
+
   draw(b) {
         const height = this.bulletHeight * ((1 - this.bulletShrink) + this.bulletShrink * b.fout());
         Draw.color(this.backColor);
@@ -30,26 +31,26 @@ const CryoExploBullet = extend(BasicBulletType, {
        Effects.effect(Fx.freezing, b.x, b.y);
     }
 });
-CryoExploBullet.despawnEffect = exploShootCryo;
-CryoExploBullet.speed = 9;
-CryoExploBullet.lifetime = 70;
-CryoExploBullet.damage = 220;
-CryoExploBullet.hitEffect = exploShootCryo;
-CryoExploBullet.width = 9;
-CryoExploBullet.height = 11;
-CryoExploBullet.shootEffect = shootCryo;
-CryoExploBullet.smokeEffect = Fx.none;
-CryoExploBullet.frontColor = cyan;
-CryoExploBullet.backColor = darkCyan;
-CryoExploBullet.fragBullet = Bullets.cryoShot;
-CryoExploBullet.fragBullets = 1000;
+cryoExploBullet.despawnEffect = exploShootCryo;
+cryoExploBullet.speed = 9;
+cryoExploBullet.lifetime = 70;
+cryoExploBullet.damage = 220;
+cryoExploBullet.hitEffect = exploShootCryo;
+cryoExploBullet.width = 9;
+cryoExploBullet.height = 11;
+cryoExploBullet.shootEffect = shootCryo;
+cryoExploBullet.smokeEffect = Fx.none;
+cryoExploBullet.frontColor = cyan;
+cryoExploBullet.backColor = darkCyan;
+cryoExploBullet.fragBullet = Bullets.cryoShot;
+cryoExploBullet.fragBullets = 1000;
 
 const exploCryoEquipe = extendContent(Weapon, "explocryo-equip", {
   load: function(){
     this.region = Core.atlas.find("vanilla-upgraded-explocryo-equip");
   }
 });
-exploCryoEquipe.bullet = CryoExploBullet;
+exploCryoEquipe.bullet = cryoExploBullet;
 exploCryoEquipe.alternate = true;
 exploCryoEquipe.reload = 700;
 exploCryoEquipe.lenght = 12;
@@ -76,6 +77,7 @@ const exploCryo = extendContent(UnitType, "explocryo", {
     this.legRegion = Core.atlas.find(this.name + "-leg");
     this.baseRegion = Core.atlas.find(this.name + "-base");
   },
+
   generateIcons(){
   return[
     Core.atlas.find("vanilla-upgraded-explocryo-equip"),
@@ -100,6 +102,7 @@ exploCryo.targetGround = true;
 const exploCryoFac = extendContent(UnitFactory, "explocryo-fac", {
   load() {
     this.super$load();
+
     this.topRegion = Core.atlas.find("clear");
     this.explocryoDrone = Core.atlas.find(this.name + "-drone");
     this.explocryo = Core.atlas.find("vanilla-upgraded-explocryo");
@@ -110,8 +113,9 @@ const exploCryoFac = extendContent(UnitFactory, "explocryo-fac", {
   },
 
   generateIcons() {
-    return [this.region];
-  },
+  return [
+    Core.atlas.find(this.name)
+  ];},
 
   draw(tile) {
     const dx = tile.drawx(), dy = tile.drawy();
