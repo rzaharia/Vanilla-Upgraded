@@ -82,17 +82,19 @@ const resilverShootEffect = newEffect(10, e => {
 });
 
 const resilverBullet = extend(BasicBulletType, {
-	update: function(b){
+	update(b){
 		Effects.shake(1.2, 1.2, b.x, b.y);
 		if(b.timer.get(1, 17)){
-			if (Mathf.chance(0.25)) {
-				this.scanUnits(b);
+			if (Mathf.chance(0.5)) {
+				if (Mathf.chance(0.5)) {
+					this.scanUnits(b)
+				}
 			}
 			Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), 170.0, false);
 		};
 	},
 
-	scanUnits: function(b){
+	scanUnits(b){
 		const vec = new Vec2();
 		
 		for(var i = 0; i < this.searchAccuracy; i++){
@@ -122,17 +124,17 @@ const resilverBullet = extend(BasicBulletType, {
 		}
 	},
 
-	range: function(){
+	range(){
 		return 190.0;
 	},
 
-	hit: function(b, hitx, hity){
+	hit(b, hitx, hity){
 		if(hitx != null && hity != null){
 			Effects.effect(this.hitEffect, hitx, hity);
 		}
 	},
 
-	draw: function(b){
+	draw(b){
 		const colors = [primeColor.cpy().mul(1.0, 1.0, 1.0, 0.4), primeColor, Color.white];
 		const tscales = [1.0, 0.7, 0.5, 0.2];
 		const lenscales = [1, 1.1, 1.13, 1.14];

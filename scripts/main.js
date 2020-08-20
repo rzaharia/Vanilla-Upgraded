@@ -9,6 +9,7 @@ require("turret/sniper");
 require("turret/bigfuse");
 require("turret/grabomb");
 require("turret/resilver");
+require("turret/reconstructor");
 require("turret/plasma");
 require("turret/quantum");
 require("turret/neutron");
@@ -57,5 +58,3 @@ require("rest/relief");
 require("rest/funclib");
 require("rest/effectlib");
 require("rest/multilib");
-
-
