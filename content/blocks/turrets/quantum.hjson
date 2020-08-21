@@ -6,7 +6,7 @@ heatColor: 0000ff
 size: 4
 health: 1850
 targetAir: true
-shootSound: bigShoot
+shootSound: laser
 category: turret
 research: plasma
 requirements: [

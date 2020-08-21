@@ -14,7 +14,7 @@
 	"recoil": 8,
 	"hasPower": true,
 	"hasLiquids": true,
-	"shootSound": "laser",
+	"shootSound": "laserbig",
 	"activeSound": "none",
 	"liquidCapacity": 60,
 	"activeSoundVolume": 2.5,

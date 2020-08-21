@@ -278,3 +278,4 @@ const bombTurret = extendContent(ItemTurret, "grabomb", {
 		this.super$init();
 	}
 });
+bombTurret.shootSound = Sounds.artillery;
