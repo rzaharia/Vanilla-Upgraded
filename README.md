@@ -22,7 +22,7 @@ U can join the official discord server of Vanilla-Upgraded now with this [link](
 
 ### Contributing
 
-See [Contributing](CONTRIBUTING.md).
+See who [contributes](CONTRIBUTING.md) to the mod.
 
 ### Bundle 
 English bundle have arrived! 
