@@ -4,7 +4,7 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE.txt)
 
 _[Trello Board](https://trello.com/b/kT6zadVS/vanilla-upgraded-trello)_
-_[Wiki](https://voz8duh.wixsite.com/vanilla-upgraded)_ 
+<br>_[Wiki](https://voz8duh.wixsite.com/vanilla-upgraded)_ 
 
 # Vanilla-Upgraded
 A mod that adds a lot more experience for the games!
