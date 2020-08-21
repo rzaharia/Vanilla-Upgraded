@@ -9,7 +9,7 @@ _[Wiki](voz8duh.wixsite.com/vanilla-upgraded)_
 A mod that adds a lot more experience for the games!
 <br>I just hope you enjoy the mod ^^
 
-U can join the official discord server of Vanilla-Upgraded now with this _[link](https://discord.gg/TQpdDKn)_!
+U can join the official discord server of Vanilla-Upgraded now with this [link](https://discord.gg/TQpdDKn)!
 
 ## The mod add: 
 `Items`: 9
@@ -22,7 +22,7 @@ U can join the official discord server of Vanilla-Upgraded now with this _[link]
 
 ### Contributing
 
-See [CONTRIBUTING](CONTRIBUTING.md).
+See [Contributing](CONTRIBUTING.md).
 
 ### Bundle 
 English bundle have arrived! 
