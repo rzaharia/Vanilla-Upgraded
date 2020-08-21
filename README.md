@@ -1,12 +1,15 @@
-![Logo](sprites-override/ui/logo.png) <br>
+![Logo](sprites-override/ui/logo.png) 
+
 [![Discord](https://img.shields.io/discord/730535373306069114)](https://discord.gg/TQpdDKn)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE.txt)
+
+_[Wiki](voz8duh.wixsite.com/vanilla-upgraded)_ 
+
 # Vanilla-Upgraded
 A mod that adds a lot more experience for the games!
 <br>I just hope you enjoy the mod ^^
 
-U can join the official discord server of Vanilla-Upgraded now with this link!
-<br>https://discord.gg/TQpdDKn
+U can join the official discord server of Vanilla-Upgraded now with this _[link](https://discord.gg/TQpdDKn)_!
 
 ## The mod add: 
 `Items`: 9
@@ -17,7 +20,11 @@ U can join the official discord server of Vanilla-Upgraded now with this link!
 <br>`Units`: 10 + 3
 <br>`Maps`: 6
 
-## Bundle 
+### Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md).
+
+### Bundle 
 English bundle have arrived! 
 <br>We have planned a Russian bundle.
 <br>We plan to add bundles based on player requests. 
