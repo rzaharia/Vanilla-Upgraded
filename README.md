@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/discord/730535373306069114)](https://discord.gg/TQpdDKn)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE.txt)
 
-_[Wiki](voz8duh.wixsite.com/vanilla-upgraded)_ 
+_[Wiki](https://voz8duh.wixsite.com/vanilla-upgraded)_ 
 
 # Vanilla-Upgraded
 A mod that adds a lot more experience for the games!
