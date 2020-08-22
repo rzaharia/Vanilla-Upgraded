@@ -1,7 +1,7 @@
 ![Logo](sprites-override/ui/logo.png) 
 
 [![Discord](https://img.shields.io/discord/730535373306069114)](https://discord.gg/TQpdDKn)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE.txt)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE)
 
 _[Trello Board](https://trello.com/b/kT6zadVS/vanilla-upgraded-trello)_
 <br>_[Wiki](https://voz8duh.wixsite.com/vanilla-upgraded)_ 
