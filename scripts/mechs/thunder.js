@@ -6,10 +6,96 @@ const thunderTrail = newEffect(13, e => {
 	Fill.circle(e.x, e.y, 1.5 * e.fout());
 });
 
+const elecMissileTrail = newEffect(50, e => {
+	Draw.color(yellow);
+	Fill.circle(e.x, e.y, e.rotation * e.fout());
+});
+
 const biggerThunderTrail = newEffect(13, e => {
 	Draw.color(yellow, orange, e.fin());
 	Fill.circle(e.x, e.y, 3 * e.fout());
 });
+
+const thunderBomb = extend(BasicBulletType, {
+	load(){
+      this.backRegion = Core.atlas.find("vanilla-upgraded-bullet-explo-back");
+      this.frontRegion = Core.atlas.find("vanilla-upgraded-bullet-explo");
+    },
+
+	draw(b){
+        Draw.color(yellow);
+        Draw.rect(this.backRegion, b.x, b.y, 6, 6, b.rot() - 90);
+        Draw.color(orange);
+        Draw.rect(this.frontRegion, b.x, b.y, 6, 6, b.rot() - 90);
+        Draw.color();
+	},
+	
+	despawned(b){
+		this.super$despawned(b);
+
+		for (var i = 0; i < Mathf.random(2, 5); i++) {
+			Lightning.create(b.getTeam(), yellow, 26, b.x, b.y, Mathf.random(360), Mathf.random(4, 18));
+		};
+		for (var i = 0; i < Mathf.random(1, 3); i++) {
+			Lightning.create(b.getTeam(), orange, 28, b.x, b.y, Mathf.random(360), Mathf.random(4, 18));
+		};
+	}
+});
+thunderBomb.drag = 0.033;
+thunderBomb.explodeRange = 4;
+thunderBomb.speed = 3;
+thunderBomb.damage = 15;
+thunderBomb.splashDamage = 5;
+thunderBomb.splashDamageRadius = 10;
+thunderBomb.bulletShrink = 0;
+thunderBomb.hitSize = 4;
+thunderBomb.knockback = 2;
+thunderBomb.hitShake = Fx.none;
+thunderBomb.hitEffect = Fx.flakExplosionBig;
+thunderBomb.hitSound = Sounds.explosionbig;
+thunderBomb.despawnEffect = Fx.flakExplosionBig;
+thunderBomb.collidesTiles = true;
+thunderBomb.collidesAir = true;
+thunderBomb.lifetime = 70;
+
+const thunderMissiles = extend(MissileBulletType, {
+	despawned(b){
+		this.super$despawned(b);
+
+		for (var i = 0; i < Mathf.random(2, 5); i++) {
+			Lightning.create(b.getTeam(), yellow, 26, b.x, b.y, Mathf.random(360), Mathf.random(4, 18));
+		};
+		for (var i = 0; i < Mathf.random(1, 3); i++) {
+			Lightning.create(b.getTeam(), orange, 28, b.x, b.y, Mathf.random(360), Mathf.random(4, 18));
+		};
+	},
+
+	update(b){
+		this.super$update(b);
+
+		if(Mathf.chance(Time.delta() * 0.2)){
+            Effects.effect(elecMissileTrail, b.x, b.y, 2);
+        }
+	} 
+});
+thunderMissiles.bulletWidth = 10;
+thunderMissiles.bulletHeight = 10;
+thunderMissiles.speed = 5.5;
+thunderMissiles.damage = 25;
+thunderMissiles.bulletShrink = 0;
+thunderMissiles.drag = -0.003;
+thunderMissiles.keepVelocity = false;
+thunderMissiles.splashDamageRadius = 32;
+thunderMissiles.splashDamage = 10;
+thunderMissiles.lifetime = 110;
+thunderMissiles.trailColor = Color.white;
+thunderMissiles.hitEffect = Fx.blastExplosion;
+thunderMissiles.despawnEffect = Fx.blastExplosion;
+thunderMissiles.backColor = yellow;
+thunderMissiles.frontColor = orange;
+thunderMissiles.weaveScale = 8;
+thunderMissiles.weaveMag = 5;
+thunderMissiles.bulletSprite = "missile";
 
 const thunderBall = extend(BasicBulletType, {
 	update(b){
@@ -45,7 +131,7 @@ const thunderBall = extend(BasicBulletType, {
 });
 thunderBall.speed = 4.6;
 thunderBall.damage = 32;
-thunderBall.lifetime = 90;
+thunderBall.lifetime = 140;
 thunderBall.hitSize = 22;
 thunderBall.despawnEffect = Fx.none;
 thunderBall.shootEffect = Fx.none;
@@ -68,6 +154,10 @@ const finalThunder = extend(BasicBulletType, {
 		for(var i = 0; i < 3; i++){
 			Lightning.create(b.getTeam(), orange, 22, b.x, b.y, b.rot() + Mathf.range(46.0), 24);
 		};
+		for (var i = 0; i < 8; i++) {
+			Bullet.create(this.frags[1], b, b.x, b.y, b.rot() + Mathf.range(10.0), Mathf.random(0.75, 1.25));
+		};
+
 		Bullet.create(this.frags[0], b, b.x, b.y, b.rot(), Mathf.random(0.75, 1.25));
 	},
 	
@@ -75,7 +165,7 @@ const finalThunder = extend(BasicBulletType, {
 });
 finalThunder.speed = 0.001;
 finalThunder.damage = 300;
-finalThunder.frags = [thunderBall];
+finalThunder.frags = [thunderBall, thunderMissiles];
 finalThunder.lifetime = 1;
 finalThunder.hitSize = 12;
 finalThunder.collidesTiles = false;
@@ -114,6 +204,9 @@ const thunder = extendContent(Mech, "thunder", {
 			pred.trns(player.velocity().angle(), 16);
 			if(Mathf.chance(0.25)){
 				Lightning.create(player.getTeam(), yellow, 18 * Vars.state.rules.playerDamageMultiplier, player.x, player.y, player.rotation + Mathf.range(21.0), Mathf.floorPositive((player.velocity().len() * 2) + Mathf.random(6, 16)));
+				for (var i = 0; i < 2; i++) {
+					Bullet.create(thunderBomb, player, player.getTeam(), player.x, player.y, player.rotation + Mathf.range(10.0), Mathf.random(0.75, 1.25));
+				}
 			}
 		};
 
