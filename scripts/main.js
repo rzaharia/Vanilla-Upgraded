@@ -54,6 +54,7 @@ require("extra/shield");
 require("extra/electromine")
 require("extra/soundmine");
 require("extra/conv");
+require("extra/hugevault");
 
 //rest
 require("rest/relief");
