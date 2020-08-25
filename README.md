@@ -14,11 +14,11 @@ U can join the official discord server of Vanilla-Upgraded now with this [link](
 
 ## The mod add: 
 `Items`: 9
-<br>`Blocks`: 61 + 10
+<br>`Blocks`: 61 + 11
 <br>`Turrets`: 11 + 7
 <br>`Mechs`: 6 + 1
 <br>`Liquids`: 2
-<br>`Units`: 10 + 3
+<br>`Units`: 10 + 4
 <br>`Maps`: 6
 
 ### Contributing
@@ -27,5 +27,5 @@ See who [contributes](CONTRIBUTING.md) to the mod.
 
 ### Bundle 
 English bundle have arrived! 
-<br>We have planned a Russian bundle.
+<br>Russian bundle have arrived! 
 <br>We plan to add bundles based on player requests. 
