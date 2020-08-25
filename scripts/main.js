@@ -25,6 +25,7 @@ require("units/misunit");
 require("units/reader");
 require("units/librarian");
 require("units/eruptsupr");
+require("units/prototype");
 
 //mechs
 require("mechs/anti");
