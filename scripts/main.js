@@ -38,6 +38,7 @@ require("mechs/builder");
 //power
 require("power/surge-tower-huge");
 require("power/giganticbattery");
+require("power/hugenode");
 
 //walls
 require("walls/mendingwall");
