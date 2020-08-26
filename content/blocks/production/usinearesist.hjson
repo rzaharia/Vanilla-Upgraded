@@ -3,6 +3,7 @@ hasPower: true
 hasLiquids: false
 hasItems: true
 updateEffect: smeltsmoke
+itemCapacity: 20
 consumes: {
   power: 2.6
   items: {
