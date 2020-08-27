@@ -39,15 +39,6 @@ const changeTeam = elib.newEffectWDraw(78, 512, e => {
 	Draw.blend();
 });
 
-const convertDamage = newEffect(67, e => {
-	Draw.blend(Blending.additive);
-	Draw.color(primeColor, Color.white, e.fin());
-	Fill.square(e.x, e.y, (7 * Vars.tilesize / 2));
-	
-	Draw.reset();
-	Draw.blend();
-});
-
 const reconstructorLaser = extend(BasicBulletType, {
 	update(b){
 		Effects.shake(1.2, 1.2, b.x, b.y);
@@ -84,7 +75,6 @@ const reconstructorLaser = extend(BasicBulletType, {
 
 							Effects.effect(changeTeam, newUnit.x, newUnit.y, newUnit.rotation, newUnit);
 							b.getOwner().damage(Math.min((newUnit.maxHealth() * 0.5), (b.getOwner().maxHealth() - 1)));
-							Effects.effect(convertDamage, b.getOwner().x, b.getOwner().y);
 						}
 					}
 				}
