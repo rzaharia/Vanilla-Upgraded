@@ -1,4 +1,3 @@
-type: Door
 size: 3
 requirements: [
   graphite/70

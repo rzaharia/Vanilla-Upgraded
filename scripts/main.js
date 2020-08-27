@@ -42,6 +42,7 @@ require("power/hugenode");
 
 //walls
 require("walls/mendingwall");
+require("walls/door");
 
 //production
 require("production/four");
