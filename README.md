@@ -18,7 +18,7 @@ U can join the official discord server of Vanilla-Upgraded now with this [link](
 <br>`Turrets`: 18
 <br>`Mechs`: 7
 <br>`Liquids`: 2
-<br>`Units`: 14
+<br>`Units`: 14 + 1
 <br>`Maps`: 6
 
 ### Contributing
