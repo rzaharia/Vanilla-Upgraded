@@ -29,5 +29,5 @@ See who [contributes](CONTRIBUTING.md) to the mod.
 English bundle have arrived! 
 <br>Russian bundle is here! 
 <br>Spanish bundle is here! 
-<br>Polish bundle is !
+<br>Polish bundle is here!
 <br>We plan to add bundles based on player requests. 
