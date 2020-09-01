@@ -6,6 +6,7 @@ require("turret/endduo");
 require("turret/tourelledelabres");
 require("turret/sniper");
 require("turret/futsniper");
+require("turret/futmachgun");
 require("turret/blizzard");
 require("turret/bigfuse");
 require("turret/grabomb");
