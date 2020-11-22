@@ -1,0 +1,12 @@
+{
+	"type": "Wall",
+    "deflect": true,
+    "flashHit": true,
+    "health": 5400,
+    "size": 3,
+    "requirements": [
+		{"item": "phase-fabric", "amount": 125}
+    ],
+    "category": "defense",
+    "research": "phase-wall-large"
+}

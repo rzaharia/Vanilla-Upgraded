@@ -1,0 +1,11 @@
+{	
+	"healh": 120,
+	"liquidCapacity": 24,
+	"liquidPressure": 1.1,
+	"requirements": [
+		{"item": "metaglass", "amount": 2},
+		{"item": "titanium", "amount": 4}
+	],
+	"category": "liquid",
+	"research": "pulse-conduit"
+}

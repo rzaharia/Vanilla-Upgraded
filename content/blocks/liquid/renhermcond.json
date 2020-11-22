@@ -1,0 +1,13 @@
+{
+	"type": "ArmoredConduit",
+	"healh": 170,
+	"liquidCapacity": 24,
+	"liquidPressure": 1.1,
+	"requirements": [
+		{"item": "thorium", "amount": 4},
+		{"item": "plastanium", "amount": 2},
+		{"item": "lithium", "amount": 2}
+	],
+	"category": "liquid",
+	"research": "hermetique-conduit"
+}

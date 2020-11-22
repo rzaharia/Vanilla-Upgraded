@@ -1,8 +1,0 @@
-requirements: [
-  surge-alloy/190
-  silicon/150
-  graphite/270
-  aliage-resist/190
-]
-category: upgrade
-research: glaive-ship-pad

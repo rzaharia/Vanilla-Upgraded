@@ -1,0 +1,9 @@
+{    
+    "temperature": 1,
+    "viscosity": 0.8,
+    "damage": 2,
+    "explovisiness": 1.5,
+    "effect": "burning",
+    "statusEffect": "melting",
+    "color": "fa00ff"
+}

@@ -1,7 +1,0 @@
-requirements: [
-  silicon/35
-  titanium/60
-  lithium/40
-]
-category: turret
-research: scorch

@@ -1,7 +1,0 @@
-size: 3
-requirements: [
-  graphite/70
-  silicon/30
-]
-category: defense
-research: door-large

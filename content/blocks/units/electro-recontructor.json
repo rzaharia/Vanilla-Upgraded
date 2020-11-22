@@ -1,0 +1,29 @@
+{
+	"type": "Reconstructor",
+	"size": 3,
+	"constructTime": 600,
+	"consumes": {
+		"power": 3,
+		"items": {
+			"items": [
+				{"item": "silicon", "amount": 25},
+				{"item": "lithium", "amount": 25}
+			]
+		}
+	},
+	"requirements": [
+		{"item": "lead", "amount": 250},
+		{"item": "silicon", "amount": 180},
+		{"item": "surge-alloy", "amount": 60}
+	],
+	"upgrades": [
+		["dagger", "teseus"],
+		["flare", "teoleus"],
+		["atrax", "misunit"],
+		["mace", "explocryo"],
+		["horizon", "haos-antologist"],
+		["mono", "bigmine"]
+	],
+	"category": "units",
+	"research": "additive-reconstructor"
+}

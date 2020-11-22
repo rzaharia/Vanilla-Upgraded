@@ -1,8 +1,0 @@
-requirements: [
-  titanium/2
-  copper/2
-  lead/2
-]
-category: distribution
-speed: 0.12
-research: titanium-conveyor

@@ -1,0 +1,89 @@
+{	
+	"type": "legs",
+	"speed": 0.22,
+	"hitsize": 30,
+	"health": 3600,
+	"drag": 0.4,
+	"range": 480,
+	"flying": false,
+	"targetAir": true,
+	"rotatespeed": 0.06,
+	"legCount": 6,
+	"legMoveSpace": 1,
+	"legPairOffset": 3,
+	"legLength": 25,
+	"legExtension": -15,
+	"legBaseOffset": 10,
+	"landShake": 1,
+	"legLengthScl": 0.96,
+	"rippleScale": 2,
+	"legSpeed": 0.2,
+	"visualElevation": 0.65,
+	"hovering": true,
+	"immunities": [
+		"burning", 
+		"melting",
+		"freezing"
+	],
+	"weapons": [
+		{
+			"name": "explocryo-equip",
+			"shootSound": "shootBig",
+			"recoil": 5.5,
+			"x": -18,
+			"y": 0,
+			"reload": 75,
+			"alternate": true,
+			"bullet": {
+				"type": "BasicBulletType",
+				"despawnEffect": "explosion",
+				"speed": 7,
+				"lifetime": 45,
+				"damage": 220,
+				"hitEffect": "explosion",
+				"width": 9,
+				"height": 11,
+				"shootEffect": "explosion",
+				"smokeEffect": "none",
+				"frontColor": "00ffff",
+				"backColor": "00ffff",
+				"fragBullet": "cryoShot",
+				"rotate": false,
+				"fragBullets": 50
+			}
+		},
+		{
+			"name": "explocryo-equp-cryoshot",
+			"shootSound": "splash",
+			"recoil": 0.25,
+			"inaccuracy": 3,
+			"x": -8,
+			"y": 4,
+			"reload": 4,
+			"alternate": false,
+			"rotate": true,
+			"bullet": "cryoShot"
+		},
+		{
+			"name": "explocryo-laser",
+			"shootSound": "laser",
+			"recoil": 1.5,
+			"x": 0,
+			"y": -4,
+			"reload": 50,
+			"shootShake": 4,
+			"alternate": false,
+			"rotate": false,
+			"bullet": {
+				"type": "LaserBulletType",
+				"damage": 70,
+				"sideAngle": 20,
+				"sideWidth": 1.5,
+				"sideLength": 80,
+				"width": 25,
+				"length": 200,
+				"shootEffect": "shockwave"
+			}
+		}
+	]
+}

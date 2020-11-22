@@ -1,0 +1,48 @@
+{	
+	"type": "legs",
+	"speed": 0.28,
+	"hitsize": 15,
+	"health": 650,
+	"drag": 0.4,
+	"range": 200,
+	"flying": false,
+	"targetAir": false,
+	"rotatespeed": 0.06,
+	"legCount": 4,
+	"legLength": 11,
+	"legTrns": 0.7,
+	"legMoveSpace": 1.2,
+	"legBaseOffset": 1.8,
+	"immunities": [
+		"burning", 
+		"melting"
+	],
+	"weapons": [
+		{
+			"name": "misunit-equip",
+			"x": -8,
+			"y": 0,
+			"reload": 30,
+			"shots": 3,
+			"shotDelay": 4,
+			"inaccuracy": 3,
+			"recoil": 1.2,
+			"ignoreRotation": true,
+			"alternate": true,
+			"shootShake": 2,
+			"shootSound": "shoot",
+			"bullet": "missileExplosive"
+		},
+		{
+			"name": "misunit-little-equip",
+			"alternate": true,
+			"reload": 15,
+			"x": 0,
+			"y": 2,
+			"shootSound": "shoot",
+			"recoil": 1,
+			"ignoreRotation": true,
+			"bullet": "missileIncendiary"
+		}
+	]
+}

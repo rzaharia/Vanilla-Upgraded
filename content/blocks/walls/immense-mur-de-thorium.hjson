@@ -1,8 +1,0 @@
-type: Wall
-health: 7200
-size: 3
-requirements: [
-  thorium/125
-]
-category: defense
-research: thorium-wall-large

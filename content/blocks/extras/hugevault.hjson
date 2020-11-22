@@ -1,9 +1,0 @@
-size: 4
-itemCapacity: 2500
-requirements: [
-	titanium/500
-	thorium/250
-	lithium/250
-]
-category: effect
-research: vault

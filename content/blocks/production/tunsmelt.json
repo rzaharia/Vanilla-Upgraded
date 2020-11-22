@@ -1,0 +1,32 @@
+{
+	"type": "GenericSmelter",
+    "size": 3,
+    "hasPower": true,
+    "hasLiquids": false,
+    "hasItems": true,
+    "craftTime": 180,
+    "updateEffect": "smeltsmoke",
+    "consumes": {
+		"power": 2.6,
+		"items": {
+			"items": [
+			{"item": "lithium", "amount": 1},
+			{"item": "pyratite", "amount": 2}
+			]
+		}
+    },
+    "requirements": [
+		{"item": "lead", "amount": 120},
+		{"item": "silicon", "amount": 160},
+		{"item": "graphite", "amount": 120},
+		{"item": "lithium", "amount": 160}
+    ],
+    "category": "crafting",
+    "research": "licomp",
+    "idleSound": "respawning",
+    "idleSoundVolume": 0.5,
+	"outputItem": {
+		"item": "tungstene",
+		"amount": 1
+	}
+}

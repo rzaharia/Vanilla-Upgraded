@@ -1,0 +1,58 @@
+{
+	"speed": 1.2,
+	"accel": 0.08,
+	"drag": 0.2,
+	"flying": true,
+	"health": 11000,
+	"engineOffset": 51.10,
+	"rotatespeed": 0.3,
+	"range": 140,
+	"crashDamageMultiplier": 6,
+	"hitsizeTile": 460,
+	"hitsize": 50,
+	"engineSize": 40,
+	"commandLimit": 40,
+	"weapons": [
+		{
+			"name": "haos-equip",
+			"y": 92,
+			"x": 70,
+			"reload": 60,
+			"recoil": 6,
+			"alternate": true,
+			"top": true,
+			"rotate": true,
+			"bullet": {
+				"type": "LaserBulletType",
+				"damage": 170,
+				"sideAngle": 20,
+				"sideWidth": 2.5,
+				"sideLength": 170,
+				"width": 50,
+				"lenght": 980,
+				"shootEffect": "shockwave",
+				"colors": ["ec7458aa", "ff9c5a", "ffffff"]
+			},
+			"shootSound": "laser"
+		},
+		{
+			"y": 92,
+			"x": 70,
+			"reload": 60,
+			"recoil": 6,
+			"alternate": true,
+			"inaccuracy": 360,
+			"shots": 50,
+			"top": true,
+			"rotate": true,
+			"bullet": {
+				"type": "LightningBulletType",
+				"damage": 60,
+				"lightningLength": 45,
+				"collidesAir": true,
+				"lightningColor": "ec7458aa"
+			},
+			"shootSound": "shockwave"
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"type": "Wall",
+	"lightningChance": 0.22,
+	"lightningDamage": 21,
+	"lightningLenght":20,
+	"health": 8280,
+	"size": 3,
+	"requirements": [
+		{"item": "surge-alloy", "amount": 125}
+	],
+	"category": "defense",
+	"research": "surge-wall-large"
+}
