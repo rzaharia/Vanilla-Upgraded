@@ -1,0 +1,33 @@
+{
+	"type": "MechUnit",
+	"canBoost": "true",
+	"boostMultiplier": 1.12,
+	"speed": 0.83,
+	"hitSize": 5,
+	"health": 110,
+	"armor": 0.6,
+	"drag": 0.4,
+	"range": 80,
+	"rotatespeed": 0.06,
+
+	"immunities": [
+		"burning", 
+		"melting",
+		"freezing"
+	],
+	"weapons": [
+		{
+			"name": "cryo-sprayer-mount",
+			"shootSound": "splash",
+			"recoil": 1.5,
+			"top": true,
+			"x": 0,
+			"y": -0.4,
+			"rotate": true,
+			"reload": 8,
+			"shootShake": 1,
+			"alternate": false,
+			"bullet": "cryoShot"
+		}
+	]
+}
