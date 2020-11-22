@@ -1,6 +1,6 @@
-Co-Developers: `VozDuh` and `Summet#4530`
+Co-Developers: `VozDuh`, `Summet#4530` and `Pekka Angelo#1608`
 
 External:
 <br>Designer: `Valoche3000` and `Alexender`
-<br>Mapper: `Zerox`, `Pekka Angelo` and `Neutron`
-<br>Development aid: `Senri`, `Alexender` and `Pekka Angelo`
+<br>Mapper: `Zerox` and `Neutron`
+<br>Development aid: `Senri` and `Alexender`
