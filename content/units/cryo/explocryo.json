@@ -16,7 +16,6 @@
 	"legExtension": -15,
 	"legBaseOffset": 10,
 	"landShake": 1,
-	"legSpeed": 0.1,
 	"legLengthScl": 0.96,
 	"rippleScale": 2,
 	"legSpeed": 0.2,
@@ -56,7 +55,7 @@
 				"rotate": false,
 				"fragBullets": 50
 			}
-		}
+		},
 		{
 			"name": "cryo-sprayer",
 			"shootSound": "splash",
@@ -69,7 +68,7 @@
 			"alternate": false,
 			"rotate": true,
 			"bullet": "cryoShot"
-		}
+		},
 		{
 			"name": "cryo-laser",
 			"shootSound": "laser",

@@ -1,5 +1,5 @@
 {
-	"type": "MechUnit",
+	"type": "mech",
 	"canBoost": "true",
 	"boostMultiplier": 1.12,
 	"speed": 0.83,

@@ -22,7 +22,8 @@
 		["atrax", "misunit"],
 		["mace", "explocryo"],
 		["horizon", "haos-antologist"],
-		["mono", "bigmine"]
+		["mono", "bigmine"],
+		["crawler", "cry"]
 	],
 	"category": "units",
 	"research": "additive-reconstructor"
