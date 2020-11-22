@@ -4,10 +4,8 @@ require("turret/rct-launcher");
 require("turret/volcano");
 require("turret/endduo");
 require("turret/tourelledelabres");
-require("turret/sniper");
-require("turret/futsniper");
-require("turret/futmachgun");
 require("turret/blizzard");
+require("turret/sniper");
 require("turret/bigfuse");
 require("turret/grabomb");
 require("turret/resilver");
@@ -28,7 +26,6 @@ require("units/reader");
 require("units/librarian");
 require("units/eruptsupr");
 require("units/prototype");
-require("units/horror");
 
 //mechs
 require("mechs/anti");
@@ -45,7 +42,6 @@ require("power/hugenode");
 
 //walls
 require("walls/mendingwall");
-require("walls/door");
 
 //production
 require("production/four");

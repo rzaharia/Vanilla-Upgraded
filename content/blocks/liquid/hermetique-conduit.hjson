@@ -1,0 +1,9 @@
+healh: 120
+liquidCapacity: 24
+liquidPressure: 1.1
+requirements: [
+	metaglass/2
+	titanium/4
+]
+category: liquid
+research: pulse-conduit

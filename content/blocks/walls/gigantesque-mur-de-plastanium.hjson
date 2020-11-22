@@ -1,0 +1,9 @@
+type: Wall
+health: 12160
+size: 4
+insulated: true
+requirements: [
+  plastanium/245
+]
+category: defense
+research: immense-mur-de-plastanium

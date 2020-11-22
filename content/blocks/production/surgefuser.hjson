@@ -1,0 +1,29 @@
+type: GenericSmelter
+size: 4
+hasPower: true
+hasLiquids: false
+hasItems: true
+craftTime: 150
+updateEffect: smeltsmoke
+consumes: {
+  power: 5
+  items: {
+    items: [
+      silicon/5
+      tungstene/3
+      thorium/4
+    ]
+  }
+}
+requirements: [
+  silicon/160
+  lead/160
+  thorium/140
+  titanium/160
+  lithium/140
+]
+category: crafting
+research: alloy-smelter
+idleSound: respawning
+idleSoundVolume: 0.5
+outputItem: surge-alloy/3
