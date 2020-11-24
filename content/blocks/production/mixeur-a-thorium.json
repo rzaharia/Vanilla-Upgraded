@@ -28,6 +28,6 @@
     "idleSoundVolume": 0.5,
     "outputItem": {
 		"item": "thorium", 
-		"amount": 1
+		"amount": 2
 	}
 }
