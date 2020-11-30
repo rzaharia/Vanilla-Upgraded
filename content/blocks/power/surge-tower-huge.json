@@ -1,0 +1,15 @@
+{	
+	"laserRange": 45,
+	"maxNodes": 4,
+	"size": 3,
+	"health": 230,
+	"insulated": false,
+	"requirements": [
+		{"item": "titanium", "amount": 14},
+		{"item": "silicon", "amount": 22},
+		{"item": "aliage-resist", "amount": 22},
+		{"item": "lead", "amount": 17}
+	],
+	"category": "power",
+	"research": "surge-tower"
+}

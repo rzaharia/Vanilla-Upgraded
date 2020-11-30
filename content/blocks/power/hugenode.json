@@ -1,0 +1,13 @@
+{
+	"size": 3,
+	"maxNodes": 50,
+	"laserRange": 14,
+	"requirements": [
+		{"item": "titanium", "amount": 10},
+		{"item": "lead", "amount": 20},
+		{"item": "silicon", "amount": 6},
+		{"item": "lithium", "amount": 6}
+	],
+	"research": "power-node-large",
+	"category": "power"
+}

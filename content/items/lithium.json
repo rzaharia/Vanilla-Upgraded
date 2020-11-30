@@ -2,5 +2,6 @@
     "type": "resource",
     "hardness": 3,
     "cost": 2,
-    "color": "ffffff"
+    "color": "ffffff",
+    "research": "graphite"
 }

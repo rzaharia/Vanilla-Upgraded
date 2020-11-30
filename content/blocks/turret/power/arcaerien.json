@@ -1,0 +1,30 @@
+{
+	"type": "PowerTurret",
+	"shootType": {
+		"type": "LightningBulletType",
+		"damage": 22,
+        "lightningLength": 30,
+        "collidesAir": true
+	},
+	"reload": 70,
+	"shootCone": 40,
+	"powerUse": 2,
+	"shots": 3,
+	"rotatespeed": 6.5,
+	"targetAir": true,
+	"targetGround": false,
+	"range": 140,
+	"shootEffect": "lightningShoot",
+	"heatColor": "ff0000",
+	"recoil": 1,
+	"size": 2,
+	"health": 670,
+	"shootSound": "spark",
+	"requirements": [
+		{"item": "copper", "amount": 80},
+		{"item": "lead", "amount": 70},
+		{"item": "silicon", "amount": 70}
+	],
+	"category": "turret",
+	"research": "arc"
+}

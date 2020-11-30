@@ -8,7 +8,6 @@
 	"flying": false,
 	"targetAir": true,
 	"rotatespeed": 0.06,
-
 	"legCount": 6,
 	"legMoveSpace": 1,
 	"legPairOffset": 3,
@@ -22,7 +21,6 @@
 	"visualElevation": 0.65,
 	"allowLegStep": true,
 	"hovering": true,
-
 	"immunities": [
 		"burning", 
 		"melting",

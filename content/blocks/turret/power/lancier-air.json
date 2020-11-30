@@ -1,0 +1,39 @@
+{
+	"type": "PowerTurret",
+	"category": "turret",
+	"range": 170,
+	"chargeTime": 45,
+	"chargeMaxDelay": 28,
+	"chargeEffects": 5,
+	"shootType": {
+		"type": "LaserBulletType",
+		"hitEffect": "hitLancer",
+		"despawnEffect": "none",
+		"hitSize": 5.5,
+		"lifetime": 16,
+		"drawSize": 430,
+		"collidesAir": true,
+		"damage": 160
+	},
+	"recoilAmount": 2.5,
+	"reloadTime": 98,
+	"cooldown": 0.03,
+	"powerUse": 2.8,
+	"shootShake": 2.2,
+	"shootEffect": "lancerLaserShoot",
+	"smokeEffect": "lancerLaserShootSmoke",
+	"chargeEffect": "lancerLaserCharge",
+	"chargeBeginEffect": "lancerLaserChargeBegin",
+	"heatColor": "ff0000",
+	"size": 2,
+	"health": 1380,
+	"targetAir": true,
+	"targetGround": false,
+	"shootSound": "laser",
+	"research": "lancer",
+	"requirements": [
+		{"item": "copper", "amount": 50},
+		{"item": "lead", "amount": 100},
+		{"item": "silicon", "amount": 90}
+	]
+}

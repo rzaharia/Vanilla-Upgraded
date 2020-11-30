@@ -1,0 +1,7 @@
+{    
+    "type": "OreBlock",
+    "itemDrop": "niobium",
+    "oreDefault": false,
+    "oreThreshold": 0.921,
+    "oreScale": 26.1234
+}

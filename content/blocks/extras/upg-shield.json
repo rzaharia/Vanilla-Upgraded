@@ -1,0 +1,35 @@
+{    
+    "health": 800,
+    "size": 4,
+    "liquidCapacity": 30,
+    "hasPower": true,
+    "canOverdrive": true,
+    "phaseUseTime": 470,
+    "phaseRadiusBoost": 90,
+    "solid": true,
+    "blockGround": "walls",
+    "radius": 181.7,
+    "breakage": 670,
+    "cooldownNormal": 2.25,
+    "cooldownLiquid": 1.8,
+    "cooldownBrokenBase": 0.5,
+    "basePowerDraw": 0.4,
+    "consumes": {
+      "power": 5.333333333333333,
+      "items": {
+        "items": [
+          {"item": "phase-fabric", "amount": 2}
+        ],
+        "booster": true,
+    	  "optional": true
+      }
+    },
+    "requirements": [
+      {"item": "lead", "amount": 220}
+      {"item": "silicon", "amount": 245}
+      {"item": "titanium", "amount": 195}
+      {"item": "lithium", "amount": 195}
+    ],
+    "category": "effect",
+    "research": "force-projector"
+}
