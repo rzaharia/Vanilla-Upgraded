@@ -1,6 +1,7 @@
 // Turrets
 require("turret/endduo");
 require("turret/canson");
+require("turret/futmachgun");
 
 // Units
 require("units/explocryo");
