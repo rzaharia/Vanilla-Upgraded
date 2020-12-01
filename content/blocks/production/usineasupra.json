@@ -1,0 +1,29 @@
+{ 
+  "size": 5,
+  "hasPower": true,
+  "hasLiquids": false,
+  "hasItems": true,
+  "craftTime": 200,
+  "updateEffect": "explosion",
+  "consumes": {
+    "power": 3.5,
+    "items": {
+      "items": [
+        {"item": "niobium", "amount": 9},
+        {"item": "titanium", "amount": 10}
+      ]
+    }
+  },
+  "requirements": [
+    {"item": "niobium", "amount": 300},
+    {"item": "silicon", "amount": 250},
+    {"item": "lithium", "amount": 200},
+    {"item": "surge-alloy", "amount": 200},
+    {"item": "lead", "amount": 200}
+  ],
+  "category": "crafting",
+  "research": "usinearesist",
+  "idleSound": "explosion",
+  "idleSoundVolume": 0.5,
+  "outputItem": {"item": "aliage-supra", "amount": 1}
+}

@@ -8,6 +8,7 @@ const hugenode = extendContent(PowerNode, "hugenode", {
 
 hugenode.buildType = () => extendContent(PowerNode.PowerNodeBuild, hugenode, {
 	draw() {
+		this.super$draw();
 	    Draw.rect(Core.atlas.find("vanilla-upgraded-hugenode"), this.x, this.y);
 	    Draw.color(this.team.color);
 	    Draw.rect(Core.atlas.find("vanilla-upgraded-hugenode-team"), this.x, this.y);

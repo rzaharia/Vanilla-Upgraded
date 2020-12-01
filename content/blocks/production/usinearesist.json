@@ -1,0 +1,29 @@
+{  
+  "size": 4,
+  "hasPower": true,
+  "hasLiquids": false,
+  "hasItems": true,
+  "updateEffect": "smeltsmoke",
+  "itemCapacity": 20,
+  "consumes": {
+    "power": 2.6,
+    "items": {
+      "items": [
+        {"item": "niobium", "amount": 5},
+        {"item": "lead", "amount": 10}
+      ]
+    }
+  },
+  "requirements": [
+    {"item": "titanium", "amount": 300},
+    {"item": "silicon", "amount": 250},
+    {"item": "phase-fabric", "amount": 200},
+    {"item": "surge-alloy", "amount": 150},
+    {"item": "lithium", "amount": 150}
+  ],
+  "category": "crafting",
+  "research": "alloy-smelter",
+  "idleSound": "respawning",
+  "idleSoundVolume": 0.5,
+  "outputItem": {"item": "aliage-resist", "amount": 1}
+}

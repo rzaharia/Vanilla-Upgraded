@@ -2,6 +2,11 @@
 require("units/explocryo-code");
 require("units/haos");
 
+// Production
+require("production/usinearesist");
+require("production/usineasupra");
+require("production/vobrotiniter");
+
 // Power
 require("power/huge-node");
 require("power/huge-surge-tower");
