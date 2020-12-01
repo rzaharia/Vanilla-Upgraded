@@ -1,0 +1,8 @@
+{	
+	"requirements": [
+	  	{"item": "obsidienne", "amount": 24},
+	 	{"item": "emeraude", "amount": 12}
+	],
+	"category": "defense",
+	"research": "mending-wall"
+}

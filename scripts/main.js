@@ -1,10 +1,10 @@
 // Units
-require("units/explocryo-code");
+require("units/explocryo");
 require("units/haos");
 
 // Production
-require("production/usinearesist");
-require("production/usineasupra");
+require("production/usine-a-resist");
+require("production/usine-a-supra");
 require("production/vobrotiniter");
 
 // Power
@@ -14,6 +14,7 @@ require("power/gigantic-battery");
 
 // Walls
 require("walls/door");
+require("walls/mending-wall");
 
 // Extra
 require("extra/distribution");

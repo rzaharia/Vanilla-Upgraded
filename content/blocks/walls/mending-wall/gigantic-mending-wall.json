@@ -1,0 +1,8 @@
+{	
+	"requirements": [
+	  	{"item": "copper", "amount": 48},
+	 	{"item": "copper", "amount": 24}
+	],
+	"category": "defense",
+	"research": "immense-mending-wall"
+}

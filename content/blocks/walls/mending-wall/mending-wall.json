@@ -1,0 +1,8 @@
+{	
+	"requirements": [
+	  	{"item": "obsidienne", "amount": 12},
+	 	{"item": "emeraude", "amount": 6}
+	],
+	"category": "defense",
+	"research": "titanium-wall"
+}
