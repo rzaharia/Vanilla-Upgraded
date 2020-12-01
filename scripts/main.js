@@ -1,5 +1,6 @@
 // Turrets
 require("turret/endduo");
+require("turret/canson");
 
 // Units
 require("units/explocryo");
