@@ -1,3 +1,6 @@
+// Turrets
+require("turret/endduo");
+
 // Units
 require("units/explocryo");
 require("units/haos");
