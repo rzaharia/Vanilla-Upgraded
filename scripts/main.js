@@ -20,3 +20,6 @@ require("extra/distribution");
 require("extra/shield");
 require("extra/huge-vault");
 require("extra/soundmine");
+
+// Rest
+require("rest/relief");
