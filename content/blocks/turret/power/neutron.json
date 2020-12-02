@@ -2,7 +2,7 @@
 	"size": 5,
 	"health": 3500,
 	"coolantMultiplier": 1.4,
-	"shootCone": 40,
+	"shootCone": 5,
 	"shootDuration": 650,
 	"powerUse": 15,
 	"shootShake": 3,

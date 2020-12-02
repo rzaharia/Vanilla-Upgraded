@@ -1,6 +1,6 @@
 {	
 	"size": 4,
-	"itemCapacity": 2500,
+	"itemCapacity": 6500,
 	"requirements": [
 		{"item": "titanium", "amount": 500},
 		{"item": "thorium", "amount": 250},
