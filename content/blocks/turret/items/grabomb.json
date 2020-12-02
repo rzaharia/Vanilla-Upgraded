@@ -1,0 +1,22 @@
+{	
+	"targetAir": true,
+	"targetGround": false,
+	"health": 1250,
+	"size": 3,
+	"inaccuracy": 0,
+	"reloadTime": 220,
+	"shootCone": 20,
+	"shots": 1,
+	"range": 200,
+	"recoil": 3,
+	"cooldown": 0.5,
+	"requirements": [
+	    { "item": "graphite", "amount": 150 },
+	    { "item": "silicon", "amount": 175 },
+	    { "item": "lead", "amount": 225 },
+	    { "item": "titanium", "amount": 175 },
+	    { "item": "lithium", "amount": 150 }
+	],
+	"category": "turret",
+	"research": "salvo"
+}

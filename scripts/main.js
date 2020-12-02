@@ -5,6 +5,15 @@ require("turret/futmachgun");
 require("turret/plasma");
 require("turret/quantum");
 require("turret/neutron");
+require("turret/sniper");
+require("turret/futsniper");
+require("turret/blizzard");
+require("turret/resilver");
+require("turret/reconstructor");
+require("turret/grabomb");
+require("turret/bigfuse");
+require("turret/rct-launcher");
+require("turret/volcano");
 
 // Units
 require("units/explocryo");

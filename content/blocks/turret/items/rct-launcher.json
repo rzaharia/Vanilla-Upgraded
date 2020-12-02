@@ -1,0 +1,29 @@
+{
+	"health": 7200,
+	"size": 5,
+	"reloadTime": 950,
+	"range": 1500,
+	"coolantMultiplier": 1.4,
+	"shotWidth": 2,
+	"targetAir": true,
+	"targetGround": true,
+	"maxAmmo": 45,
+	"inaccuracy": 10,
+	"rotatespeed": 0.5,
+	"cooldown": 2,
+	"burstSpacing": 15,
+	"xRand": 20,
+	"shootSound": "shootBig",
+	"shootCone": 35,
+	"outlineIcon": true,
+	"expanded": true,
+	"requirements": [
+	  	{ "item": "aliage-supra", "amount": 400 },
+	 	{ "item": "tungstene", "amount": 380 },
+	 	{ "item": "aliage-resist", "amount": 400 },
+	 	{ "item": "thorium", "amount": 350 },
+	 	{ "item": "plastanium", "amount": 350 }
+	],
+	"category": "turret",
+	"research": "volcano"
+}
