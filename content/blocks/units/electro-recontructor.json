@@ -17,13 +17,9 @@
 		{"item": "surge-alloy", "amount": 60}
 	],
 	"upgrades": [
-		["dagger", "teseus"],
-		["flare", "teoleus"],
-		["atrax", "misunit"],
-		["mace", "explocryo"],
-		["horizon", "haos-antologist"],
-		["mono", "bigmine"],
-		["crawler", "cry"]
+		["crawler", "cry"],
+		["dagger", "cryonic"],
+		["mace", "explocryo"]
 	],
 	"category": "units",
 	"research": "additive-reconstructor"

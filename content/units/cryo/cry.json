@@ -24,7 +24,7 @@
 			"x": 0,
 			"y": -0.4,
 			"rotate": true,
-			"reload": 8,
+			"reload": 5.5,
 			"shootShake": 1,
 			"alternate": false,
 			"bullet": "cryoShot"
