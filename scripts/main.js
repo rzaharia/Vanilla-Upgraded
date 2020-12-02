@@ -2,6 +2,9 @@
 require("turret/endduo");
 require("turret/canson");
 require("turret/futmachgun");
+require("turret/plasma");
+require("turret/quantum");
+require("turret/neutron");
 
 // Units
 require("units/explocryo");
