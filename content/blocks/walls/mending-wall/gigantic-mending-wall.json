@@ -1,7 +1,7 @@
 {	
 	"requirements": [
-	  	{"item": "copper", "amount": 48},
-	 	{"item": "copper", "amount": 24}
+	  	{"item": "obsidienne", "amount": 48},
+	 	{"item": "emeraude", "amount": 24}
 	],
 	"category": "defense",
 	"research": "immense-mending-wall"
