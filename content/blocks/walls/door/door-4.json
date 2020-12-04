@@ -1,9 +1,0 @@
-{	
-	"size": 4,
-	"requirements": [
-		{"item": "graphite", "amount": 140},
-		{"item": "silicon", "amount": 60}
-	],
-	"category": "defense",
-	"research": "door-3"
-}

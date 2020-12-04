@@ -1,9 +1,0 @@
-{	
-	"requirements": [
-		{"item": "silicon", "amount": 35},
-		{"item": "titanium", "amount": 60},
-		{"item": "lithium", "amount": 40}
-	],
-	"category": "turret",
-	"research": "scorch"
-}
