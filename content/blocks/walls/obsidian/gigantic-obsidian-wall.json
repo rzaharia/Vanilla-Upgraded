@@ -1,0 +1,10 @@
+{	
+	"requirements": [
+	  	{"item": "obsidienne", "amount": 250}
+	],
+	"health": 20400,
+	"size": 4,
+	"solid": true,
+	"category": "defense",
+	"research": "thorium-wall"
+}

@@ -32,6 +32,7 @@ require("power/gigantic-battery");
 // Walls
 require("walls/door");
 require("walls/mending-wall");
+require("walls/obsidian-wall");
 
 // Extra
 require("extra/distribution");
