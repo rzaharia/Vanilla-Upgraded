@@ -1,6 +1,3 @@
-# ExampleJavaMod
-A prototype Java Mindustry mod that works on Android and PC.
-
 ## Building for Desktop Testing
 
 1. Install JDK 14. If you don't know how, look it up. If you already have any version of the JDK >= 8, that works as well. 
