@@ -3,7 +3,7 @@ package vanilla.content;
 import mindustry.ctype.*;
 import mindustry.type.*;
 
-import static vanilla.maps.planets.VUPlanets.*;
+import static vanilla.content.VUPlanets.*;
 import static mindustry.content.Planets.*;
 
 public class VanillaSectors implements ContentList{
