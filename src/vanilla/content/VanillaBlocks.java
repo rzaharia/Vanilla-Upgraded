@@ -518,36 +518,12 @@ public class VanillaBlocks implements ContentList{
             consumes.liquid(VanillaLiquids.oberaldLiquid, 0.5f);
         }};
 
-        burnout = new ItemTurret("burnout"){{
+        /*burnout = new CircleFireTurret("burnout"){{
             requirements(Category.turret, with(Items.copper, 1));
-            ammo(
-            Items.coal, VanillaBullets.invisibleIncendiaryBullet/*,
-            Items.pyratite, VanillaBullets.invisibleIncendiaryBulletBig,
-            Items.sporePod, VanillaBullets.upgradedInvisibleIncendiaryBullet,
-            Items.blastCompound, VanillaBullets.upgradedInvisibleIncendiaryBulletBig*/
-            );
 
             range = 150;
             reloadTime = 50;
-
-            health = 850;
-            size = 3;
-            inaccuracy = 0;
-            rotateSpeed = 25;
-            shots = 3;
-            restitution = 0;
-            burstSpacing = 0;
-            targetAir = true;
-            targetGround = true;
-            shootCone = 5;
-            shootSound = Sounds.none;
-            shootEffect = Fx.none;
-
-            /*Coal : 15 Damage, Incendiary
-Pyratite : 35 Damage, Incendiary
-Spore pod : 40 Damage, Incendiary, area attack
-Blast compound : 55 Damage Incendiary*/
-        }};
+        }};*/
 
         // endregion
         // region units

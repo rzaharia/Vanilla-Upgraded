@@ -42,12 +42,8 @@ public class VanillaBullets implements ContentList{
 
     //environment, misc.
 
-    // Invisible bullet
-    invisibleIncendiaryBullet, invisibleIncendiaryBulletBig, upgradedInvisibleIncendiaryBullet,
-    upgradedInvisibleIncendiaryBulletBig,
-
     // VU bullet
-    smallPlasmaBullet, smallPlasmaBulletWhite, plasmaBullet, quantumLaser, quantumFrags, 
+    smallPlasmaBullet, smallPlasmaBulletWhite, plasmaBullet, quantumLaser, quantumFrags,
 
     // specialBullet
     neutronLaser;
@@ -264,18 +260,6 @@ public class VanillaBullets implements ContentList{
             hitEffect = Fx.flakExplosion;
             ammoMultiplier = 5f;
             shootEffect = Fx.shootSmall;
-        }};
-
-        invisibleIncendiaryBullet = new ArtilleryBulletType(12f, 15){{
-            lifetime = 15;
-            width = height = 0;
-            hitEffect = Fx.none;
-            shootEffect = Fx.none;
-            trailEffect = Fx.none;
-            hitShake = 0;
-            hitSound = Sounds.none;
-            fragBullets = 25;
-            fragBullet = Bullets.fireball;
         }};
 
         smallPlasmaBullet = new VanillaBulletType(4, 120){{
