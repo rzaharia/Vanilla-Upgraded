@@ -8,12 +8,12 @@ import static mindustry.content.Planets.*;
 
 public class VanillaSectors implements ContentList{
     public static SectorPreset
-    xStartPod;
+    xariexStart;
 
     @Override
     public void load(){
 
-        xStartPod = new SectorPreset("xStartPod", xariex, 23){{
+        xariexStart = new SectorPreset("xariexStart", xariex, 23){{
             alwaysUnlocked = true;
             addStartingItems = true;
             captureWave = 15;
